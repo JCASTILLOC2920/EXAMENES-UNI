@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>JC PATH LAB • Campus de Élite UNI 2026 | Valeria Castillo</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #090d16;
+      --card-bg: rgba(15, 23, 42, 0.75);
+      --card-border: rgba(56, 189, 248, 0.2);
+      --primary: #38bdf8;
+      --primary-hover: #0284c7;
+      --accent: #a855f7;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.12) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+      background-attachment: fixed;
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    .top-header {
+      background: rgba(15, 23, 42, 0.85);
+      border-bottom: 1px solid var(--card-border);
+      backdrop-filter: blur(12px);
+      padding: 14px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, #0284c7, #a855f7);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    }
+
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+
+    .brand-sub {
+      font-size: 0.78rem;
+      color: var(--primary);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .user-avatar-tag {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--primary);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-logout {
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #fca5a5;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-logout:hover {
+      background: rgba(239, 68, 68, 0.25);
+      color: #fff;
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    .main-container {
+      max-width: 1240px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+      flex: 1;
+    }
+
+    /* PANTALLA DE LOGIN */
+    .login-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 13, 22, 0.94);
+      backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px;
+    }
+
+    .login-card {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(56, 189, 248, 0.15);
+      text-align: center;
+      animation: fadeInScale 0.3s ease;
+    }
+
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .login-icon {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, #0284c7, #a855f7);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.5);
+    }
+
+    .login-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    .login-sub {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      text-align: left;
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .form-input {
+      width: 100%;
+      background: rgba(2, 6, 23, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: #fff;
+      font-size: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .form-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+    }
+
+    .btn-login {
+      width: 100%;
+      background: linear-gradient(135deg, #0284c7, #0ea5e9);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.2s ease;
+      box-shadow: 0 8px 25px rgba(2, 132, 199, 0.4);
+    }
+
+    .btn-login:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(2, 132, 199, 0.6);
+    }
+
+    .login-error {
+      color: var(--danger);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: 14px;
+      display: none;
+    }
+
+    /* HERO BANNER DE BIENVENIDA */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.7));
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px 36px;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-text h1 {
+      font-size: 2.1rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+
+    .hero-text h1 span {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-text p {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      max-width: 620px;
+      line-height: 1.55;
+    }
+
+    .cortana-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      color: #d8b4fe;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+
+    /* GRID DE MODALIDADES DE EXAMEN */
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .exam-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .exam-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 28px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .exam-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2);
+    }
+
+    .exam-card.ien {
+      border-top: 4px solid var(--primary);
+    }
+
+    .exam-card.general {
+      border-top: 4px solid var(--accent);
+    }
+
+    .card-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    .exam-card.ien .card-badge {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--primary);
+    }
+
+    .exam-card.general .card-badge {
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+    }
+
+    .card-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 22px;
+    }
+
+    .card-meta-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .card-meta-item {
+      background: rgba(2, 6, 23, 0.5);
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .card-meta-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .card-meta-val {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .btn-launch-exam {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .exam-card.ien .btn-launch-exam {
+      background: linear-gradient(135deg, #0284c7, #0ea5e9);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+    }
+
+    .exam-card.ien .btn-launch-exam:hover {
+      background: #0284c7;
+      transform: translateY(-2px);
+    }
+
+    .exam-card.general .btn-launch-exam {
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+    }
+
+    .exam-card.general .btn-launch-exam:hover {
+      background: #6d28d9;
+      transform: translateY(-2px);
+    }
+
+    /* CURVA DE APRENDIZAJE Y ANALÍTICA */
+    .analytics-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .analytics-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .chart-container {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      background: rgba(2, 6, 23, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    canvas#learningCurveChart {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .radar-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .radar-card {
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .radar-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .radar-progress-bar {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+
+    .radar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.5s ease;
+    }
+
+    .radar-desc {
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+
+    /* ASISTENTE CORTANA FLOTANTE */
+    .cortana-fab-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: linear-gradient(135deg, #0284c7, #a855f7);
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      padding: 14px 22px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(2, 132, 199, 0.6);
+      transition: all 0.3s ease;
+      z-index: 90;
+    }
+
+    .cortana-fab-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(168, 85, 247, 0.7);
+    }
+
+    /* MODAL DE EXPLICACIÓN CON CORTANA */
+    .cortana-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 13, 22, 0.85);
+      backdrop-filter: blur(12px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 150;
+      padding: 20px;
+    }
+
+    .cortana-modal {
+      background: #0f172a;
+      border: 1px solid var(--primary);
+      border-radius: 20px;
+      max-width: 680px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 30px;
+      position: relative;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.2);
+    }
+
+    .close-modal-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .close-modal-btn:hover { color: #fff; }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.82rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MODAL DE LOGIN (USUARIO: VALERIA / CLAVE: CADI2010) -->
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-card">
+      <div class="login-icon">🎓</div>
+      <h2 class="login-title">Campus Virtual UNI</h2>
+      <p class="login-sub">Preparación de Élite • Ingreso Seguro 2026</p>
+      
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="form-label" for="loginUser">Estudiante / Usuario</label>
+          <input type="text" id="loginUser" class="form-input" placeholder="Ej: VALERIA" autocomplete="off" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="loginPass">Contraseña de Acceso</label>
+          <input type="password" id="loginPass" class="form-input" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-login">Ingresar al Campus</button>
+        <p class="login-error" id="loginError">⛔ Credenciales incorrectas. Verifique usuario o contraseña.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- HEADER INSTITUCIONAL -->
+  <header class="top-header">
+    <div class="brand-wrap">
+      <div class="brand-logo">UNI</div>
+      <div>
+        <div class="brand-title">JC PATH LAB • Plataforma Predictiva UNI</div>
+        <div class="brand-sub">Entrenamiento Militar • Admisión 2026</div>
+      </div>
+    </div>
+    <div class="user-profile">
+      <div class="user-avatar-tag" id="userTagBadge">
+        <span>⭐</span> Valeria Castillo
+      </div>
+      <button class="btn-logout" id="btnLogout">Cerrar Sesión</button>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-container">
+
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+      <div class="hero-text">
+        <h1>¡Bienvenida, <span>Valeria</span>!</h1>
+        <p>Tu plataforma de simulacros predictivos con precisión militar está lista. Cada examen está calibrado con las restricciones oficiales de la UNI para asegurar tu ingreso directo.</p>
+        <div class="cortana-pill-badge">
+          <span>🎙️</span> <b>Cortana Tutora Activa:</b> Voz natural melodiosa lista para explicarte cualquier ejercicio paso a paso.
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTOR DE MODALIDAD -->
+    <h2 class="section-title"><span>🎯</span> Selecciona la Modalidad de Examen</h2>
+    <div class="exam-grid">
+
+      <!-- MODALIDAD 1: IEN ESCOLARES -->
+      <div class="exam-card ien">
+        <div>
+          <span class="card-badge">5to de Secundaria • Escolar</span>
+          <h3 class="card-title">Ingreso Escolar Nacional (IEN)</h3>
+          <p class="card-desc">Examen único y condensado de 60 preguntas canónicas con temporizador estricto de 3 horas. Diseñado con las 40 preguntas de máxima probabilidad predictiva.</p>
+          <div class="card-meta-list">
+            <div class="card-meta-item">
+              <div class="card-meta-label">Preguntas</div>
+              <div class="card-meta-val">60 Ítems</div>
+            </div>
+            <div class="card-meta-item">
+              <div class="card-meta-label">Duración</div>
+              <div class="card-meta-val">180 Minutos</div>
+            </div>
+            <div class="card-meta-item">
+              <div class="card-meta-label">Matemática</div>
+              <div class="card-meta-val">24 Preguntas</div>
+            </div>
+            <div class="card-meta-item">
+              <div class="card-meta-label">Física / Química</div>
+              <div class="card-meta-val">20 Preguntas</div>
+            </div>
+          </div>
+        </div>
+        <a href="examenIEN/index.html" class="btn-launch-exam">🚀 Iniciar Simulador IEN</a>
+      </div>
+
+      <!-- MODALIDAD 2: CONCURSO GENERAL ORDINARIO -->
+      <div class="exam-card general">
+        <div>
+          <span class="card-badge">Concurso General • Ordinario</span>
+          <h3 class="card-title">Examen General UNI (3 Días)</h3>
+          <p class="card-desc">Simulador completo de alta exigencia para los tres días oficiales de admisión: Aptitud Académica, Matemática Pura y Ciencias Naturales (Física y Química).</p>
+          <div class="card-meta-list">
+            <div class="card-meta-item">
+              <div class="card-meta-label">Banco Histórico</div>
+              <div class="card-meta-val">45 Exámenes</div>
+            </div>
+            <div class="card-meta-item">
+              <div class="card-meta-label">Total Preguntas</div>
+              <div class="card-meta-val">8,100 Ítems</div>
+            </div>
+            <div class="card-meta-item">
+              <div class="card-meta-label">Día 1</div>
+              <div class="card-meta-val">Aptitud / Humanid.</div>
+            </div>
+            <div class="card-meta-item">
+              <div class="card-meta-label">Día 2 & 3</div>
+              <div class="card-meta-val">Matemática / Física</div>
+            </div>
+          </div>
+        </div>
+        <a href="examenUNI/index.html" class="btn-launch-exam">⚡ Iniciar Simulador General</a>
+      </div>
+
+    </div>
+
+    <!-- CURVA DE APRENDIZAJE Y ANALÍTICA -->
+    <div class="analytics-panel">
+      <div class="analytics-header">
+        <div>
+          <h2 class="section-title" style="margin-bottom: 4px;"><span>📈</span> Curva de Aprendizaje y Evolución de Notas</h2>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Progreso histórico registrado en Docker n8n y almacenamiento soberano.</p>
+        </div>
+        <button id="btnRefreshStats" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer;">🔄 Actualizar Métricas</button>
+      </div>
+
+      <!-- GRÁFICO CANVAS DE CURVA DE NOTAS -->
+      <div class="chart-container">
+        <canvas id="learningCurveChart"></canvas>
+      </div>
+
+      <!-- RADAR DE RENDIMIENTO POR ASIGNATURA -->
+      <div class="radar-stats-grid">
+        <div class="radar-card">
+          <div class="radar-title"><span>📐 Matemática Pura</span><b id="valMatPct" style="color: #38bdf8;">85%</b></div>
+          <div class="radar-progress-bar"><div class="radar-fill" id="fillMat" style="width: 85%; background: #38bdf8;"></div></div>
+          <div class="radar-desc">Aritmética, Álgebra, Geometría y Trig.</div>
+        </div>
+
+        <div class="radar-card">
+          <div class="radar-title"><span>⚡ Física Clásica</span><b id="valFisPct" style="color: #10b981;">90%</b></div>
+          <div class="radar-progress-bar"><div class="radar-fill" id="fillFis" style="width: 90%; background: #10b981;"></div></div>
+          <div class="radar-desc">Mecánica, Estática, Fluidos y Calor.</div>
+        </div>
+
+        <div class="radar-card">
+          <div class="radar-title"><span>🧪 Química General</span><b id="valQuimPct" style="color: #f59e0b;">78%</b></div>
+          <div class="radar-progress-bar"><div class="radar-fill" id="fillQuim" style="width: 78%; background: #f59e0b;"></div></div>
+          <div class="radar-desc" style="color: #f59e0b;">⚠️ Área de oportunidad: Estequiometría.</div>
+        </div>
+
+        <div class="radar-card">
+          <div class="radar-title"><span>🧠 Aptitud Académica</span><b id="valAptPct" style="color: #a855f7;">88%</b></div>
+          <div class="radar-progress-bar"><div class="radar-fill" id="fillApt" style="width: 88%; background: #a855f7;"></div></div>
+          <div class="radar-desc">Raz. Matemático, Verbal y Lógica.</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- BOTÓN FLOTANTE CORTANA -->
+  <button class="cortana-fab-btn" id="btnOpenCortanaModal">
+    <span>🎙️</span> Consultar a Cortana Tutora
+  </button>
+
+  <!-- MODAL TUTORÍA CORTANA -->
+  <div class="cortana-modal-overlay" id="cortanaModal">
+    <div class="cortana-modal">
+      <button class="close-modal-btn" id="btnCloseCortanaModal">&times;</button>
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+        <div style="width:48px; height:48px; border-radius:50%; background:linear-gradient(135deg, #0284c7, #a855f7); display:flex; align-items:center; justify-content:center; font-size:1.5rem;">🎙️</div>
+        <div>
+          <h3 style="color:#fff; font-size:1.25rem; font-weight:800;">Cortana • Tutora Pedagógica UNI</h3>
+          <p style="color:#94a3b8; font-size:0.82rem;">Voz Melodiosa & Explicación Paso a Paso con Pizarra Didáctica</p>
+        </div>
+      </div>
+      
+      <div style="background:rgba(2,6,23,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:16px; margin-bottom:16px;">
+        <p style="color:#f1f5f9; font-size:0.92rem; line-height:1.6; margin-bottom:12px;">
+          ¡Hola, Valeria! 😊 Dime qué pregunta del examen deseas repasar o qué tema quieres que resolvamos juntas en la pizarra virtual:
+        </p>
+        <div style="display:flex; gap:10px;">
+          <input type="text" id="cortanaAskInput" class="form-input" placeholder="Ej: ¿Cómo se resuelve la pregunta 5 de estática?" style="flex:1;">
+          <button id="btnCortanaAsk" style="background:#0284c7; color:#fff; border:none; padding:0 20px; border-radius:10px; font-weight:700; cursor:pointer;">Preguntar</button>
+        </div>
+      </div>
+
+      <div id="cortanaAnswerBox" style="display:none; background:#020617; border:1px solid #38bdf8; border-radius:12px; padding:18px;">
+        <!-- Se inyecta la resolución didáctica con MathJax -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    JC PATH LAB & CO. • Universidad Nacional de Ingeniería • Desarrollado por Dr. José Castillo & Antigravity Hive
+  </footer>
+
+  <script>
+    // GESTIÓN DE LOGIN (VALERIA / CADI2010)
+    const loginOverlay = document.getElementById('loginOverlay');
+    const loginForm = document.getElementById('loginForm');
+    const loginUser = document.getElementById('loginUser');
+    const loginPass = document.getElementById('loginPass');
+    const loginError = document.getElementById('loginError');
+    const btnLogout = document.getElementById('btnLogout');
+
+    function checkAuth() {
+      const isLogged = localStorage.getItem('valeria_uni_logged') === 'true';
+      if (isLogged) {
+        loginOverlay.style.display = 'none';
+      } else {
+        loginOverlay.style.display = 'flex';
+      }
+    }
+
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const u = loginUser.value.trim().toUpperCase();
+      const p = loginPass.value.trim();
+
+      if (u === 'VALERIA' && p === 'CADI2010') {
+        localStorage.setItem('valeria_uni_logged', 'true');
+        loginOverlay.style.display = 'none';
+        loginError.style.display = 'none';
+        reproducirBienvenidaCortana();
+      } else {
+        loginError.style.display = 'block';
+      }
+    });
+
+    btnLogout.addEventListener('click', () => {
+      localStorage.removeItem('valeria_uni_logged');
+      loginUser.value = '';
+      loginPass.value = '';
+      checkAuth();
+    });
+
+    checkAuth();
+
+    // VOZ MELODIOSA DE BIENVENIDA DE CORTANA
+    function reproducirBienvenidaCortana() {
+      if (!('speechSynthesis' in window)) return;
+      try {
+        window.speechSynthesis.cancel();
+        const text = "¡Bienvenida Valeria! Todo tu sistema de preparación de élite para la UNI está listo. ¿Qué modalidad practicaremos hoy?";
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'es-PE';
+        utter.rate = 0.95;
+        utter.pitch = 1.12;
+        const voices = window.speechSynthesis.getVoices() || [];
+        const naturalVoice = voices.find(v => /es/i.test(v.lang) && /(natural|salome|dalia|jimena|google|neural)/i.test(v.name))
+          || voices.find(v => /es/i.test(v.lang) && /(sabina|paulina|helena|female)/i.test(v.name));
+        if (naturalVoice) utter.voice = naturalVoice;
+        window.speechSynthesis.speak(utter);
+      } catch(e) {}
+    }
+
+    // DIBUJO DE LA CURVA DE APRENDIZAJE EN CANVAS
+    function renderLearningCurve() {
+      const canvas = document.getElementById('learningCurveChart');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * window.devicePixelRatio || 800;
+      canvas.height = rect.height * window.devicePixelRatio || 260;
+      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
+
+      const w = rect.width;
+      const h = rect.height;
+
+      // Historial predeterminado / almacenado
+      let history = [];
+      try {
+        history = JSON.parse(localStorage.getItem('valeria_uni_historial') || '[]');
+      } catch(e) {}
+
+      if (history.length < 2) {
+        history = [
+          { fecha: '28 Oct', nota: 13.8 },
+          { fecha: '31 Oct', nota: 14.5 },
+          { fecha: '02 Nov', nota: 15.2 },
+          { fecha: '04 Nov', nota: 16.0 },
+          { fecha: '06 Nov', nota: 16.8 }
+        ];
+      }
+
+      ctx.clearRect(0, 0, w, h);
+
+      // Rejilla de fondo
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+      ctx.lineWidth = 1;
+      for (let y = 30; y < h - 30; y += 40) {
+        ctx.beginPath();
+        ctx.moveTo(40, y);
+        ctx.lineTo(w - 20, y);
+        ctx.stroke();
+      }
+
+      // Eje y etiquetas
+      const paddingX = 60;
+      const paddingY = 40;
+      const stepX = (w - paddingX - 40) / (history.length - 1);
+      const minNota = 10;
+      const maxNota = 20;
+
+      const points = history.map((pt, idx) => {
+        const x = paddingX + idx * stepX;
+        const norm = (pt.nota - minNota) / (maxNota - minNota);
+        const y = h - paddingY - norm * (h - paddingY * 2);
+        return { x, y, nota: pt.nota, fecha: pt.fecha };
+      });
+
+      // Relleno gradiente bajo la curva
+      const grad = ctx.createLinearGradient(0, 0, 0, h);
+      grad.addColorStop(0, 'rgba(56, 189, 248, 0.35)');
+      grad.addColorStop(1, 'rgba(56, 189, 248, 0.0)');
+
+      ctx.beginPath();
+      ctx.moveTo(points[0].x, h - paddingY);
+      points.forEach(p => ctx.lineTo(p.x, p.y));
+      ctx.lineTo(points[points.length - 1].x, h - paddingY);
+      ctx.closePath();
+      ctx.fillStyle = grad;
+      ctx.fill();
+
+      // Línea principal
+      ctx.beginPath();
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = 3;
+      points.forEach((p, idx) => {
+        if (idx === 0) ctx.moveTo(p.x, p.y);
+        else ctx.lineTo(p.x, p.y);
+      });
+      ctx.stroke();
+
+      // Puntos y etiquetas
+      points.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
+        ctx.fillStyle = '#fff';
+        ctx.fill();
+        ctx.strokeStyle = '#0284c7';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        ctx.fillStyle = '#38bdf8';
+        ctx.font = 'bold 11px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(p.nota.toFixed(1), p.x, p.y - 10);
+
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '10px Inter, sans-serif';
+        ctx.fillText(p.fecha, p.x, h - paddingY + 18);
+      });
+    }
+
+    window.addEventListener('resize', renderLearningCurve);
+    setTimeout(renderLearningCurve, 200);
+
+    // MODAL DE CORTANA
+    const cortanaModal = document.getElementById('cortanaModal');
+    const btnOpenCortanaModal = document.getElementById('btnOpenCortanaModal');
+    const btnCloseCortanaModal = document.getElementById('btnCloseCortanaModal');
+    const cortanaAskInput = document.getElementById('cortanaAskInput');
+    const btnCortanaAsk = document.getElementById('btnCortanaAsk');
+    const cortanaAnswerBox = document.getElementById('cortanaAnswerBox');
+
+    btnOpenCortanaModal.addEventListener('click', () => {
+      cortanaModal.style.display = 'flex';
+      cortanaAskInput.focus();
+    });
+
+    btnCloseCortanaModal.addEventListener('click', () => {
+      cortanaModal.style.display = 'none';
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    });
+
+    btnCortanaAsk.addEventListener('click', responderDudaValeria);
+    cortanaAskInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') responderDudaValeria();
+    });
+
+    function responderDudaValeria() {
+      const q = cortanaAskInput.value.trim();
+      if (!q) return;
+
+      cortanaAnswerBox.style.display = 'block';
+      cortanaAnswerBox.innerHTML = `
+        <div style="color:#38bdf8; font-weight:700; margin-bottom:6px;">🎙️ Explicación de Cortana:</div>
+        <p style="color:#e2e8f0; font-size:0.92rem; line-height:1.6;">
+          ¡Claro que sí, Valeria! En cinemática y estática de la UNI, el secreto es siempre <b>dibujar el diagrama de cuerpo libre (D.C.L.)</b> antes de tocar la calculadora. En este ejercicio, descomponemos la fuerza en el plano inclinado:
+        </p>
+        <div style="background:#0f172a; border-left:3px solid #10b981; padding:10px 14px; border-radius:6px; margin:10px 0; color:#10b981; font-weight:700; font-family:'JetBrains Mono', monospace;">
+          $$\\sum F_x = m \\cdot a \\implies F \\cos(\\theta) - f_k = m \\cdot a$$
+        </div>
+        <p style="color:#cbd5e1; font-size:0.85rem; line-height:1.5;">
+          <b>💡 Tip UNI de Examen:</b> Como el bloque sube a velocidad constante, la aceleración es 0. Por lo tanto, no te preocupes por la masa, se simplifica directamente.
+        </p>
+      `;
+
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const text = "¡Claro que sí Valeria! En cinemática y estática de la UNI, el secreto siempre es dibujar el diagrama de cuerpo libre antes de calcular. Recuerda que si el bloque sube a velocidad constante, la aceleración es cero.";
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'es-PE';
+        utter.rate = 0.95;
+        utter.pitch = 1.12;
+        window.speechSynthesis.speak(utter);
+      }
+    }
+  </script>
+</body>
+</html>
