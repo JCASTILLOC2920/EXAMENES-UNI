@@ -1,0 +1,1035 @@
+{
+  "proceso": "IEN_UNI_2026",
+  "anio": 2026,
+  "modalidad": "Ingreso Escolar Nacional (IEN) - 5to de Secundaria",
+  "institucion": "Universidad Nacional de Ingenieria (UNI)",
+  "total_preguntas": 60,
+  "distribucion": {
+    "Matematica": 24,
+    "Fisica": 10,
+    "Quimica": 10,
+    "Aptitud_Academica_y_Humanidades": 16
+  },
+  "preguntas": [
+    {
+      "numero": 1,
+      "curso": "Aritmética",
+      "tema": "Teoría de Conjuntos",
+      "dificultad": "Intermedio",
+      "enunciado": "En el concurso IEN UNI 2026, de 65 postulantes de 5to de secundaria, 36 eligen Civil, 30 Industrial y 10 ninguna. ¿Cuántos postulan a exactamente una carrera?",
+      "opciones": {
+        "A": "40",
+        "B": "42",
+        "C": "44",
+        "D": "46",
+        "E": "48"
+      },
+      "clave": "C",
+      "teoria": "n(A Δ B) = n(A U B) - n(A ∩ B)",
+      "solucion": "n(A U B) = 55. n(A ∩ B) = 11. Exactamente una = 44."
+    },
+    {
+      "numero": 2,
+      "curso": "Aritmética",
+      "tema": "Sistemas de Numeración",
+      "dificultad": "Intermedio",
+      "enunciado": "Si el número decimal 140 se escribe en base 8, determine la suma de sus cifras.",
+      "opciones": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8",
+        "E": "9"
+      },
+      "clave": "C",
+      "teoria": "Divisiones sucesivas entre la base k.",
+      "solucion": "Cifras en base 8: (0, 2, 1, 4). Suma = 7."
+    },
+    {
+      "numero": 3,
+      "curso": "Aritmética",
+      "tema": "Divisibilidad y Residuos",
+      "dificultad": "Intermedio",
+      "enunciado": "Si N = 7k + 5, ¿cuál es el residuo de dividir (6N + 7) entre 7?",
+      "opciones": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5",
+        "E": "6"
+      },
+      "clave": "A",
+      "teoria": "Congruencias modulares: aN + b ≡ ar + b (mod m).",
+      "solucion": "Residuo = 2."
+    },
+    {
+      "numero": 4,
+      "curso": "Aritmética",
+      "tema": "Números Primos y Divisores",
+      "dificultad": "Intermedio",
+      "enunciado": "Determine la cantidad de divisores compuestos de N = 2^2 * 3^1 * 5.",
+      "opciones": {
+        "A": "8",
+        "B": "9",
+        "C": "10",
+        "D": "11",
+        "E": "12"
+      },
+      "clave": "A",
+      "teoria": "Compuestos = CD(N) - (Primos + 1).",
+      "solucion": "CD = 12, Primos = 3. Compuestos = 8."
+    },
+    {
+      "numero": 5,
+      "curso": "Aritmética",
+      "tema": "Fracciones y Rendimiento",
+      "dificultad": "Intermedio",
+      "enunciado": "Un caño llena un tanque en 4 h y un desagüe lo vacía en 6 h. Abiertos juntos, ¿en cuántas horas se llena?",
+      "opciones": {
+        "A": "8 h",
+        "B": "10 h",
+        "C": "12 h",
+        "D": "14 h",
+        "E": "16 h"
+      },
+      "clave": "C",
+      "teoria": "1/T = 1/4 - 1/6 = 1/12.",
+      "solucion": "T = 12 horas."
+    },
+    {
+      "numero": 6,
+      "curso": "Aritmética",
+      "tema": "Razones y Proporciones",
+      "dificultad": "Básico",
+      "enunciado": "Dos cantidades están en relación de 2 a 7 y suman 80. Calcule su diferencia.",
+      "opciones": {
+        "A": "36",
+        "B": "38",
+        "C": "40",
+        "D": "42",
+        "E": "44"
+      },
+      "clave": "C",
+      "teoria": "2k + 7k = 9k. Diferencia = 5k.",
+      "solucion": "k = 8, Diferencia = 40."
+    },
+    {
+      "numero": 7,
+      "curso": "Álgebra",
+      "tema": "Leyes de Exponentes",
+      "dificultad": "Básico",
+      "enunciado": "Simplifique: E = [3^(x+3) + 3^(x+1)] / [3^(x+1) * 10].",
+      "opciones": {
+        "A": "1/3",
+        "B": "1",
+        "C": "3",
+        "D": "9",
+        "E": "10"
+      },
+      "clave": "B",
+      "teoria": "3^(x+1)*(9 + 1) / [3^(x+1)*10] = 1.",
+      "solucion": "E = 1."
+    },
+    {
+      "numero": 8,
+      "curso": "Álgebra",
+      "tema": "Productos Notables",
+      "dificultad": "Intermedio",
+      "enunciado": "Si x + y = 8 y xy = 4, determine x^2 + y^2.",
+      "opciones": {
+        "A": "52",
+        "B": "54",
+        "C": "56",
+        "D": "58",
+        "E": "60"
+      },
+      "clave": "C",
+      "teoria": "x^2 + y^2 = (x+y)^2 - 2xy.",
+      "solucion": "8^2 - 2(4) = 56."
+    },
+    {
+      "numero": 9,
+      "curso": "Álgebra",
+      "tema": "Teorema del Resto",
+      "dificultad": "Intermedio",
+      "enunciado": "Halle el residuo de dividir P(x) = x^40 + 3x^21 - 2x^2 + 5 entre x + 1.",
+      "opciones": {
+        "A": "1",
+        "B": "3",
+        "C": "5",
+        "D": "7",
+        "E": "9"
+      },
+      "clave": "A",
+      "teoria": "R = P(-1) = 1 - 3 - 2 + 5 = 1.",
+      "solucion": "Residuo = 1."
+    },
+    {
+      "numero": 10,
+      "curso": "Álgebra",
+      "tema": "Ecuaciones Cuadráticas",
+      "dificultad": "Intermedio",
+      "enunciado": "Si r1 y r2 son raíces de x^2 - 7x + 5 = 0, calcule r1^2 + r2^2.",
+      "opciones": {
+        "A": "39",
+        "B": "41",
+        "C": "43",
+        "D": "47",
+        "E": "49"
+      },
+      "clave": "A",
+      "teoria": "Vieta: r1+r2=7, r1*r2=5. r1^2+r2^2 = 7^2 - 2(5) = 39.",
+      "solucion": "39."
+    },
+    {
+      "numero": 11,
+      "curso": "Álgebra",
+      "tema": "Inecuaciones Cuadráticas",
+      "dificultad": "Intermedio",
+      "enunciado": "Resuelva: x^2 - 8x + 12 < 0 e indique el conjunto solución.",
+      "opciones": {
+        "A": "<2, 6>",
+        "B": "[2, 6]",
+        "C": "<-inf, 2>",
+        "D": "<6, +inf>",
+        "E": "<-2, 6>"
+      },
+      "clave": "A",
+      "teoria": "(x - 2)(x - 6) < 0.",
+      "solucion": "CS = <2, 6>."
+    },
+    {
+      "numero": 12,
+      "curso": "Álgebra",
+      "tema": "Logaritmos",
+      "dificultad": "Intermedio",
+      "enunciado": "Calcule x en log_3(2x + 3) = 2.",
+      "opciones": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "5"
+      },
+      "clave": "C",
+      "teoria": "2x + 3 = 3^2 = 9 => x = 3.",
+      "solucion": "x = 3."
+    },
+    {
+      "numero": 13,
+      "curso": "Geometría",
+      "tema": "Líneas Notables",
+      "dificultad": "Intermedio",
+      "enunciado": "En un triángulo ABC con <B = 50°, halle el ángulo entre bisectrices interiores de A y C.",
+      "opciones": {
+        "A": "110",
+        "B": "115",
+        "C": "120",
+        "D": "110°",
+        "E": "125°"
+      },
+      "clave": "B",
+      "teoria": "x = 90° + B/2.",
+      "solucion": "x = 90° + 25° = 115°."
+    },
+    {
+      "numero": 14,
+      "curso": "Geometría",
+      "tema": "Relaciones Métricas",
+      "dificultad": "Intermedio",
+      "enunciado": "En triángulo rectángulo ABC (recto en B), altura BH divide la hipotenusa en segmentos de 4 y 9 cm. Calcule BH.",
+      "opciones": {
+        "A": "5 cm",
+        "B": "6 cm",
+        "C": "7 cm",
+        "D": "8 cm",
+        "E": "9 cm"
+      },
+      "clave": "B",
+      "teoria": "BH^2 = AH * HC.",
+      "solucion": "BH = sqrt(36) = 6 cm."
+    },
+    {
+      "numero": 15,
+      "curso": "Geometría",
+      "tema": "Ángulos en la Circunferencia",
+      "dificultad": "Básico",
+      "enunciado": "Una cuerda subtiende un arco de 80°. Calcule la medida del ángulo inscrito correspondiente.",
+      "opciones": {
+        "A": "20°",
+        "B": "40°",
+        "C": "60°",
+        "D": "80°",
+        "E": "160°"
+      },
+      "clave": "B",
+      "teoria": "Inscrito = Arco / 2.",
+      "solucion": "80° / 2 = 40°."
+    },
+    {
+      "numero": 16,
+      "curso": "Geometría",
+      "tema": "Áreas Triangulares",
+      "dificultad": "Básico",
+      "enunciado": "Calcule el área de un triángulo de base 8 cm y altura relativa 6 cm.",
+      "opciones": {
+        "A": "20",
+        "B": "22",
+        "C": "24",
+        "D": "26",
+        "E": "28"
+      },
+      "clave": "C",
+      "teoria": "A = (b * h)/2.",
+      "solucion": "A = (8 * 6)/2 = 24 cm^2."
+    },
+    {
+      "numero": 17,
+      "curso": "Geometría",
+      "tema": "Polígonos Regulares",
+      "dificultad": "Intermedio",
+      "enunciado": "Calcule el número total de diagonales de un decágono.",
+      "opciones": {
+        "A": "25",
+        "B": "30",
+        "C": "35",
+        "D": "40",
+        "E": "45"
+      },
+      "clave": "C",
+      "teoria": "ND = n(n-3)/2.",
+      "solucion": "10(7)/2 = 35."
+    },
+    {
+      "numero": 18,
+      "curso": "Geometría",
+      "tema": "Cilindro de Revolución",
+      "dificultad": "Intermedio",
+      "enunciado": "Calcule el volumen de un cilindro de radio 3 cm y altura 5 cm.",
+      "opciones": {
+        "A": "15 pi cm^3",
+        "B": "30 pi cm^3",
+        "C": "45 pi cm^3",
+        "D": "60 pi cm^3",
+        "E": "75 pi cm^3"
+      },
+      "clave": "C",
+      "teoria": "V = pi * r^2 * h.",
+      "solucion": "V = pi * 9 * 5 = 45 pi cm^3."
+    },
+    {
+      "numero": 19,
+      "curso": "Trigonometría",
+      "tema": "Razones Notables",
+      "dificultad": "Básico",
+      "enunciado": "Calcule E = tan(45°) + 2*sen(30°) + cos(60°).",
+      "opciones": {
+        "A": "1.5",
+        "B": "2.0",
+        "C": "2.5",
+        "D": "3.0",
+        "E": "3.5"
+      },
+      "clave": "C",
+      "teoria": "1 + 2(1/2) + 1/2 = 2.5.",
+      "solucion": "E = 2.5."
+    },
+    {
+      "numero": 20,
+      "curso": "Trigonometría",
+      "tema": "Ángulos Canónicos",
+      "dificultad": "Intermedio",
+      "enunciado": "P(-3, 4) está en el lado final de θ. Calcule 5*sen(θ) + 3*tan(θ).",
+      "opciones": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4"
+      },
+      "clave": "A",
+      "teoria": "r = 5. sen=4/5, tan=-4/3.",
+      "solucion": "5(4/5) + 3(-4/3) = 4 - 4 = 0."
+    },
+    {
+      "numero": 21,
+      "curso": "Trigonometría",
+      "tema": "Identidades Trigonométricas",
+      "dificultad": "Intermedio",
+      "enunciado": "Reduzca: K = (sec x - cos x) * cot x.",
+      "opciones": {
+        "A": "sen x",
+        "B": "cos x",
+        "C": "tan x",
+        "D": "sec x",
+        "E": "1"
+      },
+      "clave": "A",
+      "teoria": "(sen^2 x / cos x) * (cos x / sen x) = sen x.",
+      "solucion": "K = sen x."
+    },
+    {
+      "numero": 22,
+      "curso": "Trigonometría",
+      "tema": "Arcos Compuestos",
+      "dificultad": "Intermedio",
+      "enunciado": "Calcule sen(15°) sabiendo que 15° = 45° - 30°.",
+      "opciones": {
+        "A": "(sqrt(6) - sqrt(2)) / 4",
+        "B": "(sqrt(6) + sqrt(2)) / 4",
+        "C": "sqrt(2)/4",
+        "D": "sqrt(3)/2",
+        "E": "1/4"
+      },
+      "clave": "A",
+      "teoria": "sen(45°-30°) = (sqrt(6)-sqrt(2))/4.",
+      "solucion": "(sqrt(6)-sqrt(2))/4."
+    },
+    {
+      "numero": 23,
+      "curso": "Trigonometría",
+      "tema": "Ecuaciones Trigonométricas",
+      "dificultad": "Intermedio",
+      "enunciado": "Menor solución positiva de 2*sen(x) - 1 = 0.",
+      "opciones": {
+        "A": "15°",
+        "B": "30°",
+        "C": "45°",
+        "D": "60°",
+        "E": "90°"
+      },
+      "clave": "B",
+      "teoria": "sen x = 1/2 => x = 30°.",
+      "solucion": "x = 30°."
+    },
+    {
+      "numero": 24,
+      "curso": "Trigonometría",
+      "tema": "Ley de Senos",
+      "dificultad": "Intermedio",
+      "enunciado": "En triángulo ABC, a = 8 cm y <A = 30°. Halle el radio circunscrito R.",
+      "opciones": {
+        "A": "4 cm",
+        "B": "8 cm",
+        "C": "12 cm",
+        "D": "16 cm",
+        "E": "20 cm"
+      },
+      "clave": "B",
+      "teoria": "a / sen A = 2R => 8 / (1/2) = 16 => R = 8 cm.",
+      "solucion": "R = 8 cm."
+    },
+    {
+      "numero": 25,
+      "curso": "Fisica",
+      "tema": "Analisis Dimensional",
+      "dificultad": "Intermedio",
+      "enunciado": "En la ecuacion dimensionalmente homogenea P = d^x * v^y, donde P es presion, d es densidad y v es velocidad, halle x + y.",
+      "opciones": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4",
+        "E": "5"
+      },
+      "clave": "C",
+      "teoria": "[P] = M L^-1 T^-2; [d] = M L^-3; [v] = L T^-1 => x=1, y=2 => x+y=3.",
+      "solucion": "x=1, y=2. Suma = 3."
+    },
+    {
+      "numero": 26,
+      "curso": "Fisica",
+      "tema": "Cinematica MRUV",
+      "dificultad": "Intermedio",
+      "enunciado": "Un movil inicia con velocidad de 4 m/s y acelera a razon de 2 m/s^2 durante 5 s. Calcule la distancia recorrida.",
+      "opciones": {
+        "A": "40",
+        "B": "45",
+        "C": "50",
+        "D": "55",
+        "E": "60"
+      },
+      "clave": "B",
+      "teoria": "d = vo*t + (1/2)*a*t^2.",
+      "solucion": "d = 4*(5) + 0.5*(2)*(25) = 45 m."
+    },
+    {
+      "numero": 27,
+      "curso": "Fisica",
+      "tema": "Caida Libre Vertical",
+      "dificultad": "Basico",
+      "enunciado": "Un cuerpo se suelta desde una altura de 115 m (g = 10 m/s^2). Calcule el tiempo que tarda en impactar el suelo.",
+      "opciones": {
+        "A": "3 s",
+        "B": "4 s",
+        "C": "5 s",
+        "D": "6 s",
+        "E": "7 s"
+      },
+      "clave": "B",
+      "teoria": "h = (1/2)*g*t^2 => t = sqrt(2h/g).",
+      "solucion": "t = sqrt(2*115/10) = 4 s."
+    },
+    {
+      "numero": 28,
+      "curso": "Fisica",
+      "tema": "Estatica de la Particula",
+      "dificultad": "Intermedio",
+      "enunciado": "Un bloque de masa 6 kg cuelga en reposo sostenido por una cuerda vertical inextensible (g = 10 m/s^2). Determine la tension en la cuerda.",
+      "opciones": {
+        "A": "40 N",
+        "B": "50 N",
+        "C": "60 N",
+        "D": "70 N",
+        "E": "80 N"
+      },
+      "clave": "C",
+      "teoria": "Equilibrio: Sumatoria de Fuerzas en Y = 0 => T = mg.",
+      "solucion": "T = 6 * 10 = 60 N."
+    },
+    {
+      "numero": 29,
+      "curso": "Fisica",
+      "tema": "Segunda Ley de Newton",
+      "dificultad": "Intermedio",
+      "enunciado": "Una fuerza horizontal neta de 18 N se aplica sobre una masa de 6 kg sobre una superficie lisa. Calcule su aceleracion.",
+      "opciones": {
+        "A": "2 m/s^2",
+        "B": "3 m/s^2",
+        "C": "4 m/s^2",
+        "D": "5 m/s^2",
+        "E": "6 m/s^2"
+      },
+      "clave": "B",
+      "teoria": "F = m * a => a = F / m.",
+      "solucion": "a = 18 / 6 = 3 m/s^2."
+    },
+    {
+      "numero": 30,
+      "curso": "Fisica",
+      "tema": "Energia Cinetica y Trabajo",
+      "dificultad": "Basico",
+      "enunciado": "Calcule la energia cinetica de un cuerpo de 2 kg que se desplaza a una rapidez de 6 m/s.",
+      "opciones": {
+        "A": "26 J",
+        "B": "36 J",
+        "C": "46 J",
+        "D": "56 J",
+        "E": "66 J"
+      },
+      "clave": "B",
+      "teoria": "Ek = (1/2)*m*v^2.",
+      "solucion": "Ek = 0.5 * 2 * (6**2) = 36 J."
+    },
+    {
+      "numero": 31,
+      "curso": "Fisica",
+      "tema": "Presion Hidrostatica",
+      "dificultad": "Intermedio",
+      "enunciado": "Calcule la presion hidrostatica a 4 m de profundidad en agua dulce (densidad = 1000 kg/m^3, g = 10 m/s^2).",
+      "opciones": {
+        "A": "35 kPa",
+        "B": "40 kPa",
+        "C": "45 kPa",
+        "D": "50 kPa",
+        "E": "55 kPa"
+      },
+      "clave": "B",
+      "teoria": "Ph = rho * g * h.",
+      "solucion": "Ph = 1000 * 10 * 4 = 40000 Pa = 40 kPa."
+    },
+    {
+      "numero": 32,
+      "curso": "Fisica",
+      "tema": "Calorimetria y Calor Sensible",
+      "dificultad": "Basico",
+      "enunciado": "¿Cuantas calorias se requieren para elevar la temperatura de 100 g de agua liquida en 20 grados C? (Ce = 1 cal/g C).",
+      "opciones": {
+        "A": "1600 cal",
+        "B": "1800 cal",
+        "C": "2000 cal",
+        "D": "2200 cal",
+        "E": "2400 cal"
+      },
+      "clave": "C",
+      "teoria": "Q = m * Ce * delta_T.",
+      "solucion": "Q = 100 * 1 * 20 = 2000 cal."
+    },
+    {
+      "numero": 33,
+      "curso": "Fisica",
+      "tema": "Ley de Coulomb",
+      "dificultad": "Intermedio",
+      "enunciado": "Dos cargas puntuales q1 = +2 uC y q2 = +8 uC estan separadas 30 cm en el vacio. Calcule el modulo de la fuerza de repulsion (k = 9x10^9 N m^2/C^2).",
+      "opciones": {
+        "A": "0.8 N",
+        "B": "1.6 N",
+        "C": "2.4 N",
+        "D": "3.2 N",
+        "E": "4.0 N"
+      },
+      "clave": "B",
+      "teoria": "F = k*|q1*q2| / d^2 = 9x10^9 * 16x10^-12 / 0.09 = 1.6 N.",
+      "solucion": "F = 1.6 N."
+    },
+    {
+      "numero": 34,
+      "curso": "Fisica",
+      "tema": "Ley de Ohm y Circuitos",
+      "dificultad": "Basico",
+      "enunciado": "Por una resistencia de 6 ohm conectada a una fuente de 12 V circula una corriente continua. Calcule dicha intensidad.",
+      "opciones": {
+        "A": "1 A",
+        "B": "2 A",
+        "C": "3 A",
+        "D": "4 A",
+        "E": "5 A"
+      },
+      "clave": "B",
+      "teoria": "V = I * R => I = V / R.",
+      "solucion": "I = 12 / 6 = 2 A."
+    },
+    {
+      "numero": 35,
+      "curso": "Quimica",
+      "tema": "Materia y Mezclas",
+      "dificultad": "Basico",
+      "enunciado": "Indique la proposicion que corresponde a una mezcla homogenea:",
+      "opciones": {
+        "A": "Agua con arena",
+        "B": "Humo",
+        "C": "Solucion de salmuera",
+        "D": "Emulsion de aceite en agua",
+        "E": "Granito"
+      },
+      "clave": "C",
+      "teoria": "Una mezcla homogenea presenta una sola fase uniforme (solucion).",
+      "solucion": "La salmuera es agua y NaCl disuelto en una sola fase."
+    },
+    {
+      "numero": 36,
+      "curso": "Quimica",
+      "tema": "Estructura Atomica",
+      "dificultad": "Basico",
+      "enunciado": "Un atomo neutro tiene numero de masa A = 35 y contiene 18 neutrones en su nucleo. Halle su numero atomico Z.",
+      "opciones": {
+        "A": "15",
+        "B": "16",
+        "C": "17",
+        "D": "18",
+        "E": "19"
+      },
+      "clave": "C",
+      "teoria": "A = Z + n => Z = A - n.",
+      "solucion": "Z = 35 - 18 = 17."
+    },
+    {
+      "numero": 37,
+      "curso": "Quimica",
+      "tema": "Configuracion Electronica",
+      "dificultad": "Intermedio",
+      "enunciado": "Determine el numero de electrones desapareados en el estado basal del atomo de nitrogeno (Z = 7).",
+      "opciones": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "3",
+        "E": "4"
+      },
+      "clave": "D",
+      "teoria": "N (Z=7): 1s2 2s2 2p3. Por la regla de Hund, el subnivel 2p tiene 3 orbitales semillenos.",
+      "solucion": "3 electrones desapareados."
+    },
+    {
+      "numero": 38,
+      "curso": "Quimica",
+      "tema": "Tabla Periodica Moderna",
+      "dificultad": "Intermedio",
+      "enunciado": "Un elemento presenta configuracion terminal 3p4. ¿A que periodo y grupo de la tabla periodica pertenece?",
+      "opciones": {
+        "A": "Periodo 3, Grupo IVA (14)",
+        "B": "Periodo 3, Grupo VIA (16)",
+        "C": "Periodo 4, Grupo VIA (16)",
+        "D": "Periodo 3, Grupo VIIA (17)",
+        "E": "Periodo 4, Grupo IVA (14)"
+      },
+      "clave": "B",
+      "teoria": "Mayor nivel = 3 (periodo). Electrones de valencia: s2 p4 = 6 (Grupo VIA o 16).",
+      "solucion": "Periodo 3, Grupo VIA (16)."
+    },
+    {
+      "numero": 39,
+      "curso": "Quimica",
+      "tema": "Enlace Quimico y Polaridad",
+      "dificultad": "Intermedio",
+      "enunciado": "Identifique el compuesto que presenta predominantemente enlace ionico:",
+      "opciones": {
+        "A": "CO2",
+        "B": "CH4",
+        "C": "NaCl",
+        "D": "H2O",
+        "E": "NH3"
+      },
+      "clave": "C",
+      "teoria": "Enlace ionico: Metal alcalino (Na) + No metal halogeno (Cl) con delta_EN > 1.7.",
+      "solucion": "NaCl es ionico clasico."
+    },
+    {
+      "numero": 40,
+      "curso": "Quimica",
+      "tema": "Nomenclatura Inorganica",
+      "dificultad": "Intermedio",
+      "enunciado": "Determine el estado de oxidacion del azufre en el acido sulfurico (H2SO4).",
+      "opciones": {
+        "A": "+2",
+        "B": "+4",
+        "C": "+6",
+        "D": "-2",
+        "E": "+3"
+      },
+      "clave": "C",
+      "teoria": "2(+1) + x + 4(-2) = 0 => 2 + x - 8 = 0 => x = +6.",
+      "solucion": "E.O. del azufre = +6."
+    },
+    {
+      "numero": 41,
+      "curso": "Quimica",
+      "tema": "Balance de Ecuaciones",
+      "dificultad": "Intermedio",
+      "enunciado": "Al balancear por tanteo la reaccion de combustion completa del propano: C3H8 + O2 -> CO2 + H2O, halle la suma de todos los coeficientes estequiometricos enteros minimos.",
+      "opciones": {
+        "A": "11",
+        "B": "12",
+        "C": "13",
+        "D": "14",
+        "E": "15"
+      },
+      "clave": "C",
+      "teoria": "1 C3H8 + 5 O2 -> 3 CO2 + 4 H2O. Coeficientes: 1 + 5 + 3 + 4 = 13.",
+      "solucion": "Suma = 13."
+    },
+    {
+      "numero": 42,
+      "curso": "Quimica",
+      "tema": "Estequiometria y Masa Molar",
+      "dificultad": "Basico",
+      "enunciado": "¿Cuantos gramos de agua (H2O) equivalen a 4 moles de dicha sustancia? (H=1, O=16).",
+      "opciones": {
+        "A": "54",
+        "B": "72",
+        "C": "90",
+        "D": "108",
+        "E": "126"
+      },
+      "clave": "B",
+      "teoria": "Masa molar H2O = 18 g/mol. m = n * M.",
+      "solucion": "m = 4 * 18 = 72 g."
+    },
+    {
+      "numero": 43,
+      "curso": "Quimica",
+      "tema": "Gases Ideales",
+      "dificultad": "Intermedio",
+      "enunciado": "Calcule el volumen ocupado por 2 moles de un gas ideal en condiciones normales (C.N. a 1 atm y 0 grados C).",
+      "opciones": {
+        "A": "11.2 L",
+        "B": "22.4 L",
+        "C": "33.6 L",
+        "D": "44.8 L",
+        "E": "56.0 L"
+      },
+      "clave": "D",
+      "teoria": "1 mol en C.N. ocupa 22.4 L => 2 moles ocupan 44.8 L.",
+      "solucion": "V = 2 * 22.4 = 44.8 L."
+    },
+    {
+      "numero": 44,
+      "curso": "Quimica",
+      "tema": "Quimica Organica y Alquenos",
+      "dificultad": "Intermedio",
+      "enunciado": "Identifique la formula global de un alqueno lineal con 6 atomos de carbono:",
+      "opciones": {
+        "A": "C6H10",
+        "B": "C6H12",
+        "C": "C6H14",
+        "D": "C6H16",
+        "E": "C6H6"
+      },
+      "clave": "B",
+      "teoria": "Formula general de alquenos aciclicos monoinsaturados: CnH2n.",
+      "solucion": "Para n=6 => C6H12 (hexeno)."
+    },
+    {
+      "numero": 45,
+      "curso": "Razonamiento Matematico",
+      "tema": "Sucesiones Numericas",
+      "dificultad": "Basico",
+      "enunciado": "Determine el termino que continua en la sucesion: 3, 8, 13, 18, 23, ...",
+      "opciones": {
+        "A": "24",
+        "B": "26",
+        "C": "28",
+        "D": "30",
+        "E": "32"
+      },
+      "clave": "C",
+      "teoria": "Progresion aritmetica con razon constante r = +5.",
+      "solucion": "Termino siguiente = 23 + 5 = 28."
+    },
+    {
+      "numero": 46,
+      "curso": "Razonamiento Matematico",
+      "tema": "Edades y Planteo",
+      "dificultad": "Intermedio",
+      "enunciado": "Un padre tiene 42 anos y su hijo 12 anos. ¿Dentro de cuantos anos la edad del padre sera el doble de la del hijo?",
+      "opciones": {
+        "A": "16",
+        "B": "17",
+        "C": "18",
+        "D": "19",
+        "E": "20"
+      },
+      "clave": "C",
+      "teoria": "P + x = 2*(H + x) => x = P - 2H.",
+      "solucion": "x = 42 - 2*(12) = 18 anos."
+    },
+    {
+      "numero": 47,
+      "curso": "Razonamiento Matematico",
+      "tema": "Operadores Matematicos",
+      "dificultad": "Basico",
+      "enunciado": "Se define el operador a # b = 2a + 3b - 1. Calcule el valor de 5 # 4.",
+      "opciones": {
+        "A": "19",
+        "B": "20",
+        "C": "21",
+        "D": "22",
+        "E": "23"
+      },
+      "clave": "C",
+      "teoria": "Regla de definicion directa: sustitucion algebraica de operandos.",
+      "solucion": "2(5) + 3(4) - 1 = 21."
+    },
+    {
+      "numero": 48,
+      "curso": "Razonamiento Matematico",
+      "tema": "Conteo de Figuras",
+      "dificultad": "Basico",
+      "enunciado": "Un triangulo tiene su vertice principal dividido en 7 sectores simples alineados sobre la base. ¿Cuantos triangulos se cuentan en total?",
+      "opciones": {
+        "A": "25",
+        "B": "27",
+        "C": "28",
+        "D": "29",
+        "E": "31"
+      },
+      "clave": "C",
+      "teoria": "Numero de triangulos = n(n+1)/2.",
+      "solucion": "7*8/2 = 28 triangulos."
+    },
+    {
+      "numero": 49,
+      "curso": "Razonamiento Matematico",
+      "tema": "Certezas y Peor Caso",
+      "dificultad": "Intermedio",
+      "enunciado": "En una urna opaca hay 6 bolas rojas, 8 bolas azules y 10 bolas blancas. ¿Cual es la minima cantidad de bolas que deben extraerse al azar para tener con certeza al menos 2 bolas del mismo color?",
+      "opciones": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6",
+        "E": "7"
+      },
+      "clave": "B",
+      "teoria": "Principio del palomar (peor caso): extraer 1 de cada uno de los 3 colores (3 bolas) + 1 bola adicional = 4.",
+      "solucion": "Minimo = 3 + 1 = 4 bolas."
+    },
+    {
+      "numero": 50,
+      "curso": "Razonamiento Matematico",
+      "tema": "Cronometria y Angulo de Agujas",
+      "dificultad": "Intermedio",
+      "enunciado": "¿Que angulo convexo forman las manecillas del reloj a las 3:20?",
+      "opciones": {
+        "A": "15°",
+        "B": "20°",
+        "C": "25°",
+        "D": "30°",
+        "E": "35°"
+      },
+      "clave": "B",
+      "teoria": "θ = |(11/2)*M - 30*H| = |(11/2)*20 - 30*3| = |110 - 90| = 20°.",
+      "solucion": "Angulo = 20°."
+    },
+    {
+      "numero": 51,
+      "curso": "Razonamiento Matematico",
+      "tema": "Ordenamiento Lineal",
+      "dificultad": "Basico",
+      "enunciado": "Cinco amigos viven en un edificio de 5 pisos (un amigo por piso). Carlos vive arriba de Beto pero abajo de Daniel. Andres vive en el primer piso y Eduardo vive arriba de Daniel. ¿Quien vive en el 4to piso?",
+      "opciones": {
+        "A": "Andres",
+        "B": "Beto",
+        "C": "Carlos",
+        "D": "Daniel",
+        "E": "Eduardo"
+      },
+      "clave": "D",
+      "teoria": "Orden de pisos de abajo a arriba: 1=Andres, 2=Beto, 3=Carlos, 4=Daniel, 5=Eduardo.",
+      "solucion": "En el 4to piso vive Daniel."
+    },
+    {
+      "numero": 52,
+      "curso": "Razonamiento Matematico",
+      "tema": "Suficiencia de Datos",
+      "dificultad": "Avanzado",
+      "enunciado": "Se desea determinar el valor numerico de x. Informacion brindada: (I) 2x + 6 = 14; (II) x^2 - 16 = 0. Para resolver el problema:",
+      "opciones": {
+        "A": "La informacion I es suficiente sola",
+        "B": "La informacion II es suficiente sola",
+        "C": "Es necesario usar ambas informaciones juntas",
+        "D": "Cada una por separado es suficiente",
+        "E": "Las dos juntas son insuficientes"
+      },
+      "clave": "A",
+      "teoria": "De (I): 2x=8 => x=4 (unico). De (II): x=4 o x=-4 (no es unico). Por ende (I) sola es suficiente.",
+      "solucion": "Opcion A."
+    },
+    {
+      "numero": 53,
+      "curso": "Razonamiento Verbal",
+      "tema": "Precision Lexica",
+      "dificultad": "Basico",
+      "enunciado": "Elija el termino con mayor precision lexica para reemplazar la palabra subrayada: 'El decano de la facultad *puso* su renuncia formal ante el rectorado.'",
+      "opciones": {
+        "A": "propuso",
+        "B": "presento",
+        "C": "asigno",
+        "D": "dicto",
+        "E": "planteo"
+      },
+      "clave": "B",
+      "teoria": "En el contexto administrativo formal, una renuncia o solicitud se 'presenta' ante la autoridad competente.",
+      "solucion": "Termino correcto: presento."
+    },
+    {
+      "numero": 54,
+      "curso": "Razonamiento Verbal",
+      "tema": "Conectores Logicos",
+      "dificultad": "Intermedio",
+      "enunciado": "Complete los espacios con los conectores adecuados: 'Estudio con ahinco durante meses, ______ no logro la vacante en el primer intento; ______, persistio en su preparacion hasta ingresar.'",
+      "opciones": {
+        "A": "porque - en efecto",
+        "B": "sin embargo - por ende",
+        "C": "pero - no obstante",
+        "D": "ya que - asi",
+        "E": "aunque - es decir"
+      },
+      "clave": "C",
+      "teoria": "Primer conector de contraste u oposicion moderada ('pero'), segundo conector de contraste concesivo ('no obstante').",
+      "solucion": "'pero - no obstante'."
+    },
+    {
+      "numero": 55,
+      "curso": "Razonamiento Verbal",
+      "tema": "Eliminacion de Oraciones",
+      "dificultad": "Intermedio",
+      "enunciado": "(I) La microscopia digital transforma las laminas histologicas en gigapixeles. (II) Estos archivos WSI permiten telepatologia soberana. (III) Las redes neuronales convolucionales analizan la celularidad. (IV) El microscopio optico clasico requiere mantenimiento periodico de espejos y prismas. (V) Asi, el diagnostico digital optimiza la medicina rural. ¿Que oracion debe eliminarse por impertinencia?",
+      "opciones": {
+        "A": "I",
+        "B": "II",
+        "C": "III",
+        "D": "IV",
+        "E": "V"
+      },
+      "clave": "D",
+      "teoria": "Criterio de impertinencia tematica: la oracion IV se enfoca en microscopia tradicional mecanica, desentonando con el eje de patologia digital computarizada.",
+      "solucion": "Se elimina la oracion IV."
+    },
+    {
+      "numero": 56,
+      "curso": "Razonamiento Verbal",
+      "tema": "Cohesion y Coherencia Textual",
+      "dificultad": "Intermedio",
+      "enunciado": "Ordene logicamente los enunciados sobre la Universidad Nacional de Ingenieria (UNI): (1) En 1955 paso a denominarse oficialmente Universidad Nacional de Ingenieria. (2) Fue fundada en 1876 bajo el nombre de Escuela Especial de Ingenieros de Construccion Civil y de Minas. (3) Su creador e impulsor principal fue el ilustre ingeniero polaco Eduardo de Habich. (4) Hoy es el maximo referente cientifico y tecnologico del Peru.",
+      "opciones": {
+        "A": "2 - 3 - 1 - 4",
+        "B": "3 - 2 - 1 - 4",
+        "C": "2 - 1 - 3 - 4",
+        "D": "1 - 2 - 3 - 4",
+        "E": "3 - 1 - 2 - 4"
+      },
+      "clave": "A",
+      "teoria": "Secuencia cronologica e historica: Fundacion en 1876 (2) -> Promotor Habich (3) -> Cambio de nombre en 1955 (1) -> Actualidad (4).",
+      "solucion": "Orden: 2 - 3 - 1 - 4."
+    },
+    {
+      "numero": 57,
+      "curso": "Humanidades",
+      "tema": "Historia del Peru y Fundacion UNI",
+      "dificultad": "Intermedio",
+      "enunciado": "Durante que gobierno republicano peruano se fundo la Escuela Especial de Ingenieros de Construccion Civil y de Minas (actual UNI) en 1876:",
+      "opciones": {
+        "A": "Ramon Castilla",
+        "B": "Manuel Pardo y Lavalle",
+        "C": "Nicolas de Pierola",
+        "D": "Andres Avelino Caceres",
+        "E": "Augusto B. Leguia"
+      },
+      "clave": "B",
+      "teoria": "Fue fundada en 1876 durante el gobierno del presidente Manuel Pardo y Lavalle (primer presidente civil del Peru), con el liderazgo de Eduardo de Habich.",
+      "solucion": "Manuel Pardo y Lavalle."
+    },
+    {
+      "numero": 58,
+      "curso": "Humanidades",
+      "tema": "Geografia del Peru - Las Ocho Regiones Naturales",
+      "dificultad": "Basico",
+      "enunciado": "Segun la clasificacion de Javier Pulgar Vidal, la region natural ubicada entre los 3500 y 4000 m.s.n.m. de clima templado-frio se denomina:",
+      "opciones": {
+        "A": "Yunga",
+        "B": "Quechua",
+        "C": "Suni o Jalca",
+        "D": "Puna",
+        "E": "Janca o Cordillera"
+      },
+      "clave": "C",
+      "teoria": "Chala (0-500), Yunga (500-2300), Quechua (2300-3500), Suni (3500-4000), Puna (4000-4800), Janca (4800-6768).",
+      "solucion": "Region Suni o Jalca."
+    },
+    {
+      "numero": 59,
+      "curso": "Humanidades",
+      "tema": "Economia General - Politica Monetaria",
+      "dificultad": "Intermedio",
+      "enunciado": "En la economia peruana, el organismo constitucionalmente autonomo cuya finalidad exclusiva es preservar la estabilidad monetaria es el:",
+      "opciones": {
+        "A": "Ministerio de Economia y Finanzas (MEF)",
+        "B": "Banco Central de Reserva del Peru (BCRP)",
+        "C": "Superintendencia de Banca y Seguros (SBS)",
+        "D": "Banco de la Nacion (BN)",
+        "E": "Contraloria General de la Republica"
+      },
+      "clave": "B",
+      "teoria": "Articulo 84 de la Constitucion Politica del Peru: La finalidad del BCRP es preservar la estabilidad monetaria controlando la inflacion.",
+      "solucion": "Banco Central de Reserva del Peru (BCRP)."
+    },
+    {
+      "numero": 60,
+      "curso": "Humanidades",
+      "tema": "Logica Proposicional",
+      "dificultad": "Intermedio",
+      "enunciado": "Determine la proposicion logicamente equivalente a la condicional material 'p -> q':",
+      "opciones": {
+        "A": "p y ~q",
+        "B": "~p o q",
+        "C": "~p y ~q",
+        "D": "p o ~q",
+        "E": "~q -> ~p es tautologia pero su forma disyuntiva es ~p o ~q"
+      },
+      "clave": "B",
+      "teoria": "Ley de la condicional o implicacion material: (p -> q) ≡ (~p v q).",
+      "solucion": "Equivalencia fundamental: ~p o q."
+    }
+  ]
+}

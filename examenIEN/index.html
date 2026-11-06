@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Plataforma Soberana de Entrenamiento y Predicción Extrema para el Ingreso Escolar Nacional (IEN) de la Universidad Nacional de Ingeniería (UNI) - JC PATH LAB & Dr. José Castillo">
+  <title>JC PATH LAB | Simulador Predictivo IEN UNI 2026 (60 Preguntas Canónicas)</title>
+  
+  <!-- Estilos CSS Responsivos Avanzados -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- MathJax para visualización matemática impecable de LaTeX -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="vendor/mathjax/tex-mml-chtml.js" id="MathJax-script" async></script>
+</head>
+<body>
+
+  <!-- Top Header Institucional y Psicométrico -->
+  <header class="header-top">
+    <div class="header-container">
+      <div class="brand-section">
+        <span class="brand-badge">JC PATH LAB</span>
+        <div class="brand-titles">
+          <h1>UNIVERSIDAD NACIONAL DE INGENIERÍA</h1>
+          <p>Concurso de Admisión: Ingreso Escolar Nacional (IEN) &bull; 5to de Secundaria (~100% Certeza)</p>
+        </div>
+      </div>
+      <div class="header-meta">
+        <div class="user-pill">
+          <span class="status-indicator"></span>
+          <span>Dra. Castillo &bull; Cómputo General IEN UNI</span>
+        </div>
+        <div class="model-badge" title="Estructura Canónica IEN: 60 Preguntas (24 Matemática, 10 Física, 10 Química, 16 Aptitud/Humanidades)">
+          <span>🎯 Modelo Psicométrico IEN (Markov + TRI)</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Control & Status Bar -->
+  <div class="control-bar">
+    <div class="control-container">
+      <div class="selectors-group">
+        <div class="select-wrapper">
+          <label for="examSelect" class="sr-only">Seleccionar Examen o Modo</label>
+          <select id="examSelect" aria-label="Seleccionar Examen o Generador"></select>
+        </div>
+        <div class="select-wrapper">
+          <label for="subjectFilterSelect" class="sr-only">Filtrar por Área</label>
+          <select id="subjectFilterSelect" aria-label="Filtrar por Área">
+            <option value="ALL">Todas las Áreas (60 Preguntas - 3h)</option>
+            <option value="Matemática">Matemática (Preguntas 01-24)</option>
+            <option value="Física">Física (Preguntas 25-34)</option>
+            <option value="Química">Química (Preguntas 35-44)</option>
+            <option value="Aptitud">Aptitud y Humanidades (45-60)</option>
+          </select>
+        </div>
+        <button id="generateNewBtn" class="btn btn-generator" title="Genera un nuevo simulacro dinámico IEN permutando variables manteniendo 100% los arquetipos oficiales">
+          <span class="sparkle-icon">✨</span>
+          <span class="btn-text">Generar Nuevo Simulacro IEN (IA)</span>
+        </button>
+      </div>
+
+      <div class="control-actions">
+        <!-- Toggle para abrir/cerrar Ficha Óptica en Móviles y Tablets -->
+        <button id="toggleSheetBtn" class="btn btn-sheet-toggle" aria-label="Abrir Ficha Óptica">
+          <span>📋 Ficha Óptica</span>
+          <span class="badge-mini" id="sheetAnsweredBadge">0/60</span>
+        </button>
+
+        <!-- Cronómetro Oficial UNI con Alerta (3 Horas) -->
+        <div class="timer-box" id="timerBox" title="Tiempo reglamentario oficial: 3 horas (180 minutos)">
+          <span class="timer-icon">⏱</span>
+          <span id="timerDisplay">03:00:00</span>
+        </div>
+
+        <!-- Finalizar y Calificar -->
+        <button id="finishBtn" class="btn btn-finish">Finalizar Prueba</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner de Notificación / Toast de Generación Dinámica -->
+  <div id="dynamicAlert" class="dynamic-alert-banner" style="display:none;">
+    <span class="alert-icon">⚡</span>
+    <span id="dynamicAlertText">Simulacro Dinámico Predictivo IEN Generado con Éxito (100% Arquetipos Oficiales UNI)</span>
+    <button id="closeAlertBtn" class="close-alert">&times;</button>
+  </div>
+
+  <!-- Layout Principal de Examen -->
+  <main class="main-layout">
+    
+    <!-- Columna Izquierda: Tarjeta de la Pregunta Actual -->
+    <section class="question-card" id="questionCard">
+      <div class="question-header">
+        <div class="q-main-title">
+          <span class="q-number-title" id="qNumBadge">PREGUNTA 1 / 60</span>
+          <span class="q-archetype-tag" id="qArchetypeTag">Arquetipo Canónico IEN</span>
+        </div>
+        <div class="q-badge-group">
+          <span class="badge badge-subject" id="qSubjectBadge">MATERIA</span>
+          <span class="badge badge-topic" id="qTopicBadge">SUBTEMA</span>
+          <span class="badge badge-prob" id="qProbBadge">🎯 CERTEZA: 98.5%</span>
+          <span class="badge badge-nucleo" id="qNucleoBadge">⭐ INNEGABLE IEN</span>
+          <span class="badge badge-diff" id="qDiffBadge">INTERMEDIO</span>
+          <span class="badge badge-tri" id="qTriBadge">θ ∈ [+1.0, +1.6]</span>
+        </div>
+      </div>
+
+      <div class="question-statement" id="qStatement">
+        Cargando enunciado analítico...
+      </div>
+
+      <div class="options-list" id="optionsContainer">
+        <!-- Opciones generadas dinámicamente A, B, C, D, E -->
+      </div>
+
+      <div class="question-nav-actions">
+        <div class="nav-btn-group">
+          <button id="prevBtn" class="btn btn-outline" title="Pregunta anterior (Flecha Izquierda)">&larr; Anterior</button>
+          <button id="nextBtn" class="btn btn-primary" title="Pregunta siguiente (Flecha Derecha)">Siguiente &rarr;</button>
+        </div>
+        <div class="util-btn-group">
+          <button id="markReviewBtn" class="btn btn-review" title="Marcar para revisión posterior (Barra Espaciadora)">☆ Marcar Revisión</button>
+          <button id="clearAnsBtn" class="btn btn-outline" title="Borrar marcación actual">Borrar</button>
+        </div>
+      </div>
+
+      <!-- Atajos de teclado para entrenamiento de alta velocidad -->
+      <div class="keyboard-hints">
+        <span><strong>Atajos:</strong> [1-5] o [A-E] marcar &bull; [←/→] navegar &bull; [Espacio] revisión &bull; [Delete] borrar</span>
+      </div>
+    </section>
+
+    <!-- Columna Derecha: Ficha Óptica UNI Interactiva -->
+    <aside class="optical-sheet-card" id="opticalSheetCard">
+      <div class="sheet-title">
+        <div class="sheet-title-text">
+          <span>FICHA ÓPTICA DIGITAL IEN UNI</span>
+          <span class="sheet-subtitle">CONCURSO INGRESO ESCOLAR NACIONAL</span>
+        </div>
+        <button id="closeSheetMobileBtn" class="close-sheet-mobile" aria-label="Cerrar Ficha">&times;</button>
+      </div>
+
+      <div class="sheet-summary">
+        <div class="stat-pill stat-answered">
+          <span class="stat-num" id="answeredCount">0</span>
+          <span class="stat-lbl">Respondidas</span>
+        </div>
+        <div class="stat-pill stat-pending">
+          <span class="stat-num" id="pendingCount">60</span>
+          <span class="stat-lbl">En Blanco</span>
+        </div>
+        <div class="stat-pill stat-review">
+          <span class="stat-num" id="reviewCount">0</span>
+          <span class="stat-lbl">Revisión</span>
+        </div>
+      </div>
+
+      <div class="sheet-legend">
+        <span><span class="legend-dot dot-active"></span> Actual</span>
+        <span><span class="legend-dot dot-answered"></span> Marcada</span>
+        <span><span class="legend-dot dot-review"></span> Revisar</span>
+        <span><span class="legend-dot dot-blank"></span> En Blanco</span>
+      </div>
+
+      <!-- Matriz de burbujas 1 a 60 -->
+      <div class="bubble-grid" id="bubbleGrid">
+        <!-- Generado dinámicamente -->
+      </div>
+    </aside>
+  </main>
+
+  <!-- Modal de Calificación y Solucionario UNI -->
+  <div class="modal-overlay" id="modalOverlay" style="display:none;"></div>
+  <div class="results-modal" id="resultsModal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-header">
+      <div class="modal-title-group">
+        <h2 id="modalTitle">RESULTADO OFICIAL DE EVALUACIÓN IEN UNI</h2>
+        <p class="modal-subtitle">Calificación Oficial UNI: Correcta: +5.0 | Incorrecta: -1.025 | Blanco: 0.0</p>
+      </div>
+      <button id="closeResultsBtn" class="modal-close" aria-label="Cerrar">&times;</button>
+    </div>
+
+    <div class="modal-body">
+      <!-- Tarjeta de Puntaje Total -->
+      <div class="score-card">
+        <div class="score-main">
+          <span class="score-val" id="scoreNumber">0.000</span>
+          <span class="score-max" id="scoreMaxLabel">/ 300.000 pts</span>
+        </div>
+        <div class="score-percent" id="scorePercentLabel">Rendimiento: 0.0%</div>
+      </div>
+
+      <!-- Métricas del Desempeño -->
+      <div class="modal-stats-grid">
+        <div class="stat-box box-correct">
+          <span class="box-val" id="correctCount">0</span>
+          <span class="box-lbl">Correctas (+5.0)</span>
+        </div>
+        <div class="stat-box box-incorrect">
+          <span class="box-val" id="incorrectCount">0</span>
+          <span class="box-lbl">Incorrectas (-1.025)</span>
+        </div>
+        <div class="stat-box box-blank">
+          <span class="box-val" id="blankCount">60</span>
+          <span class="box-lbl">En Blanco (0.0)</span>
+        </div>
+      </div>
+
+      <!-- Carreras Alcanzables según Puntaje IEN -->
+      <div class="admitted-careers-section">
+        <h3>Diagnóstico de Ingreso a Facultades UNI:</h3>
+        <ul id="careerList" class="career-list">
+          <!-- Generado dinámicamente -->
+        </ul>
+      </div>
+
+      <!-- Solucionario Completo y Detallado -->
+      <div class="solutions-section">
+        <h3>Solucionario Detallado y Fundamentos Teóricos</h3>
+        <div id="solutionsContainer" class="solutions-container">
+          <!-- Preguntas con su clave, teoría y resolución paso a paso -->
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button id="restartBtn" class="btn btn-outline">Reintentar Mismo Examen</button>
+      <button id="modalGenNewBtn" class="btn btn-generator">✨ Generar Otro Simulacro IEN</button>
+    </div>
+  </div>
+
+  <!-- Carga del Banco Maestro Predictivo IEN y Lógica de Aplicación -->
+  <script src="data/banco_predictivo_ien.js"></script>
+  <script src="js/app_ien.js"></script>
+</body>
+</html>

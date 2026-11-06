@@ -1,0 +1,171 @@
+MATERIA | TEMA | FRECUENCIA (44 PROCESOS) | PROBABILIDAD REPETICION (%) | ARQUETIPOS DISTINTOS
+==============================================================================================================
+Razonamiento Verbal | Analogías Verbales | 88 veces | 200.0% | 2 arquetipos
+Razonamiento Verbal | Precisión Léxica | 88 veces | 200.0% | 2 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Sinonimia | 88 veces | 200.0% | 1 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Antonimia | 88 veces | 200.0% | 1 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Analogía | 88 veces | 200.0% | 1 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Precisión Léxica | 88 veces | 200.0% | 1 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Conectores | 88 veces | 200.0% | 1 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Oración Eliminada | 88 veces | 200.0% | 1 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Plan de Redacción | 88 veces | 200.0% | 1 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Comprensión Lectora | 88 veces | 200.0% | 1 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Término Excluido | 88 veces | 200.0% | 1 arquetipos
+Razonamiento Matemático | Sucesiones y Progresiones Aritméticas | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Series Geométricas Infinitas Convergentes | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Operadores Matemáticos con Regla Explícita | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Operaciones Binarias en Conjuntos Finitos | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Problemas sobre Certezas | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Planteo de Ecuaciones: Edades | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Sistemas Lineales Aplicados a Monedas | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Cinemática y Problemas de Móviles | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Cronometría: Campanadas e Intervalos | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Cronometría: Ángulos entre Manecillas del Reloj | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Reducción a la Unidad: Grifos y Desagües | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Tanto por Ciento: Descuentos Sucesivos | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Análisis Combinatorio: Principios Fundamentales | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Análisis Combinatorio: Permutación Circular | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Análisis Combinatorio: Combinaciones Simples | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Probabilidades: Regla de Laplace | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Probabilidad Condicional | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Razonamiento Inductivo | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Conteo de Figuras Geométricas | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Áreas de Regiones Sombreadas | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Orden de Información: Ordenamiento Lineal | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Orden de Información: Distribución Circular | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Cuadros de Decisiones y Test de Asignación | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Problemas de Trasvases | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Relaciones de Parentesco | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Lógica Recreativa: Verdades y Mentiras | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Cortes y Secciones Longitudianles | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Transmisión de Movimiento: Engranajes | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Distribuciones Numéricas en Arreglos | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Cuadrados Mágicos Aditivos de Orden 3 | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Pesadas y Balanza de Dos Platillos | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Rutas y Trayectorias Mínimas | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Optimización Algebraica: Máximos y Mínimos | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Suficiencia de Datos: Geometría | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Matemático | Suficiencia de Datos: Aritmética y Álgebra | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Sinonimia Contextual | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Antonimia Contextual | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Conectores Lógicos Interoracionales | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Conectores Lógicos | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Información Eliminada / Inatingencia | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Información Eliminada / Redundancia | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Coherencia Textual: Plan de Redacción | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Plan de Redacción | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Inclusión de Enunciados | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Sentido Conotativo | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Extrapolación | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Incompatibilidad | 44 veces | 100.0% | 1 arquetipos
+Razonamiento Verbal | Aptitud Verbal: Inferencia | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Historia del Perú: Periodo Precerámico y Formativo | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Historia del Perú: Horizonte Medio (Imperio Wari) | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Historia del Perú: Tahuantinsuyo y Organización Económica | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Historia del Perú: Virreinato y Reformas Borbónicas | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Historia del Perú: Guerra del Guano y del Salitre | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Historia del Perú: República Aristocrática y Oncenio | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Historia Universal: Grecia Clásica | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Historia Universal: Feudalismo Medieval | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Historia Universal: Revolución Francesa | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Historia Universal: Revolución Industrial | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Historia Universal: Primera Guerra Mundial | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Historia Universal: Guerra Fría | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Geografía: Estructura de la Atmósfera | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Geografía: Geodinámica Interna y Tectónica de Placas | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Geografía del Perú: Las 8 Regiones Naturales | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Geografía del Perú: El Mar Peruano y Corriente de Humboldt | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Geografía: Cuencas Hidrográficas del Perú | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Geografía Ambiental: Efecto Invernadero y Calentamiento Global | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Economía: Factores Productivos y Retribuciones | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Economía: Estructuras de Mercado | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Economía: Ley de la Oferta y la Demanda | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Economía: Dinero e Inflación | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Economía: Agregados Macroeconómicos (PBI) | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Economía: Sector Externo y Tipo de Cambio | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Filosofía: Periodo Presocrático | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Filosofía: Gnoseología y Teoría del Conocimiento | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Filosofía: Epistemología y Método Científico | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Lógica Formal: Leyes Proposicionales | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Lógica Formal: Falacias No Formales | 44 veces | 100.0% | 1 arquetipos
+Humanidades | Filosofía: Ética y Deontología | 44 veces | 100.0% | 1 arquetipos
+Aritmética | Teoría de Conjuntos y Cardinales | 44 veces | 100.0% | 1 arquetipos
+Aritmética | Sistemas de Numeración y Descomposición Polinómica | 44 veces | 100.0% | 1 arquetipos
+Aritmética | Divisibilidad y Teorema de Euler / Fermat | 44 veces | 100.0% | 1 arquetipos
+Aritmética | Estudio de los Divisores de un Entero Positivo | 44 veces | 100.0% | 1 arquetipos
+Aritmética | Máximo Común Divisor y Mínimo Común Múltiplo | 44 veces | 100.0% | 1 arquetipos
+Aritmética | Razones Geométricas y Proporcionalidad | 44 veces | 100.0% | 1 arquetipos
+Aritmética | Regla del Tanto por Ciento y Aplicaciones Comerciales | 44 veces | 100.0% | 1 arquetipos
+Aritmética | Promedios (Aritmético, Geométrico y Armónico) | 44 veces | 100.0% | 1 arquetipos
+Aritmética | Magnitudes Inversamente Proporcionales y Regla de Tres | 44 veces | 100.0% | 1 arquetipos
+Aritmética | Regla de Mezcla y Grado Alcohólico | 44 veces | 100.0% | 1 arquetipos
+Álgebra | Teoría de Exponentes y Radicales Infinitos | 44 veces | 100.0% | 1 arquetipos
+Álgebra | Polinomios Homogéneos y Grados de Homogeneidad | 44 veces | 100.0% | 1 arquetipos
+Álgebra | Identidades de Legendre y Cauchy (Productos Notables) | 44 veces | 100.0% | 1 arquetipos
+Álgebra | Teorema del Resto y Artificio de Cambio de Variable | 44 veces | 100.0% | 1 arquetipos
+Álgebra | Propiedades de los Determinantes | 44 veces | 100.0% | 1 arquetipos
+Álgebra | Ecuaciones Cuadráticas y Relaciones de Cardano-Viète | 44 veces | 100.0% | 1 arquetipos
+Álgebra | Inecuaciones Fraccionarias y Método de Puntos Críticos | 44 veces | 100.0% | 1 arquetipos
+Álgebra | Funciones Reales: Dominio Máximo de una Función Irracional | 44 veces | 100.0% | 1 arquetipos
+Álgebra | Logaritmos y Ecuaciones Logarítmicas | 44 veces | 100.0% | 1 arquetipos
+Álgebra | Progresión Geométrica y Suma de Términos | 44 veces | 100.0% | 1 arquetipos
+Geometría | Ángulos Formados por Bisectrices Interiores | 44 veces | 100.0% | 1 arquetipos
+Geometría | Relaciones Métricas en el Triángulo Rectángulo | 44 veces | 100.0% | 1 arquetipos
+Geometría | Circunferencia y Teorema de Poncelet | 44 veces | 100.0% | 1 arquetipos
+Geometría | Áreas de Regiones Sombreadas y Círculo Inscrito | 44 veces | 100.0% | 1 arquetipos
+Geometría | Poliedros Regulares y Teorema de Euler | 44 veces | 100.0% | 1 arquetipos
+Geometría | Sólidos de Revolución: Cilindro Circular Recto | 44 veces | 100.0% | 1 arquetipos
+Geometría | Cono de Revolución y Área Lateral | 44 veces | 100.0% | 1 arquetipos
+Geometría | Esfera: Superficie y Volumen | 44 veces | 100.0% | 1 arquetipos
+Geometría | Geometría Analítica: Pendiente y Ecuación General de la Recta | 44 veces | 100.0% | 1 arquetipos
+Geometría | Geometría Analítica: La Parábola con Vértice en el Origen | 44 veces | 100.0% | 1 arquetipos
+Trigonometría | Razones Trigonométricas de Ángulos Agudos y Triángulos Notables | 44 veces | 100.0% | 1 arquetipos
+Trigonometría | Identidades Trigonométricas Pitagóricas y Auxiliares | 44 veces | 100.0% | 1 arquetipos
+Trigonometría | Identidades de Arcos Compuestos: Suma y Diferencia de Ángulos | 44 veces | 100.0% | 1 arquetipos
+Trigonometría | Identidades de Arco Doble | 44 veces | 100.0% | 1 arquetipos
+Trigonometría | Transformaciones de Suma a Producto | 44 veces | 100.0% | 1 arquetipos
+Trigonometría | Circunferencia Trigonométrica y Variación de Líneas Trigonométricas | 44 veces | 100.0% | 1 arquetipos
+Trigonometría | Funciones Trigonométricas Inversas y Propiedad de Conmutatividad | 44 veces | 100.0% | 1 arquetipos
+Trigonometría | Ecuaciones Trigonométricas Elementales | 44 veces | 100.0% | 1 arquetipos
+Trigonometría | Resolución de Triángulos: Ley de Senos | 44 veces | 100.0% | 1 arquetipos
+Trigonometría | Resolución de Triángulos: Ley de Cosenos | 44 veces | 100.0% | 1 arquetipos
+Física | Análisis Dimensional y Principio de Homogeneidad de Fourier | 44 veces | 100.0% | 1 arquetipos
+Física | Cinemática: Movimiento Rectilíneo Uniformemente Variado (MRUV) | 44 veces | 100.0% | 1 arquetipos
+Física | Cinemática Bidimensional: Movimiento Parabólico de Caída Libre | 44 veces | 100.0% | 1 arquetipos
+Física | Estática: Primera Condición de Equilibrio en Plano Inclinado | 44 veces | 100.0% | 1 arquetipos
+Física | Estática: Segunda Condición de Equilibrio y Torque | 44 veces | 100.0% | 1 arquetipos
+Física | Dinámica Lineal: Segunda Ley de Newton | 44 veces | 100.0% | 1 arquetipos
+Física | Trabajo y Potencia Mecánica | 44 veces | 100.0% | 1 arquetipos
+Física | Energía Mecánica: Teorema de Conservación | 44 veces | 100.0% | 1 arquetipos
+Física | Cantidad de Movimiento y Teorema del Impulso | 44 veces | 100.0% | 1 arquetipos
+Física | Hidrostática: Principio de Arquímedes y Empuje Hidrostático | 44 veces | 100.0% | 1 arquetipos
+Física | Termodinámica: Primera Ley para un Gas Ideal | 44 veces | 100.0% | 1 arquetipos
+Física | Termodinámica: Eficiencia Máxima de una Máquina de Carnot | 44 veces | 100.0% | 1 arquetipos
+Física | Electrostática: Ley de Coulomb en el Vacío | 44 veces | 100.0% | 1 arquetipos
+Física | Capacitancia y Energía Almacenada en un Condensador | 44 veces | 100.0% | 1 arquetipos
+Física | Electrodinámica: Circuitos y Resistencia Equivalente | 44 veces | 100.0% | 1 arquetipos
+Física | Magnetismo: Fuerza Magnética sobre una Carga en Movimiento | 44 veces | 100.0% | 1 arquetipos
+Física | Inducción Electromagnética: Ley de Faraday | 44 veces | 100.0% | 1 arquetipos
+Física | Ondas Mecánicas y Acústica: Ecuación Fundamental de Onda | 44 veces | 100.0% | 1 arquetipos
+Física | Óptica Geométrica: Refracción de la Luz y Ley de Snell | 44 veces | 100.0% | 1 arquetipos
+Física | Física Moderna: Efecto Fotoeléctrico de Einstein | 44 veces | 100.0% | 1 arquetipos
+Química | Estructura Atómica: Números Cuánticos y Configuración Electrónica | 44 veces | 100.0% | 1 arquetipos
+Química | Tabla Periódica: Variación de la Electronegatividad y Radio Atómico | 44 veces | 100.0% | 1 arquetipos
+Química | Enlace Químico Covalente: Enlaces Sigma ($\sigma$) y Pi ($\pi$) | 44 veces | 100.0% | 1 arquetipos
+Química | Fuerzas Intermoleculares y Puntos de Ebullición | 44 veces | 100.0% | 1 arquetipos
+Química | Nomenclatura Química Inorgánica y Estados de Oxidación | 44 veces | 100.0% | 1 arquetipos
+Química | Reacciones Redox: Balanceo por Método del Cambio en el Número de Oxidación | 44 veces | 100.0% | 1 arquetipos
+Química | Estequiometría: Leyes Ponderales y Reactivo Limitante | 44 veces | 100.0% | 1 arquetipos
+Química | Estado Gaseoso: Ecuación Universal de los Gases Ideales | 44 veces | 100.0% | 1 arquetipos
+Química | Mezcla de Gases: Presión Parcial y Fracción Molar (Ley de Dalton) | 44 veces | 100.0% | 1 arquetipos
+Química | Soluciones Químicas: Cálculo de la Molaridad (M) | 44 veces | 100.0% | 1 arquetipos
+Química | Soluciones: Ley de Dilución | 44 veces | 100.0% | 1 arquetipos
+Química | Cinética Química: Ley de Velocidad y Orden de Reacción | 44 veces | 100.0% | 1 arquetipos
+Química | Equilibrio Químico: Principio de Le Chatelier | 44 veces | 100.0% | 1 arquetipos
+Química | Ácidos y Bases: Concepto y Cálculo del pH | 44 veces | 100.0% | 1 arquetipos
+Química | Equilibrio Iónico del Agua: Relación pH + pOH = 14 | 44 veces | 100.0% | 1 arquetipos
+Química | Electroquímica: Potencial Estándar de Celda Galvánica (Pila Daniell) | 44 veces | 100.0% | 1 arquetipos
+Química | Electroquímica: Primera Ley de Faraday de la Electrólisis | 44 veces | 100.0% | 1 arquetipos
+Química | Química Orgánica: Hidrocarburos Saturados (Alcanos) | 44 veces | 100.0% | 1 arquetipos
+Química | Química Orgánica: Isomería de Cadena y Posición | 44 veces | 100.0% | 1 arquetipos
+Química | Química Orgánica: Nomenclatura IUPAC de Ácidos Carboxílicos | 44 veces | 100.0% | 1 arquetipos

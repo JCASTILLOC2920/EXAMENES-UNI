@@ -1,0 +1,157 @@
+{
+  "titulo": "BANCO HISTÓRICO MAESTRO DE EXÁMENES IEN UNI (2006 - 2026)",
+  "autoridad": "Dr. José Castillo / JC PATH LAB",
+  "fecha_compilacion": "2026-10-29T17:08:15.544348",
+  "total_procesos": 21,
+  "total_preguntas": 1260,
+  "directiva": "100% Offline Soberano, Cero Créditos de Nube",
+  "procesos": [
+    {
+      "proceso": "IEN_UNI_2006",
+      "anio": 2006,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2006",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2007",
+      "anio": 2007,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2007",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2008",
+      "anio": 2008,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2008",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2009",
+      "anio": 2009,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2009",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2010",
+      "anio": 2010,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2010",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2011",
+      "anio": 2011,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2011",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2012",
+      "anio": 2012,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2012",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2013",
+      "anio": 2013,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2013",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2014",
+      "anio": 2014,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2014",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2015",
+      "anio": 2015,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2015",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2016",
+      "anio": 2016,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2016",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2017",
+      "anio": 2017,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2017",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2018",
+      "anio": 2018,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2018",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2019",
+      "anio": 2019,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2019",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2020",
+      "anio": 2020,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2020",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2021",
+      "anio": 2021,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2021",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2022",
+      "anio": 2022,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2022",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2023",
+      "anio": 2023,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2023",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2024",
+      "anio": 2024,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2024",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2025",
+      "anio": 2025,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2025",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    },
+    {
+      "proceso": "IEN_UNI_2026",
+      "anio": 2026,
+      "carpeta": "C:\\Users\\HP\\Desktop\\PROYECTO_UNI_ADMISION_IA\\05_BANCO_INGRESO_ESCOLAR_NACIONAL_IEN_UNI\\IEN_UNI_2026",
+      "preguntas": 60,
+      "claves_verificadas": 60
+    }
+  ]
+}
