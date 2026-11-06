@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Plataforma Soberana de Entrenamiento y Predicción Extrema para el Examen de Admisión de la Universidad Nacional de Ingeniería (UNI) - JC PATH LAB & Dr. José Castillo">
+  <title>JC PATH LAB | Simulador Predictivo Examen de Admisión UNI (~100% Certeza)</title>
+  
+  <!-- Estilos CSS Responsivos Avanzados -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- MathJax para visualización matemática impecable de LaTeX -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="vendor/mathjax/tex-mml-chtml.js" id="MathJax-script" async></script>
+</head>
+<body>
+
+  <!-- Top Header Institucional y Psicométrico -->
+  <header class="header-top">
+    <div class="header-container">
+      <div class="brand-section">
+        <span class="brand-badge">JC PATH LAB</span>
+        <div class="brand-titles">
+          <h1>UNIVERSIDAD NACIONAL DE INGENIERÍA</h1>
+          <p>Sistema Predictivo Extremo de Admisión UNI &bull; Preparación de Élite (~100% Certeza)</p>
+        </div>
+      </div>
+      <div class="header-meta">
+        <div class="user-pill">
+          <span class="status-indicator"></span>
+          <span>Dra. Castillo &bull; Hacia el Cómputo General</span>
+        </div>
+        <div class="model-badge" title="Estructura MILP, 50 Innegables, Cadenas de Markov y 150 Arquetipos Canónicos">
+          <span>🎯 Modelo Psicométrico Activo (Markov + MILP)</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Control & Status Bar -->
+  <div class="control-bar">
+    <div class="control-container">
+      <div class="selectors-group">
+        <div class="select-wrapper">
+          <label for="examSelect" class="sr-only">Seleccionar Examen o Modo</label>
+          <select id="examSelect" aria-label="Seleccionar Examen o Generador"></select>
+        </div>
+        <div class="select-wrapper">
+          <label for="daySelect" class="sr-only">Seleccionar Día de Evaluación</label>
+          <select id="daySelect" aria-label="Seleccionar Día de Evaluación">
+            <option value="dia_1">Día 1: Aptitud Académica y Humanidades (100 P. - 3h)</option>
+            <option value="dia_2">Día 2: Matemática (40 P. - 3h)</option>
+            <option value="dia_3">Día 3: Física y Química (40 P. - 3h)</option>
+          </select>
+        </div>
+        <button id="generateNewBtn" class="btn btn-generator" title="Genera un nuevo simulacro dinámico permutando variables para que nunca se repita, preservando 100% el temario y los 150 arquetipos">
+          <span class="sparkle-icon">✨</span>
+          <span class="btn-text">Generar Nuevo Simulacro (IA)</span>
+        </button>
+      </div>
+
+      <div class="control-actions">
+        <!-- Toggle para abrir/cerrar Ficha Óptica en Móviles y Tablets -->
+        <button id="toggleSheetBtn" class="btn btn-sheet-toggle" aria-label="Abrir Ficha Óptica">
+          <span>📋 Ficha Óptica</span>
+          <span class="badge-mini" id="sheetAnsweredBadge">0/100</span>
+        </button>
+
+        <!-- Cronómetro Oficial UNI con Alerta -->
+        <div class="timer-box" id="timerBox" title="Tiempo reglamentario oficial: 3 horas">
+          <span class="timer-icon">⏱</span>
+          <span id="timerDisplay">03:00:00</span>
+        </div>
+
+        <!-- Finalizar y Calificar -->
+        <button id="finishBtn" class="btn btn-finish">Finalizar Prueba</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banner de Notificación / Toast de Generación Dinámica -->
+  <div id="dynamicAlert" class="dynamic-alert-banner" style="display:none;">
+    <span class="alert-icon">⚡</span>
+    <span id="dynamicAlertText">Simulacro Dinámico Predictivo Generado con Éxito (0% Repetición | 100% Temario Oficial UNI)</span>
+    <button id="closeAlertBtn" class="close-alert">&times;</button>
+  </div>
+
+  <!-- Layout Principal de Examen -->
+  <main class="main-layout">
+    
+    <!-- Columna Izquierda: Tarjeta de la Pregunta Actual -->
+    <section class="question-card" id="questionCard">
+      <div class="question-header">
+        <div class="q-main-title">
+          <span class="q-number-title" id="qNumBadge">PREGUNTA 1 / 100</span>
+          <span class="q-archetype-tag" id="qArchetypeTag">Arquetipo Canónico</span>
+        </div>
+        <div class="q-badge-group">
+          <span class="badge badge-subject" id="qSubjectBadge">MATERIA</span>
+          <span class="badge badge-topic" id="qTopicBadge">SUBTEMA</span>
+          <span class="badge badge-prob" id="qProbBadge">🎯 CERTEZA: 98.2%</span>
+          <span class="badge badge-nucleo" id="qNucleoBadge">⭐ 50 INNEGABLES</span>
+          <span class="badge badge-diff" id="qDiffBadge">INTERMEDIO</span>
+          <span class="badge badge-tri" id="qTriBadge">θ ∈ [+1.2, +1.8]</span>
+        </div>
+      </div>
+
+      <div class="question-statement" id="qStatement">
+        Cargando enunciado analítico...
+      </div>
+
+      <div class="options-list" id="optionsContainer">
+        <!-- Opciones generadas dinámicamente A, B, C, D, E -->
+      </div>
+
+      <div class="question-nav-actions">
+        <div class="nav-btn-group">
+          <button id="prevBtn" class="btn btn-outline" title="Pregunta anterior (Flecha Izquierda)">&larr; Anterior</button>
+          <button id="nextBtn" class="btn btn-primary" title="Pregunta siguiente (Flecha Derecha)">Siguiente &rarr;</button>
+        </div>
+        <div class="util-btn-group">
+          <button id="markReviewBtn" class="btn btn-review" title="Marcar para revisión posterior (Barra Espaciadora)">☆ Marcar Revisión</button>
+          <button id="clearAnsBtn" class="btn btn-outline" title="Borrar marcación actual">Borrar</button>
+        </div>
+      </div>
+
+      <!-- Atajos de teclado para entrenamiento de alta velocidad -->
+      <div class="keyboard-hints">
+        <span><strong>Atajos:</strong> [1-5] o [A-E] marcar &bull; [←/→] navegar &bull; [Espacio] revisión &bull; [Delete] borrar</span>
+      </div>
+    </section>
+
+    <!-- Columna Derecha: Ficha Óptica UNI Interactiva -->
+    <aside class="optical-sheet-card" id="opticalSheetCard">
+      <div class="sheet-title">
+        <div class="sheet-title-text">
+          <span>FICHA ÓPTICA DIGITAL UNI</span>
+          <span class="sheet-subtitle">CONCURSO DE ADMISIÓN</span>
+        </div>
+        <button id="closeSheetMobileBtn" class="btn-close-sheet-mobile" aria-label="Cerrar Ficha Óptica">&times;</button>
+      </div>
+
+      <div class="sheet-stats">
+        <div class="stat-item" title="Preguntas marcadas">
+          <span class="stat-dot" style="background:#10b981;"></span>
+          <span>Resp: <strong id="answeredCount">0</strong></span>
+        </div>
+        <div class="stat-item" title="Preguntas marcadas para revisión">
+          <span class="stat-dot" style="background:#f59e0b;"></span>
+          <span>Rev: <strong id="reviewCount">0</strong></span>
+        </div>
+        <div class="stat-item" title="Preguntas aún sin marcar">
+          <span class="stat-dot" style="background:#94a3b8;"></span>
+          <span>Pend: <strong id="pendingCount">100</strong></span>
+        </div>
+      </div>
+
+      <div class="bubble-grid-container">
+        <div class="bubble-grid" id="bubbleGrid">
+          <!-- 100 o 40 burbujas interactivas -->
+        </div>
+      </div>
+
+      <div class="sheet-footer-legend">
+        <span><strong style="color:#10b981;">●</strong> Marcada</span>
+        <span><strong style="color:#f59e0b;">●</strong> Revisión</span>
+        <span><strong style="color:var(--uni-bordeaux);">●</strong> Actual</span>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Modal Oficial de Resultados y Solucionario Analítico -->
+  <div class="results-modal" id="resultsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="results-overlay" id="modalOverlay"></div>
+    <div class="results-content">
+      <div class="results-header">
+        <span class="modal-badge-uni">REPORTE OFICIAL UNI</span>
+        <h2 id="modalTitle">CALIFICACIÓN Y AUDITORÍA PSICOMÉTRICA</h2>
+        <p>Ponderación oficial: +5.000 ptos por acierto | -1.025 ptos por error | 0.000 ptos en blanco</p>
+        
+        <div class="score-display-box">
+          <div class="score-number" id="scoreNumber">0.000</div>
+          <div class="score-max" id="scoreMaxLabel">PUNTAJE NETO OBTENIDO</div>
+          <div class="score-percent" id="scorePercentLabel">Eficacia: 0.0%</div>
+        </div>
+      </div>
+
+      <div class="results-body">
+        <div class="score-metrics-grid">
+          <div class="metric-card correct">
+            <h4>Aciertos (+5.0)</h4>
+            <p id="correctCount">0</p>
+          </div>
+          <div class="metric-card incorrect">
+            <h4>Errores (-1.025)</h4>
+            <p id="incorrectCount">0</p>
+          </div>
+          <div class="metric-card blank">
+            <h4>En Blanco (0.0)</h4>
+            <p id="blankCount">0</p>
+          </div>
+        </div>
+
+        <div class="ranking-box">
+          <h3>🎯 PROYECCIÓN INSTITUCIONAL DE INGRESO A FACULTADES UNI</h3>
+          <p style="font-size: 0.85rem; color:#166534; margin-bottom: 0.75rem;">
+            Basado en las notas de corte oficiales históricas de la Universidad Nacional de Ingeniería:
+          </p>
+          <ul id="careerList"></ul>
+        </div>
+
+        <div class="solutions-section">
+          <div class="solutions-title-bar">
+            <h3>SOLUCIONARIO ANALÍTICO PASO A PASO (RIGOR FORMAL)</h3>
+            <span class="badge badge-subject">100% Auditado</span>
+          </div>
+          <div id="solutionsContainer">
+            <!-- Soluciones completas con teoría y desarrollo LaTeX -->
+          </div>
+        </div>
+
+        <div class="modal-actions-bar">
+          <button id="restartBtn" class="btn btn-primary">Volver a Intentar Prueba</button>
+          <button id="modalGenNewBtn" class="btn btn-generator">✨ Generar Otro Simulacro IA</button>
+          <button id="closeResultsBtn" class="btn btn-outline">Cerrar Reporte</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Institucional -->
+  <footer>
+    <div class="footer-container">
+      <p><strong>JC PATH LAB &bull; DR. JOSÉ CASTILLO</strong> &mdash; Plataforma Soberana de Entrenamiento y Predicción UNI</p>
+      <p class="footer-subtext">Modelo Matemático MILP &bull; 50 Innegables &bull; Cadenas de Markov de 2do Orden &bull; 150 Arquetipos Canónicos &bull; 100% Offline</p>
+    </div>
+  </footer>
+
+  <!-- Banco de Datos Predictivo Oficial (44 Procesos + Simulacro 2026) -->
+  <script src="data/banco_predictivo.js"></script>
+  <!-- Lógica Avanzada de la Aplicación y Generador Dinámico -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
