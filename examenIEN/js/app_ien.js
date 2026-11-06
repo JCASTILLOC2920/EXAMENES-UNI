@@ -522,6 +522,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const puntajeMax = state.examData.calificacion.puntaje_maximo || 300.0;
     const porcentaje = ((puntajeTotal / puntajeMax) * 100).toFixed(1);
 
+    // Persistencia y Docker n8n para Valeria
+    try {
+      const breakdown = {};
+      state.examData.preguntas.forEach(q => {
+        const c = q.curso || 'General';
+        if (!breakdown[c]) breakdown[c] = { correctas: 0, total: 0 };
+        breakdown[c].total++;
+        if (state.answers[q.numero] === q.clave) breakdown[c].correctas++;
+      });
+
+      const payload = {
+        fecha: new Date().toISOString(),
+        fechaFormato: new Date().toLocaleString('es-PE'),
+        modo: 'IEN',
+        simulacro: state.selectedExamKey || 'Simulacro IEN',
+        puntaje: parseFloat(puntajeTotal.toFixed(2)),
+        nota20: parseFloat(((puntajeTotal / puntajeMax) * 20).toFixed(2)),
+        correctas, incorrectas, blancas: enBlanco,
+        total: state.examData.preguntas.length,
+        desglose: breakdown
+      };
+      const hist = JSON.parse(localStorage.getItem('valeria_uni_historial') || '[]');
+      hist.push(payload);
+      localStorage.setItem('valeria_uni_historial', JSON.stringify(hist));
+
+      fetch('http://localhost:5678/webhook/uni-progreso-valeria', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(e => console.log('[n8n webhook info]', e.message));
+    } catch(e) { console.warn('[Persistencia Valeria]', e); }
+
     scoreNumberEl.textContent = puntajeTotal.toFixed(3);
     scoreMaxLabel.textContent = `/ ${puntajeMax.toFixed(3)} pts`;
     scorePercentLabel.textContent = `Rendimiento: ${porcentaje}% (${porTiempo ? 'Tiempo Agotado' : 'Finalizado por el Postulante'})`;

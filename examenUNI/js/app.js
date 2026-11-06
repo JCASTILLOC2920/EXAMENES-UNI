@@ -635,6 +635,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const pct = Math.max(0, (totalScore / maxScore) * 100);
 
     // Actualizar Encabezado del Modal
+    // Persistencia y Docker n8n para Valeria
+    try {
+      const payload = {
+        fecha: new Date().toISOString(),
+        fechaFormato: new Date().toLocaleString('es-PE'),
+        modo: 'GENERAL',
+        simulacro: 'Simulacro General UNI',
+        puntaje: parseFloat(roundedScore),
+        nota20: parseFloat(((totalScore / maxScore) * 20).toFixed(2)),
+        correctas: correct, incorrectas: incorrect, blancas: blank,
+        total: qList.length
+      };
+      const hist = JSON.parse(localStorage.getItem('valeria_uni_historial') || '[]');
+      hist.push(payload);
+      localStorage.setItem('valeria_uni_historial', JSON.stringify(hist));
+
+      fetch('http://localhost:5678/webhook/uni-progreso-valeria', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(e => console.log('[n8n webhook info]', e.message));
+    } catch(e) { console.warn('[Persistencia Valeria]', e); }
+
     scoreNumberEl.textContent = roundedScore;
     scoreMaxLabel.textContent = `PUNTAJE NETO OBTENIDO (MÁXIMO: ${maxScore.toFixed(1)} PTS)`;
     if (scorePercentLabel) {
