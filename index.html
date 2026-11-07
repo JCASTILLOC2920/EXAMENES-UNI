@@ -234,17 +234,20 @@
     .login-overlay {
       position: fixed; inset: 0; background: rgba(9, 13, 22, 0.96); backdrop-filter: blur(16px);
       display: flex; align-items: center; justify-content: center; z-index: 200; padding: 16px;
+      overflow-y: auto; -webkit-overflow-scrolling: touch;
     }
     .login-card {
       background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(56, 189, 248, 0.3);
       border-radius: 18px; padding: 32px 24px; max-width: 380px; width: 100%; text-align: center;
+      max-height: 90vh; overflow-y: auto;
     }
     .form-group { text-align: left; margin-bottom: 14px; }
     .form-label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
     .form-input {
       width: 100%; background: rgba(2, 6, 23, 0.8); border: 1px solid rgba(148, 163, 184, 0.2);
-      border-radius: 8px; padding: 10px 12px; color: #fff; font-size: 0.95rem; font-family: 'JetBrains Mono', monospace;
+      border-radius: 8px; padding: 10px 12px; color: #fff; font-size: 16px; font-family: 'JetBrains Mono', monospace;
     }
+    mjx-container, .MathJax { max-width: 100% !important; overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
     .btn-login {
       width: 100%; background: linear-gradient(135deg, #0284c7, #0ea5e9); color: #fff;
       border: none; padding: 12px; border-radius: 8px; font-weight: 700; cursor: pointer; margin-top: 8px;
@@ -605,21 +608,33 @@
 
       try {
         const stored = JSON.parse(localStorage.getItem('valeria_uni_historial') || '[]');
-        if (stored.length >= 2) history = stored;
+        if (Array.isArray(stored) && stored.length >= 2) history = stored;
       } catch(e) {}
 
       ctx.clearRect(0, 0, w, h);
       const paddingX = 40;
       const paddingY = 30;
-      const stepX = (w - paddingX * 2) / (history.length - 1);
+      const stepX = history.length > 1 ? (w - paddingX * 2) / (history.length - 1) : 0;
       const minNota = 10;
       const maxNota = 20;
 
       const points = history.map((pt, idx) => {
         const x = paddingX + idx * stepX;
-        const norm = (pt.nota - minNota) / (maxNota - minNota);
+        const valNota = Number(pt.nota20 ?? pt.nota ?? (pt.puntaje != null ? (pt.puntaje / 300) * 20 : 10)) || 10;
+        const boundedNota = Math.max(minNota, Math.min(maxNota, valNota));
+        const norm = (boundedNota - minNota) / (maxNota - minNota);
         const y = h - paddingY - norm * (h - paddingY * 2);
-        return { x, y, nota: pt.nota, fecha: pt.fecha };
+
+        let fechaTxt = pt.fecha || '';
+        if (pt.fechaFormato) {
+          fechaTxt = pt.fechaFormato.split(',')[0].trim();
+        } else if (typeof fechaTxt === 'string' && fechaTxt.includes('T')) {
+          try {
+            const d = new Date(fechaTxt);
+            fechaTxt = d.toLocaleDateString('es-PE', { day: '2-digit', month: 'short' });
+          } catch(e) {}
+        }
+        return { x, y, nota: valNota, fecha: fechaTxt || ('S' + (idx + 1)) };
       });
 
       // Relleno

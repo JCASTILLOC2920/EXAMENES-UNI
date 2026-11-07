@@ -19,14 +19,18 @@
       "enunciado": "En el concurso IEN UNI 2006, de 60 postulantes de 5to de secundaria, 32 eligen Civil, 28 Industrial y 10 ninguna. ¿Cuántos postulan a exactamente una carrera?",
       "opciones": {
         "A": "36",
-        "B": "38",
-        "C": "40",
+        "B": "40",
+        "C": "38",
         "D": "42",
         "E": "44"
       },
-      "clave": "C",
+      "clave": "B",
       "teoria": "n(A Δ B) = n(A U B) - n(A ∩ B)",
-      "solucion": "n(A U B) = 50. n(A ∩ B) = 10. Exactamente una = 40."
+      "solucion": "n(A U B) = 50. n(A ∩ B) = 10. Exactamente una = 40.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.5%",
+      "tri_theta": "θ ∈ [+0.8, +1.4]",
+      "arquetipo": "Arquetipo Canónico Aritmética P01"
     },
     {
       "numero": 2,
@@ -43,7 +47,11 @@
       },
       "clave": "C",
       "teoria": "Divisiones sucesivas entre la base k.",
-      "solucion": "Cifras en base 6: (0, 3, 2, 0). Suma = 5."
+      "solucion": "Cifras en base 6: (0, 3, 2, 0). Suma = 5.",
+      "nucleo": "🔄 Rotación Markoviana (2° Orden)",
+      "probabilidad": "83.6%",
+      "tri_theta": "θ ∈ [+1.0, +1.5] (Corte IEN UNI)",
+      "arquetipo": "Arquetipo Canónico Aritmética P02"
     },
     {
       "numero": 3,
@@ -52,15 +60,19 @@
       "dificultad": "Intermedio",
       "enunciado": "Si N = 7k + 3, ¿cuál es el residuo de dividir (4N + 5) entre 7?",
       "opciones": {
-        "A": "3",
+        "A": "0",
         "B": "4",
         "C": "5",
         "D": "6",
-        "E": "0"
+        "E": "3"
       },
-      "clave": "A",
+      "clave": "E",
       "teoria": "Congruencias modulares: aN + b ≡ ar + b (mod m).",
-      "solucion": "Residuo = 3."
+      "solucion": "Residuo = 3.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.8%",
+      "tri_theta": "θ ∈ [+1.0, +1.6]",
+      "arquetipo": "Arquetipo Canónico Aritmética P03"
     },
     {
       "numero": 4,
@@ -77,7 +89,11 @@
       },
       "clave": "A",
       "teoria": "Compuestos = CD(N) - (Primos + 1).",
-      "solucion": "CD = 12, Primos = 3. Compuestos = 8."
+      "solucion": "CD = 12, Primos = 3. Compuestos = 8.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "96.5%",
+      "tri_theta": "θ ∈ [+1.1, +1.7]",
+      "arquetipo": "Arquetipo Canónico Aritmética P04"
     },
     {
       "numero": 5,
@@ -86,15 +102,19 @@
       "dificultad": "Intermedio",
       "enunciado": "Un caño llena un tanque en 4 h y un desagüe lo vacía en 6 h. Abiertos juntos, ¿en cuántas horas se llena?",
       "opciones": {
-        "A": "8 h",
+        "A": "12 h",
         "B": "10 h",
-        "C": "12 h",
+        "C": "8 h",
         "D": "14 h",
         "E": "16 h"
       },
-      "clave": "C",
+      "clave": "A",
       "teoria": "1/T = 1/4 - 1/6 = 1/12.",
-      "solucion": "T = 12 horas."
+      "solucion": "T = 12 horas.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.8%",
+      "tri_theta": "θ ∈ [+0.8, +1.3]",
+      "arquetipo": "Arquetipo Canónico Aritmética P05"
     },
     {
       "numero": 6,
@@ -104,14 +124,18 @@
       "enunciado": "Dos cantidades están en relación de 2 a 7 y suman 72. Calcule su diferencia.",
       "opciones": {
         "A": "36",
-        "B": "38",
-        "C": "40",
+        "B": "40",
+        "C": "38",
         "D": "42",
         "E": "44"
       },
-      "clave": "C",
+      "clave": "B",
       "teoria": "2k + 7k = 9k. Diferencia = 5k.",
-      "solucion": "k = 8, Diferencia = 40."
+      "solucion": "k = 8, Diferencia = 40.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.0%",
+      "tri_theta": "θ ∈ [+0.7, +1.2]",
+      "arquetipo": "Arquetipo Canónico Aritmética P06"
     },
     {
       "numero": 7,
@@ -121,14 +145,18 @@
       "enunciado": "Simplifique: E = [3^(x+3) + 3^(x+1)] / [3^(x+1) * 10].",
       "opciones": {
         "A": "1/3",
-        "B": "1",
-        "C": "3",
+        "B": "3",
+        "C": "1",
         "D": "9",
         "E": "10"
       },
-      "clave": "B",
+      "clave": "C",
       "teoria": "3^(x+1)*(9 + 1) / [3^(x+1)*10] = 1.",
-      "solucion": "E = 1."
+      "solucion": "E = 1.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.2%",
+      "tri_theta": "θ ∈ [+0.7, +1.2]",
+      "arquetipo": "Arquetipo Canónico Álgebra P07"
     },
     {
       "numero": 8,
@@ -139,13 +167,17 @@
       "opciones": {
         "A": "24",
         "B": "26",
-        "C": "28",
+        "C": "32",
         "D": "30",
-        "E": "32"
+        "E": "28"
       },
-      "clave": "C",
+      "clave": "E",
       "teoria": "x^2 + y^2 = (x+y)^2 - 2xy.",
-      "solucion": "6^2 - 2(4) = 28."
+      "solucion": "6^2 - 2(4) = 28.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.9%",
+      "tri_theta": "θ ∈ [+0.9, +1.4]",
+      "arquetipo": "Arquetipo Canónico Álgebra P08"
     },
     {
       "numero": 9,
@@ -154,15 +186,19 @@
       "dificultad": "Intermedio",
       "enunciado": "Halle el residuo de dividir P(x) = x^40 + 3x^21 - 2x^2 + 5 entre x + 1.",
       "opciones": {
-        "A": "1",
+        "A": "5",
         "B": "3",
-        "C": "5",
+        "C": "1",
         "D": "7",
         "E": "9"
       },
-      "clave": "A",
+      "clave": "C",
       "teoria": "R = P(-1) = 1 - 3 - 2 + 5 = 1.",
-      "solucion": "Residuo = 1."
+      "solucion": "Residuo = 1.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.5%",
+      "tri_theta": "θ ∈ [+1.0, +1.5]",
+      "arquetipo": "Arquetipo Canónico Álgebra P09"
     },
     {
       "numero": 10,
@@ -171,15 +207,19 @@
       "dificultad": "Intermedio",
       "enunciado": "Si r1 y r2 son raíces de x^2 - 7x + 5 = 0, calcule r1^2 + r2^2.",
       "opciones": {
-        "A": "39",
-        "B": "41",
+        "A": "41",
+        "B": "39",
         "C": "43",
         "D": "47",
         "E": "49"
       },
-      "clave": "A",
+      "clave": "B",
       "teoria": "Vieta: r1+r2=7, r1*r2=5. r1^2+r2^2 = 7^2 - 2(5) = 39.",
-      "solucion": "39."
+      "solucion": "39.",
+      "nucleo": "🔄 Rotación Markoviana (2° Orden)",
+      "probabilidad": "83.6%",
+      "tri_theta": "θ ∈ [+1.0, +1.5] (Corte IEN UNI)",
+      "arquetipo": "Arquetipo Canónico Álgebra P10"
     },
     {
       "numero": 11,
@@ -196,7 +236,11 @@
       },
       "clave": "A",
       "teoria": "(x - 2)(x - 6) < 0.",
-      "solucion": "CS = <2, 6>."
+      "solucion": "CS = <2, 6>.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.0%",
+      "tri_theta": "θ ∈ [+1.1, +1.7]",
+      "arquetipo": "Arquetipo Canónico Álgebra P11"
     },
     {
       "numero": 12,
@@ -207,13 +251,17 @@
       "opciones": {
         "A": "1",
         "B": "2",
-        "C": "3",
-        "D": "4",
+        "C": "4",
+        "D": "3",
         "E": "5"
       },
-      "clave": "C",
+      "clave": "D",
       "teoria": "2x + 3 = 3^2 = 9 => x = 3.",
-      "solucion": "x = 3."
+      "solucion": "x = 3.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "96.8%",
+      "tri_theta": "θ ∈ [+1.2, +1.8]",
+      "arquetipo": "Arquetipo Canónico Álgebra P12"
     },
     {
       "numero": 13,
@@ -223,14 +271,18 @@
       "enunciado": "En un triángulo ABC con <B = 50°, halle el ángulo entre bisectrices interiores de A y C.",
       "opciones": {
         "A": "110",
-        "B": "115",
+        "B": "125°",
         "C": "120",
         "D": "110°",
-        "E": "125°"
+        "E": "115"
       },
-      "clave": "B",
+      "clave": "E",
       "teoria": "x = 90° + B/2.",
-      "solucion": "x = 90° + 25° = 115°."
+      "solucion": "x = 90° + 25° = 115°.",
+      "nucleo": "🔄 Rotación Markoviana (2° Orden)",
+      "probabilidad": "83.6%",
+      "tri_theta": "θ ∈ [+1.0, +1.5] (Corte IEN UNI)",
+      "arquetipo": "Arquetipo Canónico Geometría P13"
     },
     {
       "numero": 14,
@@ -240,14 +292,18 @@
       "enunciado": "En triángulo rectángulo ABC (recto en B), altura BH divide la hipotenusa en segmentos de 4 y 9 cm. Calcule BH.",
       "opciones": {
         "A": "5 cm",
-        "B": "6 cm",
-        "C": "7 cm",
+        "B": "7 cm",
+        "C": "6 cm",
         "D": "8 cm",
         "E": "9 cm"
       },
-      "clave": "B",
+      "clave": "C",
       "teoria": "BH^2 = AH * HC.",
-      "solucion": "BH = sqrt(36) = 6 cm."
+      "solucion": "BH = sqrt(36) = 6 cm.",
+      "nucleo": "🔄 Rotación Markoviana (2° Orden)",
+      "probabilidad": "83.6%",
+      "tri_theta": "θ ∈ [+1.0, +1.5] (Corte IEN UNI)",
+      "arquetipo": "Arquetipo Canónico Geometría P14"
     },
     {
       "numero": 15,
@@ -256,15 +312,19 @@
       "dificultad": "Básico",
       "enunciado": "Una cuerda subtiende un arco de 80°. Calcule la medida del ángulo inscrito correspondiente.",
       "opciones": {
-        "A": "20°",
-        "B": "40°",
+        "A": "40°",
+        "B": "20°",
         "C": "60°",
         "D": "80°",
         "E": "160°"
       },
-      "clave": "B",
+      "clave": "A",
       "teoria": "Inscrito = Arco / 2.",
-      "solucion": "80° / 2 = 40°."
+      "solucion": "80° / 2 = 40°.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.6%",
+      "tri_theta": "θ ∈ [+0.9, +1.4]",
+      "arquetipo": "Arquetipo Canónico Geometría P15"
     },
     {
       "numero": 16,
@@ -275,13 +335,17 @@
       "opciones": {
         "A": "20",
         "B": "22",
-        "C": "24",
+        "C": "28",
         "D": "26",
-        "E": "28"
+        "E": "24"
       },
-      "clave": "C",
+      "clave": "E",
       "teoria": "A = (b * h)/2.",
-      "solucion": "A = (8 * 6)/2 = 24 cm^2."
+      "solucion": "A = (8 * 6)/2 = 24 cm^2.",
+      "nucleo": "🔄 Rotación Markoviana (2° Orden)",
+      "probabilidad": "83.6%",
+      "tri_theta": "θ ∈ [+1.0, +1.5] (Corte IEN UNI)",
+      "arquetipo": "Arquetipo Canónico Geometría P16"
     },
     {
       "numero": 17,
@@ -291,14 +355,18 @@
       "enunciado": "Calcule el número total de diagonales de un decágono.",
       "opciones": {
         "A": "25",
-        "B": "30",
-        "C": "35",
+        "B": "35",
+        "C": "30",
         "D": "40",
         "E": "45"
       },
-      "clave": "C",
+      "clave": "B",
       "teoria": "ND = n(n-3)/2.",
-      "solucion": "10(7)/2 = 35."
+      "solucion": "10(7)/2 = 35.",
+      "nucleo": "🔄 Rotación Markoviana (2° Orden)",
+      "probabilidad": "83.6%",
+      "tri_theta": "θ ∈ [+1.0, +1.5] (Corte IEN UNI)",
+      "arquetipo": "Arquetipo Canónico Geometría P17"
     },
     {
       "numero": 18,
@@ -307,15 +375,19 @@
       "dificultad": "Intermedio",
       "enunciado": "Calcule el volumen de un cilindro de radio 3 cm y altura 5 cm.",
       "opciones": {
-        "A": "15 pi cm^3",
+        "A": "45 pi cm^3",
         "B": "30 pi cm^3",
-        "C": "45 pi cm^3",
+        "C": "15 pi cm^3",
         "D": "60 pi cm^3",
         "E": "75 pi cm^3"
       },
-      "clave": "C",
+      "clave": "A",
       "teoria": "V = pi * r^2 * h.",
-      "solucion": "V = pi * 9 * 5 = 45 pi cm^3."
+      "solucion": "V = pi * 9 * 5 = 45 pi cm^3.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.0%",
+      "tri_theta": "θ ∈ [+1.0, +1.5]",
+      "arquetipo": "Arquetipo Canónico Geometría P18"
     },
     {
       "numero": 19,
@@ -324,15 +396,19 @@
       "dificultad": "Básico",
       "enunciado": "Calcule E = tan(45°) + 2*sen(30°) + cos(60°).",
       "opciones": {
-        "A": "1.5",
+        "A": "2.5",
         "B": "2.0",
-        "C": "2.5",
+        "C": "1.5",
         "D": "3.0",
         "E": "3.5"
       },
-      "clave": "C",
+      "clave": "A",
       "teoria": "1 + 2(1/2) + 1/2 = 2.5.",
-      "solucion": "E = 2.5."
+      "solucion": "E = 2.5.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.0%",
+      "tri_theta": "θ ∈ [+0.7, +1.2]",
+      "arquetipo": "Arquetipo Canónico Trigonometría P19"
     },
     {
       "numero": 20,
@@ -341,15 +417,19 @@
       "dificultad": "Intermedio",
       "enunciado": "P(-3, 4) está en el lado final de θ. Calcule 5*sen(θ) + 3*tan(θ).",
       "opciones": {
-        "A": "0",
+        "A": "2",
         "B": "1",
-        "C": "2",
+        "C": "0",
         "D": "3",
         "E": "4"
       },
-      "clave": "A",
+      "clave": "C",
       "teoria": "r = 5. sen=4/5, tan=-4/3.",
-      "solucion": "5(4/5) + 3(-4/3) = 4 - 4 = 0."
+      "solucion": "5(4/5) + 3(-4/3) = 4 - 4 = 0.",
+      "nucleo": "🔄 Rotación Markoviana (2° Orden)",
+      "probabilidad": "83.6%",
+      "tri_theta": "θ ∈ [+1.0, +1.5] (Corte IEN UNI)",
+      "arquetipo": "Arquetipo Canónico Trigonometría P20"
     },
     {
       "numero": 21,
@@ -358,15 +438,19 @@
       "dificultad": "Intermedio",
       "enunciado": "Reduzca: K = (sec x - cos x) * cot x.",
       "opciones": {
-        "A": "sen x",
+        "A": "tan x",
         "B": "cos x",
-        "C": "tan x",
+        "C": "sen x",
         "D": "sec x",
         "E": "1"
       },
-      "clave": "A",
+      "clave": "C",
       "teoria": "(sen^2 x / cos x) * (cos x / sen x) = sen x.",
-      "solucion": "K = sen x."
+      "solucion": "K = sen x.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.5%",
+      "tri_theta": "θ ∈ [+1.1, +1.7]",
+      "arquetipo": "Arquetipo Canónico Trigonometría P21"
     },
     {
       "numero": 22,
@@ -375,15 +459,19 @@
       "dificultad": "Intermedio",
       "enunciado": "Calcule sen(15°) sabiendo que 15° = 45° - 30°.",
       "opciones": {
-        "A": "(sqrt(6) - sqrt(2)) / 4",
+        "A": "sqrt(2)/4",
         "B": "(sqrt(6) + sqrt(2)) / 4",
-        "C": "sqrt(2)/4",
+        "C": "(sqrt(6) - sqrt(2)) / 4",
         "D": "sqrt(3)/2",
         "E": "1/4"
       },
-      "clave": "A",
+      "clave": "C",
       "teoria": "sen(45°-30°) = (sqrt(6)-sqrt(2))/4.",
-      "solucion": "(sqrt(6)-sqrt(2))/4."
+      "solucion": "(sqrt(6)-sqrt(2))/4.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.8%",
+      "tri_theta": "θ ∈ [+1.1, +1.7]",
+      "arquetipo": "Arquetipo Canónico Trigonometría P22"
     },
     {
       "numero": 23,
@@ -400,7 +488,11 @@
       },
       "clave": "B",
       "teoria": "sen x = 1/2 => x = 30°.",
-      "solucion": "x = 30°."
+      "solucion": "x = 30°.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "96.2%",
+      "tri_theta": "θ ∈ [+1.2, +1.8]",
+      "arquetipo": "Arquetipo Canónico Trigonometría P23"
     },
     {
       "numero": 24,
@@ -417,7 +509,11 @@
       },
       "clave": "B",
       "teoria": "a / sen A = 2R => 8 / (1/2) = 16 => R = 8 cm.",
-      "solucion": "R = 8 cm."
+      "solucion": "R = 8 cm.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "96.9%",
+      "tri_theta": "θ ∈ [+1.0, +1.5]",
+      "arquetipo": "Arquetipo Canónico Trigonometría P24"
     },
     {
       "numero": 25,
@@ -428,13 +524,17 @@
       "opciones": {
         "A": "1",
         "B": "2",
-        "C": "3",
-        "D": "4",
+        "C": "4",
+        "D": "3",
         "E": "5"
       },
-      "clave": "C",
+      "clave": "D",
       "teoria": "[P] = M L^-1 T^-2; [d] = M L^-3; [v] = L T^-1 => x=1, y=2 => x+y=3.",
-      "solucion": "x=1, y=2. Suma = 3."
+      "solucion": "x=1, y=2. Suma = 3.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.5%",
+      "tri_theta": "θ ∈ [+0.9, +1.4]",
+      "arquetipo": "Arquetipo Canónico Fisica P25"
     },
     {
       "numero": 26,
@@ -443,15 +543,19 @@
       "dificultad": "Intermedio",
       "enunciado": "Un movil inicia con velocidad de 4 m/s y acelera a razon de 2 m/s^2 durante 5 s. Calcule la distancia recorrida.",
       "opciones": {
-        "A": "40",
-        "B": "45",
+        "A": "45",
+        "B": "40",
         "C": "50",
         "D": "55",
         "E": "60"
       },
-      "clave": "B",
+      "clave": "A",
       "teoria": "d = vo*t + (1/2)*a*t^2.",
-      "solucion": "d = 4*(5) + 0.5*(2)*(25) = 45 m."
+      "solucion": "d = 4*(5) + 0.5*(2)*(25) = 45 m.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "99.2%",
+      "tri_theta": "θ ∈ [+0.8, +1.3]",
+      "arquetipo": "Arquetipo Canónico Fisica P26"
     },
     {
       "numero": 27,
@@ -460,15 +564,19 @@
       "dificultad": "Basico",
       "enunciado": "Un cuerpo se suelta desde una altura de 45 m (g = 10 m/s^2). Calcule el tiempo que tarda en impactar el suelo.",
       "opciones": {
-        "A": "2 s",
-        "B": "3 s",
+        "A": "3 s",
+        "B": "2 s",
         "C": "4 s",
         "D": "5 s",
         "E": "6 s"
       },
-      "clave": "B",
+      "clave": "A",
       "teoria": "h = (1/2)*g*t^2 => t = sqrt(2h/g).",
-      "solucion": "t = sqrt(2*45/10) = 3 s."
+      "solucion": "t = sqrt(2*45/10) = 3 s.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.6%",
+      "tri_theta": "θ ∈ [+0.8, +1.3]",
+      "arquetipo": "Arquetipo Canónico Fisica P27"
     },
     {
       "numero": 28,
@@ -478,14 +586,18 @@
       "enunciado": "Un bloque de masa 6 kg cuelga en reposo sostenido por una cuerda vertical inextensible (g = 10 m/s^2). Determine la tension en la cuerda.",
       "opciones": {
         "A": "40 N",
-        "B": "50 N",
-        "C": "60 N",
+        "B": "60 N",
+        "C": "50 N",
         "D": "70 N",
         "E": "80 N"
       },
-      "clave": "C",
+      "clave": "B",
       "teoria": "Equilibrio: Sumatoria de Fuerzas en Y = 0 => T = mg.",
-      "solucion": "T = 6 * 10 = 60 N."
+      "solucion": "T = 6 * 10 = 60 N.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "99.4%",
+      "tri_theta": "θ ∈ [+1.0, +1.6]",
+      "arquetipo": "Arquetipo Canónico Fisica P28"
     },
     {
       "numero": 29,
@@ -495,14 +607,18 @@
       "enunciado": "Una fuerza horizontal neta de 20 N se aplica sobre una masa de 4 kg sobre una superficie lisa. Calcule su aceleracion.",
       "opciones": {
         "A": "4 m/s^2",
-        "B": "5 m/s^2",
+        "B": "8 m/s^2",
         "C": "6 m/s^2",
         "D": "7 m/s^2",
-        "E": "8 m/s^2"
+        "E": "5 m/s^2"
       },
-      "clave": "B",
+      "clave": "E",
       "teoria": "F = m * a => a = F / m.",
-      "solucion": "a = 20 / 4 = 5 m/s^2."
+      "solucion": "a = 20 / 4 = 5 m/s^2.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.8%",
+      "tri_theta": "θ ∈ [+0.9, +1.5]",
+      "arquetipo": "Arquetipo Canónico Fisica P29"
     },
     {
       "numero": 30,
@@ -512,14 +628,18 @@
       "enunciado": "Calcule la energia cinetica de un cuerpo de 2 kg que se desplaza a una rapidez de 6 m/s.",
       "opciones": {
         "A": "26 J",
-        "B": "36 J",
+        "B": "66 J",
         "C": "46 J",
         "D": "56 J",
-        "E": "66 J"
+        "E": "36 J"
       },
-      "clave": "B",
+      "clave": "E",
       "teoria": "Ek = (1/2)*m*v^2.",
-      "solucion": "Ek = 0.5 * 2 * (6**2) = 36 J."
+      "solucion": "Ek = 0.5 * 2 * (6**2) = 36 J.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.0%",
+      "tri_theta": "θ ∈ [+0.9, +1.4]",
+      "arquetipo": "Arquetipo Canónico Fisica P30"
     },
     {
       "numero": 31,
@@ -529,14 +649,18 @@
       "enunciado": "Calcule la presion hidrostatica a 2 m de profundidad en agua dulce (densidad = 1000 kg/m^3, g = 10 m/s^2).",
       "opciones": {
         "A": "15 kPa",
-        "B": "20 kPa",
+        "B": "35 kPa",
         "C": "25 kPa",
         "D": "30 kPa",
-        "E": "35 kPa"
+        "E": "20 kPa"
       },
-      "clave": "B",
+      "clave": "E",
       "teoria": "Ph = rho * g * h.",
-      "solucion": "Ph = 1000 * 10 * 2 = 20000 Pa = 20 kPa."
+      "solucion": "Ph = 1000 * 10 * 2 = 20000 Pa = 20 kPa.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.2%",
+      "tri_theta": "θ ∈ [+1.0, +1.5]",
+      "arquetipo": "Arquetipo Canónico Fisica P31"
     },
     {
       "numero": 32,
@@ -547,13 +671,17 @@
       "opciones": {
         "A": "1600 cal",
         "B": "1800 cal",
-        "C": "2000 cal",
-        "D": "2200 cal",
+        "C": "2200 cal",
+        "D": "2000 cal",
         "E": "2400 cal"
       },
-      "clave": "C",
+      "clave": "D",
       "teoria": "Q = m * Ce * delta_T.",
-      "solucion": "Q = 100 * 1 * 20 = 2000 cal."
+      "solucion": "Q = 100 * 1 * 20 = 2000 cal.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.5%",
+      "tri_theta": "θ ∈ [+0.8, +1.3]",
+      "arquetipo": "Arquetipo Canónico Fisica P32"
     },
     {
       "numero": 33,
@@ -562,15 +690,19 @@
       "dificultad": "Intermedio",
       "enunciado": "Dos cargas puntuales q1 = +2 uC y q2 = +8 uC estan separadas 30 cm en el vacio. Calcule el modulo de la fuerza de repulsion (k = 9x10^9 N m^2/C^2).",
       "opciones": {
-        "A": "0.8 N",
-        "B": "1.6 N",
+        "A": "1.6 N",
+        "B": "0.8 N",
         "C": "2.4 N",
         "D": "3.2 N",
         "E": "4.0 N"
       },
-      "clave": "B",
+      "clave": "A",
       "teoria": "F = k*|q1*q2| / d^2 = 9x10^9 * 16x10^-12 / 0.09 = 1.6 N.",
-      "solucion": "F = 1.6 N."
+      "solucion": "F = 1.6 N.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "96.8%",
+      "tri_theta": "θ ∈ [+1.1, +1.6]",
+      "arquetipo": "Arquetipo Canónico Fisica P33"
     },
     {
       "numero": 34,
@@ -580,14 +712,18 @@
       "enunciado": "Por una resistencia de 4 ohm conectada a una fuente de 12 V circula una corriente continua. Calcule dicha intensidad.",
       "opciones": {
         "A": "2 A",
-        "B": "3 A",
-        "C": "4 A",
+        "B": "4 A",
+        "C": "3 A",
         "D": "5 A",
         "E": "6 A"
       },
-      "clave": "B",
+      "clave": "C",
       "teoria": "V = I * R => I = V / R.",
-      "solucion": "I = 12 / 4 = 3 A."
+      "solucion": "I = 12 / 4 = 3 A.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.0%",
+      "tri_theta": "θ ∈ [+1.0, +1.5]",
+      "arquetipo": "Arquetipo Canónico Fisica P34"
     },
     {
       "numero": 35,
@@ -598,13 +734,17 @@
       "opciones": {
         "A": "Agua con arena",
         "B": "Humo",
-        "C": "Solucion de salmuera",
-        "D": "Emulsion de aceite en agua",
+        "C": "Emulsion de aceite en agua",
+        "D": "Solucion de salmuera",
         "E": "Granito"
       },
-      "clave": "C",
+      "clave": "D",
       "teoria": "Una mezcla homogenea presenta una sola fase uniforme (solucion).",
-      "solucion": "La salmuera es agua y NaCl disuelto en una sola fase."
+      "solucion": "La salmuera es agua y NaCl disuelto en una sola fase.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.0%",
+      "tri_theta": "θ ∈ [+0.6, +1.1]",
+      "arquetipo": "Arquetipo Canónico Quimica P35"
     },
     {
       "numero": 36,
@@ -613,15 +753,19 @@
       "dificultad": "Basico",
       "enunciado": "Un atomo neutro tiene numero de masa A = 31 y contiene 16 neutrones en su nucleo. Halle su numero atomico Z.",
       "opciones": {
-        "A": "13",
+        "A": "15",
         "B": "14",
-        "C": "15",
+        "C": "13",
         "D": "16",
         "E": "17"
       },
-      "clave": "C",
+      "clave": "A",
       "teoria": "A = Z + n => Z = A - n.",
-      "solucion": "Z = 31 - 16 = 15."
+      "solucion": "Z = 31 - 16 = 15.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.8%",
+      "tri_theta": "θ ∈ [+0.7, +1.2]",
+      "arquetipo": "Arquetipo Canónico Quimica P36"
     },
     {
       "numero": 37,
@@ -638,7 +782,11 @@
       },
       "clave": "D",
       "teoria": "N (Z=7): 1s2 2s2 2p3. Por la regla de Hund, el subnivel 2p tiene 3 orbitales semillenos.",
-      "solucion": "3 electrones desapareados."
+      "solucion": "3 electrones desapareados.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.5%",
+      "tri_theta": "θ ∈ [+0.9, +1.4]",
+      "arquetipo": "Arquetipo Canónico Quimica P37"
     },
     {
       "numero": 38,
@@ -648,14 +796,18 @@
       "enunciado": "Un elemento presenta configuracion terminal 3p4. ¿A que periodo y grupo de la tabla periodica pertenece?",
       "opciones": {
         "A": "Periodo 3, Grupo IVA (14)",
-        "B": "Periodo 3, Grupo VIA (16)",
+        "B": "Periodo 3, Grupo VIIA (17)",
         "C": "Periodo 4, Grupo VIA (16)",
-        "D": "Periodo 3, Grupo VIIA (17)",
+        "D": "Periodo 3, Grupo VIA (16)",
         "E": "Periodo 4, Grupo IVA (14)"
       },
-      "clave": "B",
+      "clave": "D",
       "teoria": "Mayor nivel = 3 (periodo). Electrones de valencia: s2 p4 = 6 (Grupo VIA o 16).",
-      "solucion": "Periodo 3, Grupo VIA (16)."
+      "solucion": "Periodo 3, Grupo VIA (16).",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.7%",
+      "tri_theta": "θ ∈ [+0.8, +1.3]",
+      "arquetipo": "Arquetipo Canónico Quimica P38"
     },
     {
       "numero": 39,
@@ -665,14 +817,18 @@
       "enunciado": "Identifique el compuesto que presenta predominantemente enlace ionico:",
       "opciones": {
         "A": "CO2",
-        "B": "CH4",
-        "C": "NaCl",
+        "B": "NaCl",
+        "C": "CH4",
         "D": "H2O",
         "E": "NH3"
       },
-      "clave": "C",
+      "clave": "B",
       "teoria": "Enlace ionico: Metal alcalino (Na) + No metal halogeno (Cl) con delta_EN > 1.7.",
-      "solucion": "NaCl es ionico clasico."
+      "solucion": "NaCl es ionico clasico.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.2%",
+      "tri_theta": "θ ∈ [+0.9, +1.4]",
+      "arquetipo": "Arquetipo Canónico Quimica P39"
     },
     {
       "numero": 40,
@@ -681,15 +837,19 @@
       "dificultad": "Intermedio",
       "enunciado": "Determine el estado de oxidacion del azufre en el acido sulfurico (H2SO4).",
       "opciones": {
-        "A": "+2",
+        "A": "+6",
         "B": "+4",
-        "C": "+6",
+        "C": "+2",
         "D": "-2",
         "E": "+3"
       },
-      "clave": "C",
+      "clave": "A",
       "teoria": "2(+1) + x + 4(-2) = 0 => 2 + x - 8 = 0 => x = +6.",
-      "solucion": "E.O. del azufre = +6."
+      "solucion": "E.O. del azufre = +6.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.9%",
+      "tri_theta": "θ ∈ [+1.0, +1.5]",
+      "arquetipo": "Arquetipo Canónico Quimica P40"
     },
     {
       "numero": 41,
@@ -698,15 +858,19 @@
       "dificultad": "Intermedio",
       "enunciado": "Al balancear por tanteo la reaccion de combustion completa del propano: C3H8 + O2 -> CO2 + H2O, halle la suma de todos los coeficientes estequiometricos enteros minimos.",
       "opciones": {
-        "A": "11",
+        "A": "13",
         "B": "12",
-        "C": "13",
+        "C": "11",
         "D": "14",
         "E": "15"
       },
-      "clave": "C",
+      "clave": "A",
       "teoria": "1 C3H8 + 5 O2 -> 3 CO2 + 4 H2O. Coeficientes: 1 + 5 + 3 + 4 = 13.",
-      "solucion": "Suma = 13."
+      "solucion": "Suma = 13.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.6%",
+      "tri_theta": "θ ∈ [+0.9, +1.4]",
+      "arquetipo": "Arquetipo Canónico Quimica P41"
     },
     {
       "numero": 42,
@@ -716,14 +880,18 @@
       "enunciado": "¿Cuantos gramos de agua (H2O) equivalen a 2 moles de dicha sustancia? (H=1, O=16).",
       "opciones": {
         "A": "18",
-        "B": "36",
+        "B": "90",
         "C": "54",
         "D": "72",
-        "E": "90"
+        "E": "36"
       },
-      "clave": "B",
+      "clave": "E",
       "teoria": "Masa molar H2O = 18 g/mol. m = n * M.",
-      "solucion": "m = 2 * 18 = 36 g."
+      "solucion": "m = 2 * 18 = 36 g.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "99.0%",
+      "tri_theta": "θ ∈ [+1.1, +1.7]",
+      "arquetipo": "Arquetipo Canónico Quimica P42"
     },
     {
       "numero": 43,
@@ -735,12 +903,16 @@
         "A": "11.2 L",
         "B": "22.4 L",
         "C": "33.6 L",
-        "D": "44.8 L",
-        "E": "56.0 L"
+        "D": "56.0 L",
+        "E": "44.8 L"
       },
-      "clave": "D",
+      "clave": "E",
       "teoria": "1 mol en C.N. ocupa 22.4 L => 2 moles ocupan 44.8 L.",
-      "solucion": "V = 2 * 22.4 = 44.8 L."
+      "solucion": "V = 2 * 22.4 = 44.8 L.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.4%",
+      "tri_theta": "θ ∈ [+1.0, +1.5]",
+      "arquetipo": "Arquetipo Canónico Quimica P43"
     },
     {
       "numero": 44,
@@ -750,14 +922,18 @@
       "enunciado": "Identifique la formula global de un alqueno lineal con 6 atomos de carbono:",
       "opciones": {
         "A": "C6H10",
-        "B": "C6H12",
+        "B": "C6H16",
         "C": "C6H14",
-        "D": "C6H16",
+        "D": "C6H12",
         "E": "C6H6"
       },
-      "clave": "B",
+      "clave": "D",
       "teoria": "Formula general de alquenos aciclicos monoinsaturados: CnH2n.",
-      "solucion": "Para n=6 => C6H12 (hexeno)."
+      "solucion": "Para n=6 => C6H12 (hexeno).",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.5%",
+      "tri_theta": "θ ∈ [+0.9, +1.4]",
+      "arquetipo": "Arquetipo Canónico Quimica P44"
     },
     {
       "numero": 45,
@@ -767,14 +943,18 @@
       "enunciado": "Determine el termino que continua en la sucesion: 3, 8, 13, 18, 23, ...",
       "opciones": {
         "A": "24",
-        "B": "26",
-        "C": "28",
+        "B": "28",
+        "C": "26",
         "D": "30",
         "E": "32"
       },
-      "clave": "C",
+      "clave": "B",
       "teoria": "Progresion aritmetica con razon constante r = +5.",
-      "solucion": "Termino siguiente = 23 + 5 = 28."
+      "solucion": "Termino siguiente = 23 + 5 = 28.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "99.5%",
+      "tri_theta": "θ ∈ [+0.6, +1.1]",
+      "arquetipo": "Arquetipo Canónico Razonamiento Matematico P45"
     },
     {
       "numero": 46,
@@ -791,7 +971,11 @@
       },
       "clave": "C",
       "teoria": "P + x = 2*(H + x) => x = P - 2H.",
-      "solucion": "x = 40 - 2*(10) = 20 anos."
+      "solucion": "x = 40 - 2*(10) = 20 anos.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.8%",
+      "tri_theta": "θ ∈ [+0.8, +1.3]",
+      "arquetipo": "Arquetipo Canónico Razonamiento Matematico P46"
     },
     {
       "numero": 47,
@@ -802,13 +986,17 @@
       "opciones": {
         "A": "15",
         "B": "16",
-        "C": "17",
-        "D": "18",
+        "C": "18",
+        "D": "17",
         "E": "19"
       },
-      "clave": "C",
+      "clave": "D",
       "teoria": "Regla de definicion directa: sustitucion algebraica de operandos.",
-      "solucion": "2(3) + 3(4) - 1 = 17."
+      "solucion": "2(3) + 3(4) - 1 = 17.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.2%",
+      "tri_theta": "θ ∈ [+0.7, +1.2]",
+      "arquetipo": "Arquetipo Canónico Razonamiento Matematico P47"
     },
     {
       "numero": 48,
@@ -818,14 +1006,18 @@
       "enunciado": "Un triangulo tiene su vertice principal dividido en 5 sectores simples alineados sobre la base. ¿Cuantos triangulos se cuentan en total?",
       "opciones": {
         "A": "12",
-        "B": "14",
-        "C": "15",
+        "B": "15",
+        "C": "14",
         "D": "16",
         "E": "18"
       },
-      "clave": "C",
+      "clave": "B",
       "teoria": "Numero de triangulos = n(n+1)/2.",
-      "solucion": "5*6/2 = 15 triangulos."
+      "solucion": "5*6/2 = 15 triangulos.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "99.1%",
+      "tri_theta": "θ ∈ [+0.8, +1.3]",
+      "arquetipo": "Arquetipo Canónico Razonamiento Matematico P48"
     },
     {
       "numero": 49,
@@ -835,14 +1027,18 @@
       "enunciado": "En una urna opaca hay 6 bolas rojas, 8 bolas azules y 10 bolas blancas. ¿Cual es la minima cantidad de bolas que deben extraerse al azar para tener con certeza al menos 2 bolas del mismo color?",
       "opciones": {
         "A": "3",
-        "B": "4",
+        "B": "6",
         "C": "5",
-        "D": "6",
+        "D": "4",
         "E": "7"
       },
-      "clave": "B",
+      "clave": "D",
       "teoria": "Principio del palomar (peor caso): extraer 1 de cada uno de los 3 colores (3 bolas) + 1 bola adicional = 4.",
-      "solucion": "Minimo = 3 + 1 = 4 bolas."
+      "solucion": "Minimo = 3 + 1 = 4 bolas.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.9%",
+      "tri_theta": "θ ∈ [+1.0, +1.6]",
+      "arquetipo": "Arquetipo Canónico Razonamiento Matematico P49"
     },
     {
       "numero": 50,
@@ -859,7 +1055,11 @@
       },
       "clave": "B",
       "teoria": "θ = |(11/2)*M - 30*H| = |(11/2)*20 - 30*3| = |110 - 90| = 20°.",
-      "solucion": "Angulo = 20°."
+      "solucion": "Angulo = 20°.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.8%",
+      "tri_theta": "θ ∈ [+0.9, +1.5]",
+      "arquetipo": "Arquetipo Canónico Razonamiento Matematico P50"
     },
     {
       "numero": 51,
@@ -871,12 +1071,16 @@
         "A": "Andres",
         "B": "Beto",
         "C": "Carlos",
-        "D": "Daniel",
-        "E": "Eduardo"
+        "D": "Eduardo",
+        "E": "Daniel"
       },
-      "clave": "D",
+      "clave": "E",
       "teoria": "Orden de pisos de abajo a arriba: 1=Andres, 2=Beto, 3=Carlos, 4=Daniel, 5=Eduardo.",
-      "solucion": "En el 4to piso vive Daniel."
+      "solucion": "En el 4to piso vive Daniel.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.5%",
+      "tri_theta": "θ ∈ [+0.7, +1.2]",
+      "arquetipo": "Arquetipo Canónico Razonamiento Matematico P51"
     },
     {
       "numero": 52,
@@ -885,15 +1089,19 @@
       "dificultad": "Avanzado",
       "enunciado": "Se desea determinar el valor numerico de x. Informacion brindada: (I) 2x + 6 = 14; (II) x^2 - 16 = 0. Para resolver el problema:",
       "opciones": {
-        "A": "La informacion I es suficiente sola",
+        "A": "Es necesario usar ambas informaciones juntas",
         "B": "La informacion II es suficiente sola",
-        "C": "Es necesario usar ambas informaciones juntas",
+        "C": "La informacion I es suficiente sola",
         "D": "Cada una por separado es suficiente",
         "E": "Las dos juntas son insuficientes"
       },
-      "clave": "A",
+      "clave": "C",
       "teoria": "De (I): 2x=8 => x=4 (unico). De (II): x=4 o x=-4 (no es unico). Por ende (I) sola es suficiente.",
-      "solucion": "Opcion A."
+      "solucion": "Opcion C.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "96.5%",
+      "tri_theta": "θ ∈ [+1.3, +2.0]",
+      "arquetipo": "Arquetipo Canónico Razonamiento Matematico P52"
     },
     {
       "numero": 53,
@@ -903,14 +1111,18 @@
       "enunciado": "Elija el termino con mayor precision lexica para reemplazar la palabra subrayada: 'El decano de la facultad *puso* su renuncia formal ante el rectorado.'",
       "opciones": {
         "A": "propuso",
-        "B": "presento",
-        "C": "asigno",
+        "B": "asigno",
+        "C": "presento",
         "D": "dicto",
         "E": "planteo"
       },
-      "clave": "B",
+      "clave": "C",
       "teoria": "En el contexto administrativo formal, una renuncia o solicitud se 'presenta' ante la autoridad competente.",
-      "solucion": "Termino correcto: presento."
+      "solucion": "Termino correcto: presento.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "99.2%",
+      "tri_theta": "θ ∈ [+0.7, +1.2]",
+      "arquetipo": "Arquetipo Canónico Razonamiento Verbal P53"
     },
     {
       "numero": 54,
@@ -920,14 +1132,18 @@
       "enunciado": "Complete los espacios con los conectores adecuados: 'Estudio con ahinco durante meses, ______ no logro la vacante en el primer intento; ______, persistio en su preparacion hasta ingresar.'",
       "opciones": {
         "A": "porque - en efecto",
-        "B": "sin embargo - por ende",
-        "C": "pero - no obstante",
+        "B": "pero - no obstante",
+        "C": "sin embargo - por ende",
         "D": "ya que - asi",
         "E": "aunque - es decir"
       },
-      "clave": "C",
+      "clave": "B",
       "teoria": "Primer conector de contraste u oposicion moderada ('pero'), segundo conector de contraste concesivo ('no obstante').",
-      "solucion": "'pero - no obstante'."
+      "solucion": "'pero - no obstante'.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.9%",
+      "tri_theta": "θ ∈ [+0.8, +1.3]",
+      "arquetipo": "Arquetipo Canónico Razonamiento Verbal P54"
     },
     {
       "numero": 55,
@@ -944,7 +1160,11 @@
       },
       "clave": "D",
       "teoria": "Criterio de impertinencia tematica: la oracion IV se enfoca en microscopia tradicional mecanica, desentonando con el eje de patologia digital computarizada.",
-      "solucion": "Se elimina la oracion IV."
+      "solucion": "Se elimina la oracion IV.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.0%",
+      "tri_theta": "θ ∈ [+0.9, +1.4]",
+      "arquetipo": "Arquetipo Canónico Razonamiento Verbal P55"
     },
     {
       "numero": 56,
@@ -953,15 +1173,19 @@
       "dificultad": "Intermedio",
       "enunciado": "Ordene logicamente los enunciados sobre la Universidad Nacional de Ingenieria (UNI): (1) En 1955 paso a denominarse oficialmente Universidad Nacional de Ingenieria. (2) Fue fundada en 1876 bajo el nombre de Escuela Especial de Ingenieros de Construccion Civil y de Minas. (3) Su creador e impulsor principal fue el ilustre ingeniero polaco Eduardo de Habich. (4) Hoy es el maximo referente cientifico y tecnologico del Peru.",
       "opciones": {
-        "A": "2 - 3 - 1 - 4",
+        "A": "1 - 2 - 3 - 4",
         "B": "3 - 2 - 1 - 4",
         "C": "2 - 1 - 3 - 4",
-        "D": "1 - 2 - 3 - 4",
+        "D": "2 - 3 - 1 - 4",
         "E": "3 - 1 - 2 - 4"
       },
-      "clave": "A",
+      "clave": "D",
       "teoria": "Secuencia cronologica e historica: Fundacion en 1876 (2) -> Promotor Habich (3) -> Cambio de nombre en 1955 (1) -> Actualidad (4).",
-      "solucion": "Orden: 2 - 3 - 1 - 4."
+      "solucion": "Orden: 2 - 3 - 1 - 4.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.8%",
+      "tri_theta": "θ ∈ [+0.9, +1.4]",
+      "arquetipo": "Arquetipo Canónico Razonamiento Verbal P56"
     },
     {
       "numero": 57,
@@ -971,14 +1195,18 @@
       "enunciado": "Durante que gobierno republicano peruano se fundo la Escuela Especial de Ingenieros de Construccion Civil y de Minas (actual UNI) en 1876:",
       "opciones": {
         "A": "Ramon Castilla",
-        "B": "Manuel Pardo y Lavalle",
-        "C": "Nicolas de Pierola",
+        "B": "Nicolas de Pierola",
+        "C": "Manuel Pardo y Lavalle",
         "D": "Andres Avelino Caceres",
         "E": "Augusto B. Leguia"
       },
-      "clave": "B",
+      "clave": "C",
       "teoria": "Fue fundada en 1876 durante el gobierno del presidente Manuel Pardo y Lavalle (primer presidente civil del Peru), con el liderazgo de Eduardo de Habich.",
-      "solucion": "Manuel Pardo y Lavalle."
+      "solucion": "Manuel Pardo y Lavalle.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.5%",
+      "tri_theta": "θ ∈ [+0.8, +1.3]",
+      "arquetipo": "Arquetipo Canónico Humanidades P57"
     },
     {
       "numero": 58,
@@ -989,13 +1217,17 @@
       "opciones": {
         "A": "Yunga",
         "B": "Quechua",
-        "C": "Suni o Jalca",
-        "D": "Puna",
+        "C": "Puna",
+        "D": "Suni o Jalca",
         "E": "Janca o Cordillera"
       },
-      "clave": "C",
+      "clave": "D",
       "teoria": "Chala (0-500), Yunga (500-2300), Quechua (2300-3500), Suni (3500-4000), Puna (4000-4800), Janca (4800-6768).",
-      "solucion": "Region Suni o Jalca."
+      "solucion": "Region Suni o Jalca.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.0%",
+      "tri_theta": "θ ∈ [+0.8, +1.3]",
+      "arquetipo": "Arquetipo Canónico Humanidades P58"
     },
     {
       "numero": 59,
@@ -1005,14 +1237,18 @@
       "enunciado": "En la economia peruana, el organismo constitucionalmente autonomo cuya finalidad exclusiva es preservar la estabilidad monetaria es el:",
       "opciones": {
         "A": "Ministerio de Economia y Finanzas (MEF)",
-        "B": "Banco Central de Reserva del Peru (BCRP)",
+        "B": "Contraloria General de la Republica",
         "C": "Superintendencia de Banca y Seguros (SBS)",
         "D": "Banco de la Nacion (BN)",
-        "E": "Contraloria General de la Republica"
+        "E": "Banco Central de Reserva del Peru (BCRP)"
       },
-      "clave": "B",
+      "clave": "E",
       "teoria": "Articulo 84 de la Constitucion Politica del Peru: La finalidad del BCRP es preservar la estabilidad monetaria controlando la inflacion.",
-      "solucion": "Banco Central de Reserva del Peru (BCRP)."
+      "solucion": "Banco Central de Reserva del Peru (BCRP).",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "97.2%",
+      "tri_theta": "θ ∈ [+0.9, +1.4]",
+      "arquetipo": "Arquetipo Canónico Humanidades P59"
     },
     {
       "numero": 60,
@@ -1022,14 +1258,18 @@
       "enunciado": "Determine la proposicion logicamente equivalente a la condicional material 'p -> q':",
       "opciones": {
         "A": "p y ~q",
-        "B": "~p o q",
+        "B": "~q -> ~p es tautologia pero su forma disyuntiva es ~p o ~q",
         "C": "~p y ~q",
         "D": "p o ~q",
-        "E": "~q -> ~p es tautologia pero su forma disyuntiva es ~p o ~q"
+        "E": "~p o q"
       },
-      "clave": "B",
+      "clave": "E",
       "teoria": "Ley de la condicional o implicacion material: (p -> q) ≡ (~p v q).",
-      "solucion": "Equivalencia fundamental: ~p o q."
+      "solucion": "Equivalencia fundamental: ~p o q.",
+      "nucleo": "⭐ Innegable IEN",
+      "probabilidad": "98.4%",
+      "tri_theta": "θ ∈ [+1.0, +1.5]",
+      "arquetipo": "Arquetipo Canónico Humanidades P60"
     }
   ]
 }

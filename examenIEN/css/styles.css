@@ -1081,6 +1081,105 @@ footer {
   margin-top: 0.25rem;
 }
 
+
+/* ==========================================================================
+   BLINDAJE Y RESPONSIVIDAD PARA FÓRMULAS MATHJAX / LATEX
+   ========================================================================== */
+mjx-container, .MathJax, .MathJax_Display {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 0;
+  vertical-align: middle;
+}
+mjx-container[display="true"] {
+  display: block !important;
+  margin: 0.6em auto !important;
+  text-align: center;
+}
+.option-text {
+  min-width: 0 !important;
+  word-break: break-word;
+}
+
+/* Soporte para Ficha Óptica IEN (.sheet-summary & .sheet-legend) */
+.sheet-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem;
+  margin-bottom: 0.85rem;
+  text-align: center;
+}
+.stat-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.stat-pill .stat-num {
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+.stat-pill.stat-answered .stat-num { color: #10b981; }
+.stat-pill.stat-review .stat-num { color: #f59e0b; }
+.stat-pill.stat-pending .stat-num { color: #94a3b8; }
+.sheet-legend {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.72rem;
+  color: var(--text-light);
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.5rem;
+}
+.legend-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+.dot-active { background: var(--uni-bordeaux); }
+.dot-answered { background: #10b981; }
+.dot-review { background: #f59e0b; }
+.dot-blank { background: #94a3b8; }
+
+/* Botón Flotante Compacto Cortana (48px Circular Ergonómico) */
+.cortana-fab-btn-mini {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0284c7, #a855f7);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  z-index: 80;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.cortana-fab-btn-mini:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.7);
+}
+.cortana-fab-btn-mini:active {
+  transform: scale(0.94);
+}
+
 /* ==========================================================================
    BREAKPOINTS RESPONSIVOS DE ÉLITE (4K -> SMARTPHONE)
    ========================================================================== */
@@ -1153,7 +1252,7 @@ footer {
   }
 }
 
-/* 4. Smartphones y Pantallas Estrechas (<= 640px) */
+/* 4. Smartphones y Pantallas Estrechas (<= 640px y 320px-414px) */
 @media (max-width: 640px) {
   .header-top {
     padding: 0.6rem 1rem;
@@ -1167,8 +1266,12 @@ footer {
     justify-content: space-between;
   }
 
+  /* Liberación del 50% de la pantalla: la barra no es sticky, solo el mini-dock */
   .control-bar {
-    padding: 0.5rem 1rem;
+    position: relative;
+    top: auto;
+    padding: 0.5rem 0.75rem 0.25rem;
+    box-shadow: none;
   }
   .control-container {
     flex-direction: column;
@@ -1190,9 +1293,43 @@ footer {
     width: 100%;
   }
 
+  /* Mini-Dock Compacto Adhesivo Ergonómico (Ficha, Timer y Finalizar) */
   .control-actions {
+    position: sticky;
+    top: 0;
+    z-index: 65;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.45rem 0.75rem;
+    margin: 0 -0.75rem -0.25rem;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1.5px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    width: calc(100% + 1.5rem);
+  }
+
+  /* Cuadrícula de Burbujas Ergonómica a 4 Columnas con altura táctil >= 44px */
+  .bubble-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+  .bubble {
+    height: 44px !important;
+    min-height: 44px !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Botón Cortana compacto en esquina sin obstruir respuestas */
+  .cortana-fab-btn-mini {
+    bottom: 14px;
+    right: 14px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.15rem;
   }
 
   .main-layout {

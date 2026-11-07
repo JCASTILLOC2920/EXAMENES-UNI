@@ -151,7 +151,7 @@
           <span>FICHA ÓPTICA DIGITAL IEN UNI</span>
           <span class="sheet-subtitle">CONCURSO INGRESO ESCOLAR NACIONAL</span>
         </div>
-        <button id="closeSheetMobileBtn" class="close-sheet-mobile" aria-label="Cerrar Ficha">&times;</button>
+        <button id="closeSheetMobileBtn" class="btn-close-sheet-mobile" aria-label="Cerrar Ficha">&times;</button>
       </div>
 
       <div class="sheet-summary">
@@ -183,74 +183,98 @@
     </aside>
   </main>
 
-  <!-- Modal de Calificación y Solucionario UNI -->
-  <div class="modal-overlay" id="modalOverlay" style="display:none;"></div>
+  <!-- Modal Oficial de Resultados y Solucionario Analítico IEN UNI -->
   <div class="results-modal" id="resultsModal" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-header">
-      <div class="modal-title-group">
+    <div class="results-overlay" id="modalOverlay"></div>
+    <div class="results-content">
+      <div class="results-header">
+        <span class="modal-badge-uni">REPORTE OFICIAL IEN UNI</span>
         <h2 id="modalTitle">RESULTADO OFICIAL DE EVALUACIÓN IEN UNI</h2>
-        <p class="modal-subtitle">Calificación Oficial UNI: Correcta: +5.0 | Incorrecta: -1.025 | Blanco: 0.0</p>
-      </div>
-      <button id="closeResultsBtn" class="modal-close" aria-label="Cerrar">&times;</button>
-    </div>
-
-    <div class="modal-body">
-      <!-- Tarjeta de Puntaje Total -->
-      <div class="score-card">
-        <div class="score-main">
-          <span class="score-val" id="scoreNumber">0.000</span>
-          <span class="score-max" id="scoreMaxLabel">/ 300.000 pts</span>
-        </div>
-        <div class="score-percent" id="scorePercentLabel">Rendimiento: 0.0%</div>
-      </div>
-
-      <!-- Métricas del Desempeño -->
-      <div class="modal-stats-grid">
-        <div class="stat-box box-correct">
-          <span class="box-val" id="correctCount">0</span>
-          <span class="box-lbl">Correctas (+5.0)</span>
-        </div>
-        <div class="stat-box box-incorrect">
-          <span class="box-val" id="incorrectCount">0</span>
-          <span class="box-lbl">Incorrectas (-1.025)</span>
-        </div>
-        <div class="stat-box box-blank">
-          <span class="box-val" id="blankCount">60</span>
-          <span class="box-lbl">En Blanco (0.0)</span>
+        <p>Ponderación oficial: Correcta: +5.0 | Incorrecta: -1.025 | Blanco: 0.0</p>
+        
+        <div class="score-display-box">
+          <div class="score-number" id="scoreNumber">0.000</div>
+          <div class="score-max" id="scoreMaxLabel">/ 300.000 pts</div>
+          <div class="score-percent" id="scorePercentLabel">Rendimiento: 0.0%</div>
         </div>
       </div>
 
-      <!-- Carreras Alcanzables según Puntaje IEN -->
-      <div class="admitted-careers-section">
-        <h3>Diagnóstico de Ingreso a Facultades UNI:</h3>
-        <ul id="careerList" class="career-list">
-          <!-- Generado dinámicamente -->
-        </ul>
-      </div>
+      <div class="results-body">
+        <div class="score-metrics-grid">
+          <div class="metric-card correct">
+            <h4>Correctas (+5.0)</h4>
+            <p id="correctCount">0</p>
+          </div>
+          <div class="metric-card incorrect">
+            <h4>Incorrectas (-1.025)</h4>
+            <p id="incorrectCount">0</p>
+          </div>
+          <div class="metric-card blank">
+            <h4>En Blanco (0.0)</h4>
+            <p id="blankCount">60</p>
+          </div>
+        </div>
 
-      <!-- Solucionario Completo y Detallado -->
-      <div class="solutions-section">
-        <h3>Solucionario Detallado y Fundamentos Teóricos</h3>
-        <div id="solutionsContainer" class="solutions-container">
-          <!-- Preguntas con su clave, teoría y resolución paso a paso -->
+        <div class="ranking-box">
+          <h3>🎯 DIAGNÓSTICO DE INGRESO A FACULTADES UNI</h3>
+          <p style="font-size: 0.85rem; color:#166534; margin-bottom: 0.75rem;">
+            Basado en los cortes referenciales del Concurso Ingreso Escolar Nacional (IEN):
+          </p>
+          <ul id="careerList"></ul>
+        </div>
+
+        <div class="solutions-section">
+          <div class="solutions-title-bar">
+            <h3>SOLUCIONARIO DETALLADO Y FUNDAMENTOS TEÓRICOS</h3>
+            <span class="badge badge-subject">100% Auditado</span>
+          </div>
+          <div id="solutionsContainer">
+            <!-- Soluciones completas con teoría y desarrollo LaTeX -->
+          </div>
+        </div>
+
+        <div class="modal-actions-bar">
+          <button id="restartBtn" class="btn btn-outline">Reintentar Mismo Examen</button>
+          <button id="modalGenNewBtn" class="btn btn-generator">✨ Generar Otro Simulacro IEN</button>
+          <button id="closeResultsBtn" class="btn btn-primary">Cerrar Reporte</button>
         </div>
       </div>
-    </div>
-
-    <div class="modal-footer">
-      <button id="restartBtn" class="btn btn-outline">Reintentar Mismo Examen</button>
-      <button id="modalGenNewBtn" class="btn btn-generator">✨ Generar Otro Simulacro IEN</button>
     </div>
   </div>
 
   <!-- Carga del Banco Maestro Predictivo IEN y Lógica de Aplicación -->
   <script src="data/banco_predictivo_ien.js"></script>
+  <!-- Módulo Soberano de Telemetría Militar y Offline Queue -->
+  <script src="js/telemetry.js"></script>
   <script src="js/app_ien.js"></script>
 
   <!-- BOTÓN FLOTANTE CORTANA TUTORA IEN -->
-  <button id="btnCortanaIEN" style="position:fixed; bottom:20px; right:20px; background:linear-gradient(135deg,#0284c7,#a855f7); color:#fff; border:2px solid rgba(255,255,255,0.4); padding:10px 16px; border-radius:25px; font-weight:800; font-size:0.85rem; cursor:pointer; display:flex; align-items:center; gap:8px; box-shadow:0 8px 25px rgba(2,132,199,0.5); z-index:90;">
+  <button id="btnCortanaIEN" style="position:fixed; bottom:20px; right:20px; background:linear-gradient(135deg,#0284c7,#a855f7); color:#fff; border:2px solid rgba(255,255,255,0.4); padding:10px 16px; border-radius:25px; font-weight:800; font-size:0.85rem; cursor:pointer; display:flex; align-items:center; gap:8px; box-shadow:0 8px 25px rgba(2,132,199,0.5); z-index:90;" title="🎙️ Pista Socrática Cortana">
     <span>🎙️</span> Pista Socrática Cortana
   </button>
+
+  <!-- MODAL ELEGANTE PISTA SOCRÁTICA CORTANA IEN -->
+  <div class="cortana-ien-overlay" id="cortanaModalIEN" style="display:none; position:fixed; inset:0; background:rgba(9,13,22,0.85); backdrop-filter:blur(8px); z-index:200; align-items:center; justify-content:center; padding:16px;">
+    <div style="background:#0f172a; border:1px solid #38bdf8; border-radius:16px; max-width:600px; width:100%; padding:22px; position:relative; box-shadow:0 20px 50px rgba(0,0,0,0.8); color:#f8fafc;">
+      <button id="closeCortanaModalIEN" style="position:absolute; top:12px; right:14px; background:transparent; border:none; color:#94a3b8; font-size:1.6rem; cursor:pointer;">&times;</button>
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+        <div style="width:38px; height:38px; border-radius:50%; background:linear-gradient(135deg,#0284c7,#a855f7); display:flex; align-items:center; justify-content:center; font-size:1.2rem;">🎙️</div>
+        <div>
+          <h3 style="font-size:1.1rem; font-weight:800; color:#fff; margin:0;" id="cortanaModalTitleIEN">Cortana • Pista Socrática IEN UNI</h3>
+          <p style="font-size:0.75rem; color:#38bdf8; margin:0;">Orientación Didáctica de Alta Certeza (5to Secundaria)</p>
+        </div>
+      </div>
+      <div style="background:rgba(2,6,23,0.7); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:14px; margin-bottom:12px;">
+        <div style="font-size:0.78rem; font-weight:700; color:#38bdf8; text-transform:uppercase; margin-bottom:4px;">🎯 Arquetipo y Materia:</div>
+        <div id="cortanaModalMetaIEN" style="font-size:0.85rem; color:#e2e8f0; margin-bottom:10px; font-weight:600;"></div>
+        <div style="font-size:0.78rem; font-weight:700; color:#10b981; text-transform:uppercase; margin-bottom:4px;">💡 Fundamento Teórico / Pista Rector:</div>
+        <div id="cortanaModalBodyIEN" style="font-size:0.88rem; color:#f1f5f9; line-height:1.5;"></div>
+      </div>
+      <button id="btnListenCortanaIEN" style="background:linear-gradient(135deg,#0284c7,#0ea5e9); color:#fff; border:none; padding:8px 16px; border-radius:8px; font-weight:700; font-size:0.82rem; cursor:pointer; display:flex; align-items:center; gap:6px;">
+        <span>🔊</span> Escuchar Pista con Voz Cortana
+      </button>
+    </div>
+  </div>
 
 </body>
 </html>
