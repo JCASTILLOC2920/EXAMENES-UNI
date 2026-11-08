@@ -1,13 +1,13 @@
 /**
- * JC PATH LAB & DR. JOSÃ CASTILLO - SIMULADOR PREDICTIVO IEN UNI 2026
- * SISTEMA MATEMÃTICO DE PREDICCIÃN EXTREMA (~100% CERTEZA)
+ * JC PATH LAB & DR. JOSÉ CASTILLO - SIMULADOR PREDICTIVO IEN UNI 2026
+ * SISTEMA MATEMÁTICO DE PREDICCIÓN EXTREMA (~100% CERTEZA)
  * Modalidad: Ingreso Escolar Nacional (IEN - 5to de Secundaria)
  * 
- * - Estructura CanÃ³nica: 60 Preguntas (24 Mat, 10 FÃ­s, 10 QuÃ­m, 16 Apt/Hum)
+ * - Estructura Canónica: 60 Preguntas (24 Mat, 10 Fís, 10 Quím, 16 Apt/Hum)
  * - 40 Arquetipos Innegables IEN (Probabilidad >= 95%)
- * - Cadenas de Markov de 2do Orden y RotaciÃ³n Curricular
- * - CalificaciÃ³n Oficial UNI: +5.0 / -1.025 / 0.0 (MÃ¡ximo 300 Puntos)
- * - DuraciÃ³n Oficial: 3 horas (180 minutos)
+ * - Cadenas de Markov de 2do Orden y Rotación Curricular
+ * - Calificación Oficial UNI: +5.0 / -1.025 / 0.0 (Máximo 300 Puntos)
+ * - Duración Oficial: 3 horas (180 minutos)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -46,13 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const qStatement = document.getElementById('qStatement');
   const optionsContainer = document.getElementById('optionsContainer');
 
-  // NavegaciÃ³n
+  // Navegación
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
   const markReviewBtn = document.getElementById('markReviewBtn');
   const clearAnsBtn = document.getElementById('clearAnsBtn');
 
-  // Ficha Ãptica
+  // Ficha Óptica
   const opticalSheetCard = document.getElementById('opticalSheetCard');
   const toggleSheetBtn = document.getElementById('toggleSheetBtn');
   const closeSheetMobileBtn = document.getElementById('closeSheetMobileBtn');
@@ -85,16 +85,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. INICIALIZAR SELECTOR DE EXAMENES
   function inicializarSelectores() {
     if (!window.BANCO_PREDICTIVO_IEN) {
-      qStatement.textContent = "Error: No se encontrÃ³ window.BANCO_PREDICTIVO_IEN.";
+      qStatement.textContent = "Error: No se encontró window.BANCO_PREDICTIVO_IEN.";
       return;
     }
 
     examSelect.innerHTML = '';
     
-    // OpciÃ³n 1: Dinamico IA
+    // Opción 1: Dinamico IA
     const optDyn = document.createElement('option');
     optDyn.value = 'SIMULACRO_DINAMICO_IA';
-    optDyn.textContent = 'â¨ Generador DinÃ¡mico IEN (0% RepeticiÃ³n | 100% Arquetipos)';
+    optDyn.textContent = '✨ Generador Dinámico IEN (0% Repetición | 100% Arquetipos)';
     examSelect.appendChild(optDyn);
 
     // Opciones del Banco
@@ -103,6 +103,27 @@ document.addEventListener('DOMContentLoaded', () => {
       opt.value = key;
       opt.textContent = window.BANCO_PREDICTIVO_IEN[key].titulo;
       examSelect.appendChild(opt);
+    }
+
+    // Soporte para parámetros de URL (?exam=... &year=... &subject=...)
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const paramExam = urlParams.get('exam') || urlParams.get('examen');
+      const paramYear = urlParams.get('year') || urlParams.get('año') || urlParams.get('ano');
+      const paramSubject = urlParams.get('subject') || urlParams.get('materia') || urlParams.get('area');
+
+      if (paramExam && window.BANCO_PREDICTIVO_IEN[paramExam]) {
+        state.selectedExamKey = paramExam;
+      } else if (paramYear) {
+        const matchKey = Object.keys(window.BANCO_PREDICTIVO_IEN).find(k => k.includes(paramYear));
+        if (matchKey) state.selectedExamKey = matchKey;
+      }
+      if (paramSubject && subjectFilterSelect) {
+        subjectFilterSelect.value = paramSubject;
+        state.activeFilter = paramSubject;
+      }
+    } catch (e) {
+      console.warn("Aviso URLSearchParams IEN:", e);
     }
 
     examSelect.value = state.selectedExamKey;
@@ -129,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 4. GENERADOR DINÃMICO IEN
+  // 4. GENERADOR DINÁMICO IEN
   function generarNuevoDinamico() {
     const examKeys = Object.keys(window.BANCO_PREDICTIVO_IEN);
     if (examKeys.length === 0) return;
@@ -140,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const seed = Date.now();
 
     for (let i = 0; i < totalQ; i++) {
-      // Tomar una variante de cualquiera de los exÃ¡menes para esta posiciÃ³n i
+      // Tomar una variante de cualquiera de los exámenes para esta posición i
       const randExamKey = examKeys[Math.floor(Math.random() * examKeys.length)];
       const qSource = window.BANCO_PREDICTIVO_IEN[randExamKey].preguntas[i] || baseExam.preguntas[i];
       const qClon = JSON.parse(JSON.stringify(qSource));
@@ -165,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     state.examData = {
-      titulo: `â¨ Simulacro DinÃ¡mico IEN UNI - Semilla #${seed.toString().slice(-4)}`,
+      titulo: `✨ Simulacro Dinámico IEN UNI - Semilla #${seed.toString().slice(-4)}`,
       modalidad: "Ingreso Escolar Nacional (IEN)",
       duracion_minutos: 180,
       total_preguntas: 60,
@@ -183,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     construirFichaOptica();
 
     if (dynamicAlert) {
-      dynamicAlertText.textContent = `Â¡Nuevo Simulacro IEN Generado con Ãxito! Semilla #${seed.toString().slice(-4)} (60 Arquetipos IEN)`;
+      dynamicAlertText.textContent = `Â¡Nuevo Simulacro IEN Generado con Éxito! Semilla #${seed.toString().slice(-4)} (60 Arquetipos IEN)`;
       dynamicAlert.style.display = 'flex';
       setTimeout(() => { dynamicAlert.style.display = 'none'; }, 5000);
     }
@@ -275,11 +296,11 @@ document.addEventListener('DOMContentLoaded', () => {
     qNumBadge.textContent = `PREGUNTA ${q.numero} / ${total}`;
     qArchetypeTag.textContent = q.arquetipo || `Arquetipo IEN #${q.numero}`;
     qSubjectBadge.textContent = q.curso ? q.curso.toUpperCase() : "MATERIA";
-    qTopicBadge.textContent = q.tema || "TÃ³pico";
+    qTopicBadge.textContent = q.tema || "Tópico";
     qProbBadge.textContent = `ð¯ CERTEZA: ${q.probabilidad || '98.0%'}`;
-    qNucleoBadge.textContent = q.nucleo || "â­ INNEGABLE IEN";
+    qNucleoBadge.textContent = q.nucleo || "⭐ INNEGABLE IEN";
     qDiffBadge.textContent = (q.dificultad || "INTERMEDIO").toUpperCase();
-    qTriBadge.textContent = q.tri_theta || "Î¸ â [+1.0, +1.6]";
+    qTriBadge.textContent = q.tri_theta || "Î¸ ∈ [+1.0, +1.6]";
 
     qStatement.innerHTML = q.enunciado.replace(/\n/g, '<br>');
 
@@ -312,17 +333,17 @@ document.addEventListener('DOMContentLoaded', () => {
       optionsContainer.appendChild(optBtn);
     });
 
-    // Actualizar botones de navegaciÃ³n
+    // Actualizar botones de navegación
     prevBtn.disabled = state.currentQuestionIndex === 0;
-    nextBtn.textContent = state.currentQuestionIndex === total - 1 ? 'Finalizar Examen' : 'Siguiente â';
+    nextBtn.textContent = state.currentQuestionIndex === total - 1 ? 'Finalizar Examen' : 'Siguiente →';
 
-    // Actualizar estado de revisiÃ³n
+    // Actualizar estado de revisión
     if (state.markedForReview.has(q.numero)) {
       markReviewBtn.classList.add('active');
-      markReviewBtn.textContent = 'â Marcada para RevisiÃ³n';
+      markReviewBtn.textContent = '★ Marcada para Revisión';
     } else {
       markReviewBtn.classList.remove('active');
-      markReviewBtn.textContent = 'â Marcar RevisiÃ³n';
+      markReviewBtn.textContent = '☆ Marcar Revisión';
     }
 
     actualizarBurbujaActiva(q.numero);
@@ -339,7 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
     actualizarEstadoFicha();
   }
 
-  // 7. FICHA ÃPTICA
+  // 7. FICHA ÓPTICA
   function construirFichaOptica() {
     if (!state.examData || !state.examData.preguntas) return;
     bubbleGrid.innerHTML = '';
@@ -430,7 +451,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 8. CRONÃMETRO DE 3 HORAS
+  // 8. CRONÓMETRO DE 3 HORAS
   function reiniciarCronometro() {
     if (state.timerInterval) clearInterval(state.timerInterval);
     const durationMs = 180 * 60 * 1000;
@@ -462,7 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
     state.timerInterval = setInterval(tick, 500);
   }
 
-  // 9. NAVEGACIÃN Y ACCIONES
+  // 9. NAVEGACIÓN Y ACCIONES
   prevBtn.addEventListener('click', () => {
     if (state.currentQuestionIndex > 0) {
       state.currentQuestionIndex--;
@@ -502,7 +523,7 @@ document.addEventListener('DOMContentLoaded', () => {
     finalizarExamen(false);
   });
 
-  // Toggle Ficha MÃ³vil
+  // Toggle Ficha Móvil
   toggleSheetBtn.addEventListener('click', () => {
     opticalSheetCard.classList.toggle('sheet-open-mobile');
   });
@@ -513,7 +534,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 10. CALIFICACIÃN OFICIAL UNI
+  // 10. CALIFICACIÓN OFICIAL UNI
   function finalizarExamen(porTiempo = false) {
     if (state.examFinished) return;
     if (!porTiempo) {
@@ -553,14 +574,14 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <p class="sol-statement">${q.enunciado}</p>
         <div class="sol-detail">
-          <span>Tu MarcaciÃ³n: <strong>${marcada || 'Ninguna'}</strong></span> | 
+          <span>Tu Marcación: <strong>${marcada || 'Ninguna'}</strong></span> | 
           <span>Clave Oficial: <strong>${q.clave}</strong></span>
         </div>
         <div class="sol-theory">
-          <strong>Fundamento TeÃ³rico:</strong> ${q.teoria || ''}
+          <strong>Fundamento Teórico:</strong> ${q.teoria || ''}
         </div>
         <div class="sol-steps">
-          <strong>ResoluciÃ³n Paso a Paso:</strong> ${q.solucion || ''}
+          <strong>Resolución Paso a Paso:</strong> ${q.solucion || ''}
         </div>
       `;
       solutionsContainer.appendChild(solCard);
@@ -625,16 +646,16 @@ document.addEventListener('DOMContentLoaded', () => {
     incorrectCountEl.textContent = incorrectas;
     blankCountEl.textContent = enBlanco;
 
-    // Carreras Alcanzables segÃºn Corte IEN UNI (sobre 300 pts)
+    // Carreras Alcanzables según Corte IEN UNI (sobre 300 pts)
     careerList.innerHTML = '';
     const cortesIEN = [
-      { carrera: "IngenierÃ­a de Sistemas", min: 240.0 },
-      { carrera: "IngenierÃ­a MecatrÃ³nica", min: 235.0 },
-      { carrera: "IngenierÃ­a Civil", min: 225.0 },
-      { carrera: "IngenierÃ­a ElectrÃ³nica", min: 215.0 },
-      { carrera: "IngenierÃ­a Industrial", min: 210.0 },
-      { carrera: "IngenierÃ­a QuÃ­mica", min: 185.0 },
-      { carrera: "IngenierÃ­a de Minas", min: 190.0 },
+      { carrera: "Ingeniería de Sistemas", min: 240.0 },
+      { carrera: "Ingeniería Mecatrónica", min: 235.0 },
+      { carrera: "Ingeniería Civil", min: 225.0 },
+      { carrera: "Ingeniería Electrónica", min: 215.0 },
+      { carrera: "Ingeniería Industrial", min: 210.0 },
+      { carrera: "Ingeniería Química", min: 185.0 },
+      { carrera: "Ingeniería de Minas", min: 190.0 },
       { carrera: "Arquitectura", min: 200.0 }
     ];
 
@@ -642,7 +663,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const li = document.createElement('li');
       const alcanza = puntajeTotal >= c.min;
       li.className = alcanza ? 'career-admitted' : 'career-not-admitted';
-      li.innerHTML = `<span>${alcanza ? 'â' : 'â'} <strong>${c.carrera}</strong> (Corte Referencial: ${c.min.toFixed(1)} pts)</span> <span>${alcanza ? 'Â¡ALCANZASTE VACANTE!' : 'Puntaje insuficiente'}</span>`;
+      li.innerHTML = `<span>${alcanza ? '✅' : '❌'} <strong>${c.carrera}</strong> (Corte Referencial: ${c.min.toFixed(1)} pts)</span> <span>${alcanza ? 'Â¡ALCANZASTE VACANTE!' : 'Puntaje insuficiente'}</span>`;
       careerList.appendChild(li);
     });
 
@@ -721,7 +742,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  // InicializaciÃ³n
+  // Inicialización
     // =========================================================================
   // MODAL Y PISTA SOCRÁTICA CORTANA IEN
   // =========================================================================

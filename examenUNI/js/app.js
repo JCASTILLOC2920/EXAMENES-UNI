@@ -1,19 +1,19 @@
 /**
- * JC PATH LAB & DR. JOSÃ CASTILLO - SIMULADOR PREDICTIVO UNI
- * SISTEMA MATEMÃTICO DE PREDICCIÃN EXTREMA (~100% CERTEZA)
+ * JC PATH LAB & DR. JOSÉ CASTILLO - SIMULADOR PREDICTIVO UNI
+ * SISTEMA MATEMÁTICO DE PREDICCIÓN EXTREMA (~100% CERTEZA)
  * - Automated Test Assembly (MILP)
  * - Los 50 Subtemas Innegables (Probabilidad >= 95%)
- * - Cadenas de Markov de 2do Orden (RotaciÃ³n Curricular)
- * - 150 Arquetipos CanÃ³nicos IsomÃ³rficos (Anti-RepeticiÃ³n DinÃ¡mica)
- * - TeorÃ­a de Respuesta al Ãtem (TRI 3PL / TIF)
+ * - Cadenas de Markov de 2do Orden (Rotación Curricular)
+ * - 150 Arquetipos Canónicos Isomórficos (Anti-Repetición Dinámica)
+ * - Teoría de Respuesta al Ítem (TRI 3PL / TIF)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
-  // 1. ESTADO GLOBAL DE LA APLICACIÃN
+  // 1. ESTADO GLOBAL DE LA APLICACIÓN
   // =========================================================================
   const state = {
-    selectedExamKey: 'SIMULACRO_DINAMICO_IA', // Modo DinÃ¡mico por defecto
+    selectedExamKey: 'SIMULACRO_DINAMICO_IA', // Modo Dinámico por defecto
     selectedDayKey: 'dia_1',
     currentQuestionIndex: 0,
     answers: {},            // { [qNum]: 'A' | 'B' | 'C' | 'D' | 'E' }
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     autoAdvanceTimeout: null,
     isMathJaxRunning: false,
     pendingMathJax: false,
-    dynamicExamsCache: {}   // CachÃ© de simulacros dinÃ¡micos generados
+    dynamicExamsCache: {}   // Caché de simulacros dinámicos generados
   };
 
   // =========================================================================
@@ -50,13 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const qStatement = document.getElementById('qStatement');
   const optionsContainer = document.getElementById('optionsContainer');
 
-  // Acciones y NavegaciÃ³n
+  // Acciones y Navegación
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
   const markReviewBtn = document.getElementById('markReviewBtn');
   const clearAnsBtn = document.getElementById('clearAnsBtn');
 
-  // Ficha Ãptica
+  // Ficha Óptica
   const opticalSheetCard = document.getElementById('opticalSheetCard');
   const toggleSheetBtn = document.getElementById('toggleSheetBtn');
   const closeSheetMobileBtn = document.getElementById('closeSheetMobileBtn');
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const reviewCountEl = document.getElementById('reviewCount');
   const sheetAnsweredBadge = document.getElementById('sheetAnsweredBadge');
 
-  // Alerta / Toast DinÃ¡mica
+  // Alerta / Toast Dinámica
   const dynamicAlert = document.getElementById('dynamicAlert');
   const dynamicAlertText = document.getElementById('dynamicAlertText');
   const closeAlertBtn = document.getElementById('closeAlertBtn');
@@ -87,16 +87,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalGenNewBtn = document.getElementById('modalGenNewBtn');
 
   // =========================================================================
-  // 3. MOTOR GENERADOR DINÃMICO (MARKOV + MILP + ARQUETIPOS CANÃNICOS)
+  // 3. MOTOR GENERADOR DINÁMICO (MARKOV + MILP + ARQUETIPOS CANÓNICOS)
   // =========================================================================
   
   /**
-   * Genera un examen predictivo 100% dinÃ¡mico sin repeticiÃ³n:
+   * Genera un examen predictivo 100% dinámico sin repetición:
    * Para cada pregunta k del temario oficial:
-   * - Identifica su arquetipo canÃ³nico exacto.
+   * - Identifica su arquetipo canónico exacto.
    * - Muestrea una variante de los 45 procesos del banco.
-   * - Aplica una permutaciÃ³n isomÃ³rfica sobre las alternativas (A-E) y recalcula la clave.
-   * - Con ello, cada simulacro presenta nÃºmeros y opciones distintas, pero garantiza el 100% del temario.
+   * - Aplica una permutación isomórfica sobre las alternativas (A-E) y recalcula la clave.
+   * - Con ello, cada simulacro presenta números y opciones distintas, pero garantiza el 100% del temario.
    */
   function generarSimulacroDinamicoSinRepeticion(dayKey, seed = Date.now()) {
     if (!window.BANCO_PREDICTIVO) return null;
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const examKeys = Object.keys(window.BANCO_PREDICTIVO).filter(k => k !== 'SIMULACRO_DINAMICO_IA');
     if (examKeys.length === 0) return null;
 
-    // Tomamos como plantilla la estructura oficial del DÃ­a
+    // Tomamos como plantilla la estructura oficial del Día
     const baseExam = window.BANCO_PREDICTIVO['SIMULACRO_PREDICTIVO_2026'] || window.BANCO_PREDICTIVO[examKeys[0]];
     const baseDay = baseExam.dias[dayKey];
     if (!baseDay) return null;
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalQuestions = baseDay.preguntas.length;
     const nuevasPreguntas = [];
 
-    // FunciÃ³n pseudo-aleatoria congruencial basada en semilla
+    // Función pseudo-aleatoria congruencial basada en semilla
     let s = seed % 2147483647;
     function nextRand() {
       s = (s * 16807) % 2147483647;
@@ -137,8 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const qClon = JSON.parse(JSON.stringify(qBase));
       qClon.num = i + 1;
 
-      // 4. PermutaciÃ³n IsomÃ³rfica de Alternativas (A, B, C, D, E)
-      // Permuta el orden de las alternativas y recalcula la clave oficial unÃ­voca
+      // 4. Permutación Isomórfica de Alternativas (A, B, C, D, E)
+      // Permuta el orden de las alternativas y recalcula la clave oficial unívoca
       const letters = ['A', 'B', 'C', 'D', 'E'];
       const originalOptions = qClon.opciones;
       const originalClave = qClon.clave;
@@ -176,42 +176,42 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 4. INICIALIZACIÃN DE LA APLICACIÃN
+  // 4. INICIALIZACIÓN DE LA APLICACIÓN
   // =========================================================================
   function initApp() {
     if (!window.BANCO_PREDICTIVO) {
-      console.error("No se encontrÃ³ window.BANCO_PREDICTIVO");
-      alert("Error crÃ­tico: No se encontrÃ³ banco_predictivo.js");
+      console.error("No se encontró window.BANCO_PREDICTIVO");
+      alert("Error crítico: No se encontró banco_predictivo.js");
       return;
     }
 
-    // Poblar Selector de ExÃ¡menes con Agrupamiento Inteligente
+    // Poblar Selector de Exámenes con Agrupamiento Inteligente
     examSelect.innerHTML = '';
 
     // Grupo 1: Generador IA y Simulacro 2026
     const grpPredictivo = document.createElement('optgroup');
-    grpPredictivo.label = "â¡ MODOS PREDICTIVOS EXTREMOS (~100% CERTEZA)";
+    grpPredictivo.label = "⚡ MODOS PREDICTIVOS EXTREMOS (~100% CERTEZA)";
 
     const optDinamico = document.createElement('option');
     optDinamico.value = 'SIMULACRO_DINAMICO_IA';
-    optDinamico.textContent = "â¨ Generador DinÃ¡mico IA (Sin RepeticiÃ³n - Markov + MILP)";
+    optDinamico.textContent = "✨ Generador Dinámico IA (Sin Repetición - Markov + MILP)";
     grpPredictivo.appendChild(optDinamico);
 
     if (window.BANCO_PREDICTIVO['SIMULACRO_PREDICTIVO_2026']) {
       const opt2026 = document.createElement('option');
       opt2026.value = 'SIMULACRO_PREDICTIVO_2026';
-      opt2026.textContent = "â¨ Simulacro Predictivo Oficial UNI 2026 (MÃ¡xima Certeza)";
+      opt2026.textContent = "✨ Simulacro Predictivo Oficial UNI 2026 (Máxima Certeza)";
       grpPredictivo.appendChild(opt2026);
     }
     examSelect.appendChild(grpPredictivo);
 
     // Grupo 2: Concursos Oficiales Recientes (2020 a 2025)
     const grpRecientes = document.createElement('optgroup');
-    grpRecientes.label = "ðï¸ PROCESOS OFICIALES RECIENTES (2020 - 2025)";
+    grpRecientes.label = "🏛️ PROCESOS OFICIALES RECIENTES (2020 - 2025)";
 
-    // Grupo 3: Concursos HistÃ³ricos (2004 a 2019)
+    // Grupo 3: Concursos Históricos (2004 a 2019)
     const grpHistoricos = document.createElement('optgroup');
-    grpHistoricos.label = "ðï¸ BANCO HISTÃRICO CONSOLIDADO (2004 - 2019)";
+    grpHistoricos.label = "🏛️ BANCO HISTÓRICO CONSOLIDADO (2004 - 2019)";
 
     const keys = Object.keys(window.BANCO_PREDICTIVO).filter(k => k !== 'SIMULACRO_PREDICTIVO_2026');
     keys.forEach(key => {
@@ -232,7 +232,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (grpRecientes.children.length > 0) examSelect.appendChild(grpRecientes);
     if (grpHistoricos.children.length > 0) examSelect.appendChild(grpHistoricos);
 
-    // Fijar selecciÃ³n inicial
+    // Soporte para parámetros de URL (?exam=... &day=... &year=...)
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const paramExam = urlParams.get('exam') || urlParams.get('examen');
+      const paramYear = urlParams.get('year') || urlParams.get('año') || urlParams.get('ano');
+      const paramDay = urlParams.get('day') || urlParams.get('dia');
+
+      if (paramExam && window.BANCO_PREDICTIVO[paramExam]) {
+        state.selectedExamKey = paramExam;
+      } else if (paramYear) {
+        const matchKey = Object.keys(window.BANCO_PREDICTIVO).find(k => k.includes(paramYear));
+        if (matchKey) state.selectedExamKey = matchKey;
+      }
+      if (paramDay && ['dia_1', 'dia_2', 'dia_3'].includes(paramDay.toLowerCase())) {
+        state.selectedDayKey = paramDay.toLowerCase();
+      }
+    } catch (e) {
+      console.warn("Aviso URLSearchParams:", e);
+    }
+
+    // Fijar selección inicial
     examSelect.value = state.selectedExamKey;
     daySelect.value = state.selectedDayKey;
 
@@ -247,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
       startExam();
     });
 
-    // BotÃ³n de GeneraciÃ³n DinÃ¡mica Forzada
+    // Botón de Generación Dinámica Forzada
     generateNewBtn.addEventListener('click', () => {
       triggerNewDynamicExam();
     });
@@ -259,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Toggle Ficha Ãptica MÃ³vil
+    // Toggle Ficha Óptica Móvil
     if (toggleSheetBtn) {
       toggleSheetBtn.addEventListener('click', () => {
         opticalSheetCard.classList.toggle('sheet-open-mobile');
@@ -272,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Cerrar alerta dinÃ¡mica
+    // Cerrar alerta dinámica
     if (closeAlertBtn) {
       closeAlertBtn.addEventListener('click', () => {
         dynamicAlert.style.display = 'none';
@@ -288,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
     examSelect.value = 'SIMULACRO_DINAMICO_IA';
     delete state.dynamicExamsCache[state.selectedDayKey]; // Forzar nueva semilla
     startExam(true);
-    showDynamicAlert("â¨ Â¡Nuevo Simulacro Predictivo Generado con Ãxito! (0% RepeticiÃ³n | 100% Temario Oficial UNI)");
+    showDynamicAlert("✨ Â¡Nuevo Simulacro Predictivo Generado con Éxito! (0% Repetición | 100% Temario Oficial UNI)");
   }
 
   function showDynamicAlert(msg) {
@@ -305,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   function startExam(isNewDynamic = false) {
     if (state.selectedExamKey === 'SIMULACRO_DINAMICO_IA') {
-      // Usar cachÃ© o generar uno nuevo
+      // Usar caché o generar uno nuevo
       if (!state.dynamicExamsCache[state.selectedDayKey] || isNewDynamic) {
         const dynData = generarSimulacroDinamicoSinRepeticion(state.selectedDayKey, Date.now());
         state.dynamicExamsCache[state.selectedDayKey] = dynData;
@@ -331,23 +351,23 @@ document.addEventListener('DOMContentLoaded', () => {
     state.examFinished = false;
     state.timerSeconds = (state.examData.duracion_min || 180) * 60;
 
-    // Reiniciar CronÃ³metro
+    // Reiniciar Cronómetro
     clearInterval(state.timerInterval);
     startTimer();
 
-    // Construir Ficha Ãptica y Renderizar
+    // Construir Ficha Óptica y Renderizar
     buildOpticalSheet();
     renderQuestion(state.currentQuestionIndex);
     updateStats();
 
-    // Cerrar drawer mÃ³vil si estaba abierto
+    // Cerrar drawer móvil si estaba abierto
     if (opticalSheetCard) {
       opticalSheetCard.classList.remove('sheet-open-mobile');
     }
   }
 
   // =========================================================================
-  // 6. CRONÃMETRO OFICIAL DE 3 HORAS
+  // 6. CRONÓMETRO OFICIAL DE 3 HORAS
   // =========================================================================
   function startTimer() {
     if (state.timerInterval) clearInterval(state.timerInterval);
@@ -395,25 +415,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Encabezado y Badges
     qNumBadge.textContent = `PREGUNTA ${q.num} / ${qList.length}`;
     if (qArchetypeTag) {
-      qArchetypeTag.textContent = q.arquetipo ? `Arquetipo: ${q.arquetipo}` : 'Arquetipo CanÃ³nico';
+      qArchetypeTag.textContent = q.arquetipo ? `Arquetipo: ${q.arquetipo}` : 'Arquetipo Canónico';
       qArchetypeTag.title = q.arquetipo || '';
     }
 
     qSubjectBadge.textContent = q.materia || 'General';
-    qTopicBadge.textContent = q.tema || 'Subtema CanÃ³nico';
+    qTopicBadge.textContent = q.tema || 'Subtema Canónico';
     
     if (qProbBadge) {
       qProbBadge.textContent = `ð¯ Certeza: ${q.probabilidad || '98.5%'}`;
-      qProbBadge.title = `Probabilidad marginal de apariciÃ³n en el concurso UNI: ${q.probabilidad || '98.5%'}`;
+      qProbBadge.title = `Probabilidad marginal de aparición en el concurso UNI: ${q.probabilidad || '98.5%'}`;
     }
 
     if (qNucleoBadge) {
-      qNucleoBadge.textContent = q.nucleo || 'â­ 50 Innegables';
+      qNucleoBadge.textContent = q.nucleo || '⭐ 50 Innegables';
     }
 
     qDiffBadge.textContent = q.dificultad || 'Intermedio';
     if (qTriBadge) {
-      qTriBadge.textContent = q.tri_theta || 'Î¸ â [+1.2, +1.8]';
+      qTriBadge.textContent = q.tri_theta || 'Î¸ ∈ [+1.2, +1.8]';
     }
 
     // Enunciado
@@ -451,16 +471,16 @@ document.addEventListener('DOMContentLoaded', () => {
       optionsContainer.appendChild(optDiv);
     }
 
-    // Estado del botÃ³n RevisiÃ³n
+    // Estado del botón Revisión
     if (state.markedForReview.has(q.num)) {
       markReviewBtn.classList.add('active');
-      markReviewBtn.textContent = 'â En RevisiÃ³n';
+      markReviewBtn.textContent = '★ En Revisión';
     } else {
       markReviewBtn.classList.remove('active');
-      markReviewBtn.textContent = 'â Marcar RevisiÃ³n';
+      markReviewBtn.textContent = '☆ Marcar Revisión';
     }
 
-    // Botones de NavegaciÃ³n
+    // Botones de Navegación
     prevBtn.disabled = (index === 0);
     nextBtn.disabled = (index === qList.length - 1);
 
@@ -482,7 +502,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateOpticalSheet();
     updateStats();
 
-    // Auto-avance fluido (UX Ã³ptima de 260ms para entrenamiento de reflejo)
+    // Auto-avance fluido (UX óptima de 260ms para entrenamiento de reflejo)
     clearTimeout(state.autoAdvanceTimeout);
     state.autoAdvanceTimeout = setTimeout(() => {
       if (state.currentQuestionIndex < state.examData.preguntas.length - 1) {
@@ -494,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 8. CONSTRUIR Y ACTUALIZAR FICHA ÃPTICA UNI
+  // 8. CONSTRUIR Y ACTUALIZAR FICHA ÓPTICA UNI
   // =========================================================================
   function buildOpticalSheet() {
     bubbleGrid.innerHTML = '';
@@ -511,7 +531,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       bubble.addEventListener('click', () => {
         renderQuestion(idx);
-        // En pantallas pequeÃ±as, cerrar el drawer Ã³ptico al hacer clic
+        // En pantallas pequeñas, cerrar el drawer óptico al hacer clic
         if (window.innerWidth <= 992 && opticalSheetCard.classList.contains('sheet-open-mobile')) {
           opticalSheetCard.classList.remove('sheet-open-mobile');
         }
@@ -564,7 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 9. NAVEGACIÃN Y BOTONES DE ACCIÃN
+  // 9. NAVEGACIÓN Y BOTONES DE ACCIÓN
   // =========================================================================
   prevBtn.addEventListener('click', () => {
     if (state.currentQuestionIndex > 0) {
@@ -723,7 +743,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch(e) { console.warn('[Persistencia Valeria]', e); }
 
     scoreNumberEl.textContent = roundedScore;
-    scoreMaxLabel.textContent = `PUNTAJE NETO OBTENIDO (MÃXIMO: ${maxScore.toFixed(1)} PTS)`;
+    scoreMaxLabel.textContent = `PUNTAJE NETO OBTENIDO (MÁXIMO: ${maxScore.toFixed(1)} PTS)`;
     if (scorePercentLabel) {
       scorePercentLabel.textContent = `Eficacia: ${pct.toFixed(2)}% | Tasa de Acierto Predictivo: ${((correct / qList.length) * 100).toFixed(1)}%`;
     }
@@ -760,7 +780,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Proyecciones de Ingreso a Facultades UNI
     renderRankings(pct, roundedScore);
 
-    // Solucionario AnalÃ­tico Completo
+    // Solucionario Analítico Completo
     renderSolutions(qList);
 
     // Mostrar Modal
@@ -771,25 +791,25 @@ document.addEventListener('DOMContentLoaded', () => {
     careerList.innerHTML = '';
 
     const careers = [
-      { name: "IngenierÃ­a de Sistemas", cutoff: 78.0, desc: "Facultad de IngenierÃ­a Industrial y de Sistemas (FIIS)" },
-      { name: "IngenierÃ­a MecatrÃ³nica", cutoff: 76.5, desc: "Facultad de IngenierÃ­a MecÃ¡nica (FIM)" },
-      { name: "IngenierÃ­a Civil", cutoff: 74.0, desc: "Facultad de IngenierÃ­a Civil (FIC)" },
-      { name: "IngenierÃ­a Industrial", cutoff: 72.0, desc: "Facultad de IngenierÃ­a Industrial y de Sistemas (FIIS)" },
-      { name: "IngenierÃ­a ElectrÃ³nica", cutoff: 68.0, desc: "Facultad de IngenierÃ­a ElÃ©ctrica y ElectrÃ³nica (FIEE)" },
-      { name: "IngenierÃ­a QuÃ­mica", cutoff: 62.0, desc: "Facultad de IngenierÃ­a QuÃ­mica y Textil (FIQT)" },
-      { name: "IngenierÃ­a Ambiental", cutoff: 60.0, desc: "Facultad de IngenierÃ­a Ambiental (FIA)" }
+      { name: "Ingeniería de Sistemas", cutoff: 78.0, desc: "Facultad de Ingeniería Industrial y de Sistemas (FIIS)" },
+      { name: "Ingeniería Mecatrónica", cutoff: 76.5, desc: "Facultad de Ingeniería Mecánica (FIM)" },
+      { name: "Ingeniería Civil", cutoff: 74.0, desc: "Facultad de Ingeniería Civil (FIC)" },
+      { name: "Ingeniería Industrial", cutoff: 72.0, desc: "Facultad de Ingeniería Industrial y de Sistemas (FIIS)" },
+      { name: "Ingeniería Electrónica", cutoff: 68.0, desc: "Facultad de Ingeniería Eléctrica y Electrónica (FIEE)" },
+      { name: "Ingeniería Química", cutoff: 62.0, desc: "Facultad de Ingeniería Química y Textil (FIQT)" },
+      { name: "Ingeniería Ambiental", cutoff: 60.0, desc: "Facultad de Ingeniería Ambiental (FIA)" }
     ];
 
     careers.forEach(c => {
       const li = document.createElement('li');
       const reached = (pct >= c.cutoff);
       li.innerHTML = `
-        <span class="ranking-icon">${reached ? 'â' : 'â³'}</span>
+        <span class="ranking-icon">${reached ? '✅' : '⏳'}</span>
         <div class="ranking-info">
           <strong>${c.name}</strong> <span class="career-desc">(${c.desc})</span> &bull; 
           <span class="cutoff-text">Corte aprox: ${c.cutoff}%</span>
           <span class="admission-status ${reached ? 'status-reached' : 'status-pending'}">
-            ${reached ? 'Â¡PUNTAJE DE INGRESO DIRECTO ALCANZADO!' : 'En zona de consolidaciÃ³n'}
+            ${reached ? 'Â¡PUNTAJE DE INGRESO DIRECTO ALCANZADO!' : 'En zona de consolidación'}
           </span>
         </div>
       `;
@@ -829,16 +849,16 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="solution-statement-box">${formatLatex(q.enunciado)}</div>
 
         <div class="solution-user-ans-row">
-          <span>Tu marcaciÃ³n: <strong class="${isCorrect ? 'ans-correct' : 'ans-incorrect'}">${studentAns}</strong></span>
+          <span>Tu marcación: <strong class="${isCorrect ? 'ans-correct' : 'ans-incorrect'}">${studentAns}</strong></span>
           <span>Clave Oficial UNI: <strong class="ans-official">${q.clave}</strong></span>
           <span class="badge badge-prob">${q.probabilidad ? 'ð¯ ' + q.probabilidad : '98.5%'}</span>
         </div>
 
         <div class="solution-box">
-          <div class="sol-section-title">FundamentaciÃ³n TeÃ³rica / Teorema Rector:</div>
+          <div class="sol-section-title">Fundamentación Teórica / Teorema Rector:</div>
           <div class="sol-theory-text">${formatLatex(q.teoria)}</div>
 
-          <div class="sol-section-title">Desarrollo AnalÃ­tico Paso a Paso:</div>
+          <div class="sol-section-title">Desarrollo Analítico Paso a Paso:</div>
           <div class="sol-steps-text">${formatLatex(q.solucion)}</div>
         </div>
       `;
@@ -901,10 +921,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
-  // 12. ATAJOS DE TECLADO ERGONÃMICOS
+  // 12. ATAJOS DE TECLADO ERGONÓMICOS
   // =========================================================================
   document.addEventListener('keydown', (e) => {
-    // Si el modal estÃ¡ abierto o el usuario escribe en un campo, ignorar atajos
+    // Si el modal está abierto o el usuario escribe en un campo, ignorar atajos
     if (resultsModal.style.display === 'block') {
       if (e.key === 'Escape') resultsModal.style.display = 'none';
       return;
@@ -913,7 +933,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (['INPUT', 'SELECT', 'TEXTAREA'].includes(e.target.tagName)) return;
     if (state.examFinished) return;
 
-    // NavegaciÃ³n con flechas
+    // Navegación con flechas
     if (e.key === 'ArrowLeft') {
       e.preventDefault();
       if (state.currentQuestionIndex > 0) {
@@ -925,7 +945,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderQuestion(state.currentQuestionIndex + 1);
       }
     } 
-    // Marcar para revisiÃ³n con Espacio
+    // Marcar para revisión con Espacio
     else if (e.key === ' ') {
       e.preventDefault();
       markReviewBtn.click();
@@ -935,7 +955,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       clearAnsBtn.click();
     }
-    // MarcaciÃ³n directa con [1-5] o [A-E]
+    // Marcación directa con [1-5] o [A-E]
     else {
       const keyUpper = e.key.toUpperCase();
       const numMap = {'1': 'A', '2': 'B', '3': 'C', '4': 'D', '5': 'E'};
